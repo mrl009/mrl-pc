@@ -1,0 +1,25 @@
+/*连哨*/
+.lian-grid {
+  width: 100%;
+  border: 1px solid #e94335;
+}
+.lian-grid .numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.lian-grid .cell {
+  border-right: 1px solid #ffd5d5;
+}
+.lian-grid .cell:last-child {
+  border-right: 0;
+}
+.lian-grid .cell-div {
+  border-right: 0;
+}
+.lian-grid .icon-selectors {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+/*连哨*/

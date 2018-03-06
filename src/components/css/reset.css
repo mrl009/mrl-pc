@@ -1,0 +1,187 @@
+@charset "utf-8";
+* {
+  list-style: none;
+  outline: none !important;
+}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-overflow-scrolling: touch;
+  /* 0 */
+}
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+/* Firefox 19+ */
+input:-moz-placeholder {
+  color: #999999;
+}
+/* Firefox 18- */
+input:-ms-input-placeholder {
+  color: #999999;
+}
+/* IE */
+a {
+  cursor: pointer;
+}
+.login {
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  /* IE */
+}
+.login input::-webkit-input-placeholder {
+  font-size: 13px;
+}
+.login input::-moz-placeholder {
+  font-size: 13px;
+}
+.login input:-moz-placeholder {
+  font-size: 13px;
+}
+.login input:-ms-input-placeholder {
+  font-size: 13px;
+}
+/** 清除内外边距 **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+/** 设置默认字体 **/
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "微软雅黑", "宋体", Verdana;
+  font-size: 12px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+/* 统一等宽字体 */
+small {
+  font-size: 12px;
+}
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/** 重置列表元素 **/
+ul,
+ol {
+  list-style: none;
+}
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/** 重置表单元素 **/
+legend {
+  color: #000;
+}
+/* for ie6 */
+fieldset,
+img {
+  border: 0;
+}
+/* img 搭车：让链接里的 img 无边框 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+/* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 清除浮动 */
+.ks-clear:after,
+.clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ks-clear,
+.clear {
+  *zoom: 1;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #E94335;
+}
+.red {
+  color: red!important;
+}
+.dcolor {
+  color: #E94335;
+}
+body {
+  width: 100%;
+  min-width: 1000px;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

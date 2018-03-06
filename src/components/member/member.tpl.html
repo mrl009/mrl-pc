@@ -1,0 +1,11 @@
+<div ng-include="TPL_ROOT + 'member_head/member_head.tpl.html'"></div>
+<!-- 中心内容 -->
+<div class="main usercenter">
+    <!--主体开始-->
+    <div class="{{class}}">
+        <!-- 左侧菜单 -->
+        <div ng-include="TPL_ROOT + 'member_nav/member_nav.tpl.html'"></div>
+        <ui-view></ui-view>
+    </div>
+</div>
+

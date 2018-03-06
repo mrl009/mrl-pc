@@ -1,0 +1,42 @@
+<!-- 整合模板 -->
+<div class="bet-grid">
+    <div class="row title title-bg-shen">
+        <div class="cell col33" ng-repeat="x in p2">
+            <div class="cell-title col100">{{x.name}}</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="(i, k) in r10 track by $index">
+        <div class="cell col33"
+             ng-repeat="idd in p2 track by $index"
+        >
+            <div class="number col20">
+                <span
+                        ng-class="{'ball ball-red': isBall(balls[idd.id]['balls'][i].name)}"
+                        ng-if="balls[idd.id]['balls'][i]"
+                >
+                    {{balls[idd.id]['balls'][i].name}}
+                </span>
+            </div>
+            <div class="odds col20">
+                <span class="red">{{balls[idd.id]['balls'][i].rate}}</span>
+            </div>
+            <div class="money col60">
+                <input
+                        type="text"
+                        class="cell-input"
+                        name="{{balls[idd.id]['balls'][i].name}}"
+                        rate="{{balls[idd.id]['balls'][i].rate}}"
+                        code="{{balls[idd.id]['balls'][i].code}}"
+                        keyCode="{{idd.id}}-{{k}}"
+                        rebate="{{balls[idd.id]['balls'][i].rebate}}"
+                        pid="{{balls[idd.id]['balls'][i].id}}"
+                        tid="{{idd.id}}"
+                        maxlength="9"
+                        ng-init="initChange()"
+                        ng-if="balls[idd.id]['balls'][i]"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result1.tpl.html'"></div>

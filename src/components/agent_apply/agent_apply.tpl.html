@@ -1,0 +1,53 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_apply">代理申请</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="agent-apply" class="user_body">
+            <div class="form">
+                <form id="agentApplyFrom" autocomplete="off">
+                    <div class="card marg-top">
+                        <div class="item item-input">
+                            <span class="title bicon bicon-mobile"></span>
+                            <span class="block line"></span>
+                            <input class="padding-left phone form-input" type="tel" ng-model="phone" ng-disabled="isDisabled" placeholder="请填写真实手机号，否则不予通过"/>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="item item-input">
+                            <span class="title bicon bicon-email"></span>
+                            <span class="block line"></span>
+                            <input class="padding-left email form-input" type="email" ng-model="email" ng-disabled="isDisabled" placeholder="请填写真实邮箱"/>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="item item-input">
+                            <span class="title bicon bicon-wx"></span>
+                            <span class="block line"></span>
+                            <input class="padding-left qq form-input" type="text"  ng-model="qq" ng-disabled="isDisabled" placeholder="请填写qq或者微信"/>
+                        </div>
+                    </div>
+                    <div class="card card-box">
+                        <label class="title title-left">请提交申请后耐心等待1~3个工作日</label>
+                        <textarea id="textarea" class="padding content-box " ng-disabled="isDisabled" ng-model="user_memo" ng-focus="user_memo=''">{{user_memo}}</textarea>
+                    </div>
+                    <div class="card card-box" ng-show="!isDisabled&&!isSubmit">
+                        <input class="button button-assertive submit" type="submit" value="提交申请" ng-click="register()"/>
+                    </div>
+                    <div class="card card-box" ng-show="isSubmit">
+                        <p class="label">
+                            <label>申请状态:</label><span class="status">{{statusTips}}</span>
+                        </p>
+                        <p class="label"><label>原因:</label><span class="status">{{statusDate.memo}}</span></p>
+                        <button class="button request button-assertive submit" ng-show="!isStatusNoTow">已提交</button>
+                        <button class="button request button-assertive submit bgRed" ng-show="isStatusNoTow" ng-click="register()">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

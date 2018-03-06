@@ -1,0 +1,43 @@
+<div class="lottery-buy-wrap">
+    <div class="lottery-lobby">
+        <div class="lobby-item" ng-repeat="i in lotteryData">
+            <div class="lottery-detail">
+                <div class="lottery-info">
+                    <img class="lottery-img" ng-src="{{i.img}}" alt="logo">
+                    <div class="lottery-ct">
+                        <div class="lottery-name">{{i.name}}</div>
+                        <div class="issue-cd">
+                            <div class="issue-kithe">第{{i.kithe}}期</div>
+                            <div class="issue-countdown">{{syTimeCache[i.gid]}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lottery-results">
+                    <span class="lottery-results__title">上期开奖</span>
+                    <div class="lottery-results__ball" ng-repeat="b in i.number track by $index">
+                        {{b}}
+                    </div>
+                </div>
+            </div>
+            <div class="lottery-bottom">
+                <a class="lottery-bottom__fun" ng-href="/trend_detail/{{i.tmp}}/{{i.gid}}">
+                    <i class="lottery-bottom__icon icon-zs-out"></i>
+                    <span class="lottery-bottom__text">号码走势</span>
+                </a>
+                <a class="lottery-bottom__fun lottery-bottom__bleft" ng-href="/rule_detail/{{i.tmp}}/{{i.gid}}">
+                    <i class="lottery-bottom__icon icon-rule"></i>
+                    <span class="lottery-bottom__text">玩法规则</span>
+                </a>
+                <a
+                    class="bet-btn"
+                    ng-href="/lottery/{{i.tmp}}/{{i.tmp}}/{{i.gid}}"
+                >立即投注</a>
+            </div>
+        </div>
+        <div class="lobby-item-placeholder"></div>
+        <div class="lobby-item-placeholder"></div>
+        <div class="lobby-item-placeholder"></div>
+        <div class="lobby-item-placeholder"></div>
+        <div class="lobby-item-placeholder"></div>
+    </div>
+</div>

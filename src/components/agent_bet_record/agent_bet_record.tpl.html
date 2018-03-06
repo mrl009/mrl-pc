@@ -1,0 +1,89 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_bet_record">投注记录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="topup_main">
+                <form method="post">
+                    <div class="main_header">
+                        <div class="item item-input item-input-reset">
+                            <input class="input-css username" type="text" placeholder="请输入用户名"
+                                   ng-model="data.username"/>
+                            <button class="button button-background button-search" ng-click="getAgentList()">
+                                搜索
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pay_type">
+                        <div class="pay_main" id="pay_main">
+                            <div id="tanContainer">
+                                <div id="tab">
+                                    <ul>
+                                        <li
+                                                class="tanContainer-li"
+                                                ng-repeat="x in orderType track by $index"
+                                                ng-click="getOrder($index,x.id)" ng-class="{'active':$index==0}"
+                                        >{{x.title}}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tabCon">
+                                    <div
+                                            class="tanContent-li"
+                                            ng-class="{'fdiv':$index==0}"
+                                            ng-repeat="x in orderType"
+                                    >
+                                        <div class="buyrecord_data table">
+                                            <table class="table">
+                                                <thead>
+                                                <th>彩种</th>
+                                                <th>玩法</th>
+                                                <th>期数</th>
+                                                <th>代理用户名</th>
+                                                <th>投注金额</th>
+                                                <th>状态</th>
+                                                <th>下注时间</th>
+                                                <th>下注详情</th>
+                                                </thead>
+                                                <tbody>
+                                                <tr ng-if="data==null">
+                                                    <td colspan="7" class="no_border">
+                                                        <div class="empty_data">暂无记录</div>
+                                                    </td>
+                                                </tr>
+                                                　
+                                                <tr ng-repeat="i in items" class="cell">
+                                                    <td>{{i.game}}</td>
+                                                    <td>{{i.tname}}</td>
+                                                    <td>{{i.issue}}</td>
+                                                    <td>{{i.username}}</td>
+                                                    <td>{{i.price_sum}}</td>
+                                                    <td ng-class="{red:i.status==1}">{{i.statusStr}}</td>
+                                                    <td>{{i.bet_time}}</td>
+                                                    <td><a ng-click="bet_detail(i)">{{i.names_sub}}</a></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="page-div">
+                    <button class='nextPage' id="agent_bet_pre" ng-click="nextAgentPage(0)" disabled>上一页
+                    </button>
+                    <button class='nextPage' id="agent_bet_next" ng-click="nextAgentPage(1)" disabled>下一页
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

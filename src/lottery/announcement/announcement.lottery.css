@@ -1,0 +1,315 @@
+.announcement {
+  height: 160px;
+  width: 1000px;
+  display: flex;
+  padding: 15px 0;
+}
+.announcement .currentLottery {
+  flex-shrink: 0;
+  width: 250px;
+  display: flex;
+}
+.announcement .currentLottery .lottery_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.announcement .currentLottery .lottery_logo img {
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+}
+.announcement .currentLottery .lottery_info {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.announcement .currentLottery .btn {
+  padding: 0;
+}
+.announcement .currentLottery .btn button {
+  width: 100px;
+  height: 26px;
+  border: none;
+  background-color: #d91d36;
+  cursor: pointer;
+}
+.announcement .currentLottery .lottery_name {
+  font-size: 1rem;
+  color: #333;
+}
+.announcement .currentLottery .issue {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: .875rem;
+  color: #333;
+}
+.announcement .currentLottery .issue span {
+  font-size: .875rem;
+  color: #d91d36;
+}
+.announcement .currentLottery .game-type {
+  padding-top: 8px;
+}
+.announcement .currentLottery .game-type a {
+  width: 100px;
+  height: 26px;
+  border: none;
+  border-radius: 4px;
+  background: url("../../assets/img/new.gif");
+  cursor: pointer;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 26px;
+  font-size: .875rem;
+}
+.announcement .currentLottery .game-type .highlight {
+  color: #FFFF00;
+  animation: myfirst 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes myfirst {
+  0% {
+    color: #FFFF00;
+  }
+  50% {
+    color: #33FFFF;
+  }
+  75% {
+    color: #6600FF;
+  }
+  100% {
+    color: #00FF00;
+  }
+}
+.announcement .icon-zs-in {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.announcement .icon-colon {
+  padding: 0 14px;
+  height: 30px;
+}
+.announcement .currentLottery .lottery_info .btn button {
+  width: 100px;
+  height: 26px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d91d36;
+  cursor: pointer;
+}
+.announcement .currentLottery .lottery_info .btn button i {
+  color: #fff;
+  padding-right: 5px;
+}
+.announcement .currentLottery .lottery_info .btn button a {
+  font-size: .875rem;
+  color: #fff;
+}
+.announcement .lottery-time {
+  flex-shrink: 0;
+  width: 356px;
+  border-right: 1px dashed #ddd;
+  display: flex;
+  flex-direction: column;
+}
+.announcement .lottery-time .prompt {
+  font-size: .75rem;
+  color: #333;
+  padding: 10px 0;
+}
+.announcement .lottery-time .prompt,
+.announcement .lottery-time .timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.announcement .lottery-time .timer .board {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABCCAYAAADAD1E9AAAAAXNSR0IArs4c6QAABkFJREFUeAHtXE1rJUUUzXt5ScZ8EEyE4Frd6DJklhJQZjvgxoW48WvhXxFcuhBdiQs34mwHhVknZDkgaCCzMlmFkIR8J97T5ITTt6q6ut7ooEM19Du37z33VPV51d0v5PEGE7fbzc3N4P79+59dX19/aql3bJ9nrWLjwJG9Ph0Oh99vbGx8NxgMbpAd4GV1dfV1S/xgJr6H47p1O2Be/WZefby1tfXXECuvmtdtmK9iod16Nhisra19bpftt55Uj/MO2OX8xfD2npdnV0bgALwb2lJ8O6jURC8H4B3ugQu92JUUOADvhkG2JoocqAYW2RWSq4GhJ0WZamCRXSG5Ghh6UpSpBhbZFZKrgaEnRZlqYJFdIbkaGHpSlKkGFtkVkquBoSdFmWpgkV0huRoYelKUqQYW2RWSq4GhJ0WZamCRXSG5Ghh6UpSpBhbZFZKrgaEnRZlqYJFdIbkaGHpSlKkGFtkVkquBoSdFmRHY9g/iiampqYnJyckmtv93NiLIIwa+iI1j9R2/lJ87h756l5eXExcXF403I5gzMzNzZxInnxsMdT9gn54ujn/D+ujrfBkTu8ZK1fr0jkajZrGdnp5OWDy6M8+LUkyRJwkuYvt+SLLf6+WOdRxymeNxCaLXz5e5PjocW1H14F2zAlNiHIwCbAZi83Wvk+Pn6s+rx3kS/Xz9+H68HB/9I/uKVmOEb+YxzcMxY6LmyFckj+j5zBN9XbW0luIzT/T9qqHxuHx4hy8X3Y3DGKjxHcEFytGYNM1pnKqD07Wjjzoas0dziP3G3hQ/V4/pNU9hNoIQizUXE2GOPGIfPeVSZ1ykFjGmozXGxD7z9ZqtFeiLFAZq7Hk8Vo7GrOdQezRmHx5Y2IAas55D1dQ41accjZXfWoH+psqbLxEi5KiIxhxIc4xz/dTuGq9E3+txHkRqET2f8yDG5j9iEqIUInIgxa6a8hCTS9Sc52qNfI/+BH1dNTT2PB730fPzZC/zrT/lWARqTLLmyFHUSWtMjuY0Zt2jniBXATHWrzmNqas5xH4DD1uK7+s4bl3CbG5UboVSOXIUdQDmmVOdWI58RfKIWmOsNcZEcDRmD5E1ouczT/R1HBetQDQ8z8aJAGM7tMmJjcMaez0/V49pam6c/uYeGBPRHGMMwMuKuVLkJNFHLV6WffS1nzFxHD0/f2r5PI5R4xisBw8RT/CC/phC4yC1iNDQuFSTvUSvh7yeH2MgucxxbNUihzVg6x7I5pRgrq7CfeLn1RunXw1hTMzpxeqte6B+ONWYZnAgoMasl6JqaNxXR+eocd9+z1MNjcnTOTLuXIFohOupDSJ8V2Ic1qjxX+f7+eKcOPfY+eF8Wg8RukqMNflcF5c1Ino1TmkpR2PPLz2mFhH9sVhzuTGaFZgjpeoYiO9ajMMa30XPz9W9pufjMkOOlxtj4IvYcD6tFTjOoPpu+RP0hkFf+YyJffq75kgdYhf3n6q1HiIcGKhxajDlsKcLocOemCZXElBjctmbGiOnT50Uev2cHvitS5hLnwgCV0VsUNZS/Fzda+b4vu771QBfw3GuH3XygH3OP3sJc1KNsnthjchBSWOe6OvkEckjej7zRF+nTgrZR0zxNN/FRa11CWtjjfs5UA3s51OSNby6ujpOVmuh0wF4Nzw7O3vWyarFpAPwbtJeXllaWnrXnkCtJ3KyqxYaB+wBcrqzs/P15Pn5+e8HBwevzc7OLtqXi+7ZP4unq0dpB3DZnpycPNve3v7l+Pj4K/7N86q1fGD7W9PT028uLi4+tL352gc/O0GSMT8vIfdvbviYwDExDuPU+KX83Nyphw/1tsgubX9kC+5P6/vD9p9t36eBLS37La2f5ubmHq6srMxoofQEtHec2I/HEwK+yG1vb+/MVtsj+62sD/240fve8vLyJ/v7+xu7u7tv2EqcwXdAYps/IX/CsZ7/U+525Z3Z19i24Uls7tEVCOL6+vr80dHRjxY+sNV4zy7t5hKiSeAwBmLzhjZJecnxc3WRasIc39d9v58v+cjbpTphq+7Ueh7Pz89/9OTJE/z8XbAlDSTTfpzsfXsnvrTjB7ZP2X7J2kuKuCovbH9sV943m5ubv3adZ9ZAbcaqPDw8fKl/KmphYeEwtdrUC8Z/AyG/AdV4JCswAAAAAElFTkSuQmCC);
+  width: 80px;
+  height: 66px;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  line-height: 65px;
+}
+.announcement .lottery-record {
+  flex: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: row;
+}
+.announcement .lottery-record .record {
+  flex: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.announcement .lottery-record .record .one_issue {
+  font-size: .75rem;
+  color: #333;
+  padding-top: 10px;
+  flex: 1;
+  width: 304px;
+}
+.announcement .lottery-record .record .one_issue span {
+  font-size: .75rem;
+  color: #d91d36;
+  padding: 0 3px;
+}
+.announcement .lottery-record .record .ball-magic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.announcement .lottery-record .record .ball-magic .small {
+  width: 24px;
+  height: 24px;
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+.announcement .lottery-record .record .ball-magic .small-right {
+  margin-right: 5px;
+}
+.announcement .lottery-record .record .ball-magic > div {
+  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.announcement .lottery-record .record .ball-magic > div:last-child {
+  margin-right: 0;
+}
+.announcement .lottery-record .record .ball-magic > div div {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.75rem;
+  color: #fff;
+  background-color: #d91d36;
+  text-align: center;
+  line-height: 40px;
+}
+.announcement .lottery-record .record .ball-magic > div label {
+  font-size: .875rem;
+  color: #333;
+  padding-top: 7px;
+}
+.announcement .lottery-record .record .ball-magic .lucky-reacords {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.announcement .lottery-record .record .ball-magic .lucky-reacords span {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 8px;
+}
+.announcement .lottery-record .record .ball-magic .lhc-record {
+  position: relative;
+  font-family: Microsoft YaHei, Arial, Helvetica, "sans-serif";
+}
+.announcement .lottery-record .record .ball-magic .lhc-record:last-child {
+  margin-left: 17px;
+}
+.announcement .lottery-record .record .ball-magic .lhc-record span {
+  position: absolute;
+  left: -18px;
+  top: 4px;
+}
+.announcement .lottery-record .record .five-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 304px;
+}
+.announcement .lottery-record .record .five-group .group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.announcement .lottery-record .record .five-group .group .five_issue {
+  font-size: .75rem;
+  color: #333;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.announcement .lottery-record .record .five-group .group .five_issue span {
+  font-size: .75rem;
+  color: #d91d36;
+  padding: 0 3px;
+}
+.announcement .lottery-record .record .five-group .group .lucky-reacords {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.announcement .lottery-record .record .five-group .group .lucky-reacords div {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #d91d36;
+  font-size: .6875rem;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+}
+.announcement .lottery-record .record .five-group .group .lucky-reacords span {
+  color: #333;
+  margin: 0 3px;
+}
+.announcement .lottery-record .record .five-group .group .ball {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #d91d36;
+  font-size: .6875rem;
+  color: #fff;
+  margin-right: 3px;
+  text-align: center;
+  line-height: 18px;
+  flex-shrink: 0;
+}
+.announcement .lottery-record .record .five-group .group .ball:last-child {
+  margin-right: 0;
+}
+.announcement .lottery-record .record .five-group .group .lhc-record {
+  margin-left: 3px;
+  position: relative;
+  font-family: Microsoft YaHei, Arial, Helvetica, "sans-serif";
+}
+.announcement .lottery-record .record .five-group .group .last-margin {
+  margin-left: 17px !important;
+}
+.announcement .lottery-record .record .five-group .group .last-margin {
+  margin-left: 17px !important;
+}
+.announcement .lottery-record .record .five-group .group .plus {
+  position: absolute;
+}
+.announcement .lottery-record .issue-select {
+  width: 30px;
+  flex-shrink: 0;
+}
+.announcement .lottery-record .issue-select .btn {
+  border: 1px solid #d91d36;
+  font-size: .875rem;
+  color: #666;
+  background-color: #fff;
+  height: 65px;
+  padding: 0 3px;
+  cursor: pointer;
+  border-radius: 0;
+}
+.announcement .lottery-record .issue-select .active {
+  background-color: #d91d36;
+  color: #fff;
+}

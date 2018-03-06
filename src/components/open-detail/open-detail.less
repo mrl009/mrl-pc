@@ -1,0 +1,359 @@
+@charset "utf-8";
+@import url(../css/rem.less);
+
+.kaijianggonggao {
+  overflow: hidden;
+  .kaijiang_main {
+    margin-top: 10px;
+    overflow: hidden;
+    .kaijiang_header {
+      overflow: hidden;
+      border: 1px solid #FFE3C7;
+      background: #FEF7F4;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      .top {
+        overflow: hidden;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        h1 {
+          overflow: hidden;
+          font-size: 20px;
+          font-weight: 100;
+          float: left;
+          display: block;
+        }
+        span {
+          overflow: hidden;
+          display: block;
+          color: #666;
+          font-size: 14px;
+          line-height: 26px;
+          margin-left: 40px;
+          float: left;
+          &.open {
+            overflow: hidden;
+            em {
+              overflow: hidden;
+            }
+          }
+        }
+        li {
+          overflow: hidden;
+          float: left;
+          display: inline-block;
+          line-height: 27px;
+          font-size: 12px;
+          margin-left: 40px;
+          &.zs {
+            overflow: hidden;
+            color: #F84D4D;
+            a {
+              overflow: hidden;
+              color: #F84D4D;
+              vertical-align: sub;
+            }
+          }
+          &.gz {
+            overflow: hidden;
+            color: #60C78C;
+            i {
+              font-size: 21px;
+            }
+            a {
+              overflow: hidden;
+              color: #60C78C;
+              vertical-align: sub;
+            }
+          }
+          i {
+            font-size: 20px;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+          }
+          a {
+            overflow: hidden;
+          }
+        }
+        .kjq {
+          overflow: hidden;
+          i {
+            overflow: hidden;
+          }
+        }
+      }
+
+      .bottom {
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 16px;
+        em {
+          vertical-align: bottom;
+        }
+        .ballDiv {
+          display: inline-block;
+          .number_ball {
+            float: left;
+            border-radius: 50%;
+            background-color: @bgColor;
+            width: 25px;
+            height: 25px;
+            margin-left: 1px;
+            span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 25px;
+              height: 25px;
+              color: #fff;
+              font-weight: 400;
+            }
+            .ball_sub {
+              width: 25px;
+              height: 26px;
+              text-align: center;
+            }
+          }
+        }
+        .divLiuBall {
+          height: 43px;
+        }
+        span {
+          overflow: hidden;
+          color: #000;
+          display: inline-block;
+          vertical-align: middle;
+          &.open {
+            overflow: hidden;
+            margin-left: 20px;
+            em {
+              overflow: hidden;
+              color: #666;
+            }
+          }
+        }
+        select {
+          vertical-align: middle;
+          border: 1px solid @bgColor;
+          border-radius: 4px;
+          padding: 0 3px;
+          height: 26px;
+          line-height: 26px;
+        }
+        .kjq {
+          overflow: hidden;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+          i {
+            overflow: hidden;
+            &.qiu {
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+    .day_list {
+      .day_title {
+        padding: 2px 20px 0px 20px ;
+        height: 31px;
+        border-bottom: 2px solid #ff9d00;
+        line-height: 30px;
+        .title1 {
+          float: left;
+          width: 172px;
+          font-size: 14px;
+          span {
+
+          }
+          .active {
+
+          }
+        }
+
+        .title2 {
+          width: 600px;
+          float: left;
+          font-size: 14px;
+          a {
+            display: inline-block;
+            border: 1px solid #dedede;
+            margin-left: -1px;
+            text-align: center;
+            padding: 0px 20px;
+            color: @gray3;
+            border-bottom: none;
+
+          }
+          .active {
+            background-color: #ea721a;
+            color: #fff;
+            z-index: 100;
+         }
+        }
+        .title3 {
+          width:180px ;
+          float: left;
+          font-size: 12px;
+          color: @gray3;
+          input {
+            width: 100px;
+            height: 20px;
+            border: 1px solid #ccc;
+            padding-left: 2px;
+         }
+        }
+      }
+      .day_con{
+        th{
+          text-align: left;
+        }
+        line-height: 36px;
+        font-size: 12px;
+        color: @gray6;
+        span{
+          display: inline-block;
+        }
+        .red{
+          color: #e10e00;
+        }
+        .td_span1{
+          width: 30%;
+          text-align: center;
+        }
+        .td_span2{
+          width: 60%;
+          text-align: center;
+        }
+        .td_span3{
+          width: 40px;
+          text-align: center;
+        }
+        .td_span4{
+          width: 60px;
+          text-align: center;
+        }
+        .td_span5{
+
+        }
+        .bet_btn{
+          padding: 3px 5px;
+          background-color: #f90;
+          color: #fff;
+          line-height: 14px;
+          cursor:pointer;
+          margin-left: 5px;
+
+        }
+       td {
+          border: 1px solid #d2d2d2;
+        }
+        tr {
+          border: 1px solid #d2d2d2;
+        }
+        th {
+          border: 1px solid #d2d2d2;
+          border-top: none;
+        }
+        .read{
+
+        }
+      }
+   }
+
+    .data_main {
+      overflow: hidden;
+      margin-top: 20px;
+      table {
+        overflow: hidden;
+        &.table {
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          border-left: 1px solid #ddd;
+          thead {
+            background: #f4f4f4;
+            tr {
+              overflow: hidden;
+              th {
+                border-bottom: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                text-align: center;
+                font-weight: 100;
+                color: #666666;
+              }
+            }
+          }
+          tbody {
+            overflow: hidden;
+            tr {
+              overflow: hidden;
+              td {
+                border: 1px solid #ddd;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main_foot {
+      .footMain {
+        padding: 20px 0px;
+        background: #F8F8F8;
+        font-size: 18px;
+        color: @gray3;
+        text-align: left;
+        line-height: 40px;
+        a {
+          color: @gray3;
+          &:hover {
+            color: @linkColor;
+          }
+        }
+        .in {
+          float: left;
+          i {
+            font-size: 40px !important;
+          }
+          a {
+            padding-left: 15px;
+          }
+          width: 290px;
+          margin-left: 70px;
+        }
+        .tz {
+          float: left;
+          img {
+            vertical-align: top;
+            width: 40px;
+            height: 40px;
+          }
+          a {
+            padding-left: 15px;
+          }
+          width: 280px;
+        }
+        .sc {
+          float: left;
+          width: 270px;
+          padding-left: 50px;
+          background: url(../../assets/img/shoucang.png)no-repeat left center;
+          background-size: 40px 40px;
+        }
+        .indexIcon {
+          font-size: 26px !important;
+          color: #ff8a00;
+          vertical-align: top;
+        }
+        img {
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}

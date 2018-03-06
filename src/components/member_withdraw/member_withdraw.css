@@ -1,0 +1,63 @@
+@charset "utf-8";
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+/*注册页面*/
+#withdraw_submit {
+  margin-left: 5.5rem;
+  margin-bottom: 2rem;
+}
+.topuprecord_data .cell td {
+  border: 1px solid #ddd;
+}
+.withdrawrecord_data .cell td {
+  border: 1px solid #ddd;
+}
+.picker-input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+}
+.member_topup_input {
+  display: inline;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  width: 296px;
+  margin-left: 5px;
+  padding-left: 12px;
+  color: #999;
+  padding-top: 14px;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+.bank_number {
+  font-size: 18px;
+  line-height: 56px;
+}
+.account_name {
+  font-size: 18px;
+  line-height: 56px;
+}
+.member_topup_tips {
+  padding: 0;
+}
+.withdraw-confirm p {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.withdraw-confirm {
+  padding: 20px;
+}
+.withdraw-confirm .confirm-left {
+  text-align: right;
+}
+.withdraw-confirm .confirm-right {
+  text-align: left;
+}
+.account_b tbody {
+  border: 2px solid #999999;
+}

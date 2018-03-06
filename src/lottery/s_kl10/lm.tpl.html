@@ -1,0 +1,104 @@
+<!-- 两面盘模板|总和模版 -->
+<div class="bet-grid">
+    <div class="row title title-bg-shen">
+        <div class="cell col100">
+            <div class="cell-title col100">{{p1[0].name}}</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="(i, k) in r2 track by $index">
+        <div class="cell col25"
+             ng-repeat="x in r4 track by $index"
+        >
+            <div class="number col20">
+                <span>{{balls[p1[0].id]['balls'][i+x*2].name}}</span>
+            </div>
+            <div class="odds col20">
+                <span class="red">{{balls[p1[0].id]['balls'][i+x*2].rate}}</span>
+            </div>
+            <div class="money col60">
+                <input
+                        type="text"
+                        class="cell-input"
+                        name="{{balls[p1[0].id]['balls'][i+x*2].name}}"
+                        rate="{{balls[p1[0].id]['balls'][i+x*2].rate}}"
+                        code="{{balls[p1[0].id]['balls'][i+x*2].code}}"
+                        keyCode="{{x}}-{{k}}"
+                        rebate="{{balls[p1[0].id]['balls'][i+x*2].rebate}}"
+                        pid="{{balls[p1[0].id]['balls'][i+x*2].id}}"
+                        tid="{{p1[0].id}}"
+                        maxlength="9"
+                        ng-init="initChange()"
+                >
+            </div>
+        </div>
+    </div>
+    <div ng-if="lm">
+        <div class="row title title-bg-shen">
+            <div class="cell col25" ng-repeat="x in p2">
+                <div class="cell-title col100">{{x.name}}</div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="(i, k) in r15 track by $index">
+            <div
+                    class="cell col25 s_kl10"
+                    ng-repeat="idd in p2 track by $index"
+            >
+                <div class="number col20">
+                    <span>{{balls[idd.id]['balls'][i].name}}</span>
+                </div>
+                <div class="odds col20">
+                    <span class="red">{{balls[idd.id]['balls'][i].rate}}</span>
+                </div>
+                <div class="money col60"
+                     ng-if="balls[idd.id]['balls'][i]">
+                    <input
+                            type="text"
+                            class="cell-input"
+                            name="{{balls[idd.id]['balls'][i].name}}"
+                            rate="{{balls[idd.id]['balls'][i].rate}}"
+                            code="{{balls[idd.id]['balls'][i].code}}"
+                            keyCode="{{idd.id}}-{{k}}"
+                            rebate="{{balls[idd.id]['balls'][i].rebate}}"
+                            pid="{{balls[idd.id]['balls'][i].id}}"
+                            tid="{{idd.id}}"
+                            ng-init="initChange()"
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="row title title-bg-shen">
+            <div class="cell col25" ng-repeat="x in p3">
+                <div class="cell-title col100">{{x.name}}</div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="(i, k) in r15 track by $index">
+            <div
+                    class="cell col25"
+                    ng-repeat="idd in p3 track by $index"
+            >
+                <div class="number col20">
+                    <span>{{balls[idd.id]['balls'][i].name}}</span>
+                </div>
+                <div class="odds col20">
+                    <span class="red">{{balls[idd.id]['balls'][i].rate}}</span>
+                </div>
+                <div class="money col60"
+                     ng-if="balls[idd.id]['balls'][i]">
+                    <input
+                            type="text"
+                            class="cell-input"
+                            name="{{balls[idd.id]['balls'][i].name}}"
+                            rate="{{balls[idd.id]['balls'][i].rate}}"
+                            code="{{balls[idd.id]['balls'][i].code}}"
+                            keyCode="{{idd.id}}-{{k}}"
+                            rebate="{{balls[idd.id]['balls'][i].rebate}}"
+                            pid="{{balls[idd.id]['balls'][i].id}}"
+                            tid="{{idd.id}}"
+                            ng-init="initChange()"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result1.tpl.html'"></div>

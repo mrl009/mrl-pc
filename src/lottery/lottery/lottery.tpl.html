@@ -1,0 +1,112 @@
+<div class="lottery-wrap">
+    <div class="top">
+        <div class="logo">
+            <a href="/" target="_blank"><img ng-src="{{LOGO}}" alt="LOGO" style="width: 227px; height: 68px;"></a>
+        </div>
+        <div class="status-bar">
+            <div class="status-bar__left">
+                <div class="sbl-login" ng-if="!isLogin">
+                    <div class="input-group">
+                        <div class="icon-wrap">
+                            <i class="iconfont" style="font-size: 26px; padding-top: 2px;"></i>
+                        </div>
+                        <input name="userName" ng-model="data.username" placeholder="请输入用户名" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <div class="icon-wrap">
+                            <i class="iconfont" style="font-size: 22px; padding-top: 1px;"></i>
+                        </div>
+                        <input type="password" ng-model="pwd.pwd" value="" placeholder="请输入密码" autocomplete="off">
+                    </div>
+                    <div class="verfy-code" ng-if="data.isCode">
+                        <img ng-src="{{codeSrc}}" ng-click="codeRefresh()">
+                        <input name="verfyCode" ng-model="data.code">
+                    </div>
+                    <button class="button-default" ng-click="login()">登录</button>
+                    <button class="button btn-default" onclick="location.href='/register'">注册</button>
+                </div>
+                <div class="landed" ng-if="isLogin">
+                    <div class="user-info">
+                        <span>您好，{{loginUser.username}}&nbsp;&nbsp; 可用余额
+                            <span id="lu-balance">¥{{loginUser.balance}}</span>
+                            <i class="icon-refresh" ng-class="{'icon-refresh-circle': isRotating}"
+                               ng-click="refresh()"></i>
+                        </span>
+                    </div>
+                    <a ng-href="/member/user_center" target="_blank">会员中心</a>
+                    <a ng-href="/member/member_top_up" class="recharge" target="_blank">充值</a>
+                    <a ng-href="/member/member_withdraw" target="_blank">提现</a>
+                    <a ng-href="/member/member_transaction" target="_blank">投注记录</a>
+                    <a href="javascript:;" ng-click="logout()">退出</a>
+                </div>
+            </div>
+            <div class="status-bar__right">
+                <a ng-href="mobile">
+                    <span class="icon icon-android"></span>
+                    <span>手机app下载</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="submenu">
+            <div class="submenu-wrap">
+                <div class="submenu-scroll-wrap">
+                    <div class="list">
+                        <div class="menu-lobby">
+                            <a class="logo" href="/">
+                                <i class="icon-home"></i>
+                            </a>
+                            <a class="menu-lobby-text" href="/lottery/buy">购彩大厅</a>
+                            <a href="#" ng-click="changeType()" ng-if="allauth">
+                                <img src="{{tpic}}" style="width: 85px">
+                            </a>
+                        </div>
+                        <div
+                            class="category"
+                            ng-repeat="(x,y) in game_data track by $index"
+                            ng-class="{'category-show': y[currGid].type === currType && currType, 'category-select': y[currGid]}"
+                            ng-if="x != '视讯'"
+                        >
+                            <div class="category-info" ng-click="handleMenu($event)" >
+                                <div class="logo">
+                                    <img ng-src="{{x.img}}">
+                                </div>
+                                <div class="category-name category-menu-name null">{{x}}</div>
+                                <div class="logo">
+                                    <i class="icon-right-cross"></i>
+                                </div>
+                            </div>
+                            <div class="category-detail">
+                                <div
+                                    class="category-info"
+                                    ng-repeat="i in y track by $index"
+                                    ng-class="{'curr-submenu': i.gid === currGid}"
+                                    ng-click="handleSubmenu($event)"
+                                >
+                                    <a class="show-flex" ng-click="goProd(i.tmp, i.gid)" >
+                                        <div class="logo">
+                                            <img ng-src="{{x.img}}">
+                                        </div>
+                                        <div class="category-name null">{{i.name}}</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="notice">
+                <i class="notice-text icon-notice"></i>
+                <marquee onmouseout="this.start()" onmouseover="this.stop()">
+                    <span class="notice-content">{{NOTICEMSG}}</span>
+                </marquee>
+            </div>
+
+            <div ui-view class="lottery-show"></div>
+        </div>
+    </div>
+</div>

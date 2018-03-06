@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import url(../css/rem.less);
+.wanfaguize {
+
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .wanfa_main {
+
+    margin-top: 10px;
+
+    .wanfa_sub_left {
+      width: 131px;
+      overflow: initial;
+      border: 1px solid #FFE3C7;
+      background: #FEF7F4;
+      border-radius: 5px 5px 0px 0px;
+
+      .sub_header{
+
+        width: inherit;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #FF6300;
+        background: #FFE3C7;
+
+        i{
+          display: inline-block;
+          font-size: 17px;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+
+      }
+      .sub_item {
+
+        width: inherit;
+        font-size: 14px;
+
+        .nav_title {
+          width: inherit;
+          line-height: 37px;
+          text-align: center;
+          position: relative;
+          color: #333333;
+          display: block;
+          text-decoration: none;
+          em {
+            line-height: 1px;
+            &.sj {
+              display: none;
+            }
+
+          }
+
+          i {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            width: 16px;
+            height: 16px;
+            z-index: 9;
+            font-size: 17px;
+            line-height: 17px;
+            color: @bgColor;
+
+            &.icon-sub {
+              display: none;
+            }
+
+            &.icon-tianjiaguize {
+
+              display: block;
+
+            }
+
+          }
+        }
+
+        .nav_list_main {
+          display: none;
+        }
+
+        &.hover, &:hover {
+          .nav_title {
+            background: @bgColor;
+            text-align: center;
+            color: #fff;
+            width: 132px;
+            position: relative;
+            height: 37px;
+            line-height: 37px;
+
+            em {
+
+              &.sj {
+                display: block;
+                position: absolute;
+                background: url(../../assets/img/help_sj.png);
+                top: 0px;
+                right: -11px;
+                width: 11px;
+                height: 37px;
+                background-size: 12px 38px;
+                background-repeat: no-repeat;
+
+              }
+
+            }
+
+            i {
+              color: #fff;
+              top: 11px;
+              &.icon-tianjiaguize {
+
+                display: none;
+
+              }
+
+              &.icon-sub {
+
+                display: block;
+
+              }
+            }
+          }
+
+          .nav_list_main {
+            display: block;
+            width: initial;
+            text-align: center;
+            li {
+              width: inherit;
+              line-height: 30px;
+              a {
+                width: inherit;
+                color: #333333;
+                &:hover {
+                  color: red;
+                }
+              }
+
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+    .wanfaguize_right{
+
+      border: 1px solid @bgColor;
+      background: #FFFDFA;
+      width: 853px;
+
+      .wanfa_header{
+        line-height: 10px;
+        padding: 16px 16px 0px 16px;
+        overflow: hidden;
+        height: 60px;
+
+      }
+
+      .wanfa_content{
+
+        font-size: 14px;
+        line-height: 26px;
+        padding: 20px;
+
+        p{
+          line-height: inherit;
+
+        }
+
+        img{
+
+          display: inline-block;
+          border: 0;
+
+        }
+
+      }
+
+    }
+  }
+}
+
+table{ border-collapse:collapse;overflow:hidden;}
+tr{ white-space:0;}
+td{ height:30px; border:#999999 solid 1px;}
+.agreement{line-height:27px;color:#666666;size:14px;padding:10px;}
+.submit {
+    background: #d32036 none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    height: 47px;
+    line-height: 47px;
+    outline: medium none;
+    text-align: center;
+    width: 196px;
+}
+.imgLogo{
+    width: 60px;
+    height: 60px;
+}

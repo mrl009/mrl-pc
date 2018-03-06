@@ -1,0 +1,34 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a href="/member/member_detail_set">详细设定</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="info_select">
+                <select name="lottery_category_id" ng-model="gameType" id="lottery_category_id" ng-change="gameSelect()">
+                    <option ng-repeat="x in data track by $index" ng-if="$index!=0" value="{{x.tmp}}">{{x.name}}</option>
+                </select>
+            </div>
+            <div class="detail_conf_data table">
+                <table class="table show_border">
+                    <thead>
+                        <th width="180">项目</th>
+                        <th>单项（号）限额</th>
+                        <th class="no_border">单笔限额</th>
+                    </thead>
+                    <tbody class="show_border">
+                        <tr ng-repeat="x in settingData.rows">
+                            <td class="first">{{x[0]}}</td>
+                            <td>{{x[1].max_play}}</td>
+                            <td>{{x[1].max_stake}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,490 @@
+@import url(../css/rem.less);
+
+@charset "utf-8";
+.zoushi_header_nav {
+  .lotteryNav {
+    .active {
+      background-color: #ffcd9b;
+
+    }
+  }
+  position: relative;
+  background-color: #fff7f0;
+  .liHead{
+    width: 100px !important;
+    height: 40px;
+
+    .headTitle{
+      width: 60px;
+      height: 20px;
+      text-align: center;
+      margin-top: 12px;
+      margin-left: 20px;
+      border-radius: 10px;
+      background-color: #bd10e0;
+      line-height: 20px;
+      color:#fff;
+      cursor: pointer;
+    }
+  }
+
+  .liDiv{
+    width: 128.5px;
+    float: left;
+    line-height: 40px;
+    color: @gray3;
+    font-size: 14px;
+    font-weight: 400;
+    img{
+      margin-left: 20px;
+      margin-right: 12px;
+      height: 26px;
+      width: 26px;
+      vertical-align: middle;
+      border-radius: 100%;
+    }
+    .navTitle{
+      cursor: pointer;
+
+    }
+    a {
+      color: @gray3;
+      &:hover {
+        color: @bgColor;
+      }
+    }
+  }
+  .blackDiv{
+    height:75px ;
+  }
+  .hideNav{
+    .active{
+        color: @bgColor;
+    }
+    background-color: #fff;
+    top: 40px;
+    left:0;
+    border: 1px solid #ffcd9b;
+    width: 974px;
+    color: @gray6;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    li{
+      float: left;
+      line-height: 27px;
+    }
+    em{
+      margin-left: 11px;
+      margin-right: 11px;
+    }
+    a{
+      color: @gray6;
+      &:hover {
+        color: @bgColor;
+      }
+    }
+  }
+}
+.zoushi_main {
+  overflow: hidden;
+  margin-top: 10px;
+}
+  .zoushi {
+    overflow: hidden;
+    .remencaizhong {
+      h1 {
+        background: url(../../assets/img/remencaizhongtuijian.png) left center;
+        background-size: 134px 24px;
+        background-repeat: no-repeat;
+      }
+    }
+
+      .shishicai {
+        h1 {
+          background: url(../../assets/img/shishicai.png) left center;
+          background-size: 74px 24px;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .shiyixuanwu {
+        h1 {
+          background: url(../../assets/img/shiyixuanwu.png) left center;
+          background-size: 71px 24px;
+          background-repeat: no-repeat;
+        }
+      }
+
+  .item_list, .item_list_row {
+
+    overflow: hidden;
+    margin-top: 10px;
+
+    h1 {
+
+      overflow: hidden;
+      display: block;
+      height: 25px;
+      line-height: 25px;
+      font-size: 16px;
+      color: #666;
+     font-weight: bolder;
+      padding-left: 10px;
+      border-left: 4px solid @bgColor;
+
+    }
+
+    .l {
+
+      overflow: hidden;
+      padding: 0px;
+
+      padding-bottom: 10px;
+
+      a {
+         overflow: hidden;
+        background: #FFFDFC;
+        border: 1px solid #FFF0E1;
+        padding: 10px;
+        display: inline-block;
+        float: left;
+        width: 139px;
+        height: 139px;
+        margin-right: 48px;
+        text-decoration: none;
+        margin-top: 15px;
+
+        &.no {
+
+          margin-right: 0px;
+
+        }
+
+        img {
+
+          overflow: hidden;
+          display: block;
+          width: 50%;
+          margin: 0px auto;
+
+        }
+
+        span {
+
+          overflow: hidden;
+          display: block;
+          clear: both;
+          text-align: center;
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 12px;
+          margin-top: 10px;
+
+        }
+
+        button {
+
+          overflow: hidden;
+
+          &.btn {
+            overflow: hidden;
+            width: 80px;
+            height: 26px;
+            line-height: 26px;
+            padding: 0px;
+            font-size: 12px;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+          }
+
+        }
+
+        &.hover, &:hover {
+
+          background: #fff;
+          border: 1px solid #FFC58B;
+
+          img {
+
+            overflow: hidden;
+
+          }
+
+          span {
+
+            overflow: hidden;
+
+          }
+
+          a {
+
+            text-decoration: none;
+
+          }
+
+        }
+
+        &.focus, &:focus {
+
+          background: #FFF5F0;
+          border: 1px solid #FFF0E1;
+
+          img {
+
+            overflow: hidden;
+
+          }
+
+          span {
+
+            overflow: hidden;
+
+          }
+
+          a {
+
+            overflow: hidden;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .row_title {
+
+      overflow: hidden;
+
+      h1 {
+
+        width: 146px;
+        float: left;
+        margin-right: 48px;
+
+        &.shishile {
+
+          background-size: 74px 24px;
+          background-repeat: no-repeat;
+
+        }
+
+        &.pk10 {
+
+          background-size: 60px 24px;
+          background-repeat: no-repeat;
+
+        }
+
+        &.kuaile8 {
+
+          background-size: 66px 24px;
+          background-repeat: no-repeat;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .item_list_row {
+
+    margin-bottom: 20px;
+
+  }
+
+  .zoushi_data {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    h1 {
+
+      color: #333333;
+      font-size: 16px;
+      font-weight: 200;
+      overflow: hidden;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      i {
+        overflow: hidden;
+        color: @fColor;
+        font-size: 22px;
+        vertical-align: middle;
+      }
+
+    }
+
+    .oi-title {
+      background-color: rgb(234, 234, 234);
+      display: table-row;
+    }
+
+    .data {
+      overflow: hidden;
+
+      table {
+        overflow: hidden;
+        .ballDivLhc{
+          height: 40px !important;
+        }
+        .ballDivMain{
+          display: flex;
+          justify-content: center;
+        }
+        .ballDiv {
+          display: flex;
+          flex-wrap: wrap;
+          max-height: 50px;
+          max-width: 290px;
+
+          .number_add{
+            width: 15px;
+            height: 25px;
+            line-height: 25px;
+            margin-left: 1px;
+            margin-bottom: 2px;
+            color: @gray3;
+            font-weight:400;
+            display: inline-block;
+            i{
+               color: @gray6;
+              vertical-align: middle;
+            }
+          }
+
+
+          .number_ball {
+            border-radius: 50%;
+            background-color: @bgColor;
+            width: 25px;
+            height: 25px;
+            margin-left: 3px;
+            margin-bottom: 2px;
+            display: inline-block;
+            span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 25px;
+              height: 25px;
+              color: #fff;
+              font-weight: 400;
+            }
+            .ball_sub{
+              width: 25px;
+              height: 26px;
+              text-align: center;
+            }
+          }
+
+          .ball-blue {
+            background: #1b88e0;
+          }
+
+          .ball-green {
+            background: #3ebe55;
+          }
+        }
+      &.table {
+          overflow: hidden;
+          thead {
+            overflow: hidden;
+            background: #FFF2C9;
+            tr {
+              overflow: hidden;
+              th {
+                overflow: hidden;
+                color: #673300;
+                font-weight: bold;
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px !important;
+
+              }
+
+            }
+
+          }
+
+          tbody {
+            overflow: hidden;
+            tr {
+
+              background: #fff;
+              color: #333333;
+              overflow: hidden;
+              &.oi-item {
+                background: rgb(234, 234, 234)
+              }
+
+              &.neq {
+                background: #F8F8F8;
+                color: #333333;
+              }
+
+              td {
+                overflow: hidden;
+                font-size: 14px;
+                text-align: center;
+                border: 0;
+                a {
+                  text-decoration: none;
+                  overflow: hidden;
+                  height: 25px;
+                  line-height: 20px;
+                  i {
+                    overflow: hidden;
+                    height: 20px;
+                  }
+                  &.xq {
+                    overflow: hidden;
+
+                    i {
+                      overflow: hidden;
+                      text-align: center;
+                      color: #78B931;
+                      text-decoration: none;
+                      font-size: 28px;
+                    }
+
+                  }
+
+                  &.zs {
+                    overflow: hidden;
+                    i {
+                      overflow: hidden;
+                      text-align: center;
+                      color: #4990E2;
+                      text-decoration: none;
+                      font-size: 26px;
+                    }
+
+                  }
+
+                  &.btn {
+                    display: inline-block;
+                    overflow: hidden;
+                    width: 50px;
+                    height: 24px;
+                    padding: 0px;
+                    font-size: 13px;
+                    line-height: 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,38 @@
+<!-- 两面模板 -->
+<div class="bet-grid">
+    <div ng-repeat="x in p4">
+        <div class="row title title-bg-shen">
+            <div class="cell col100">
+                <div class="cell-title col100">{{x.name}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell col25"
+                 ng-repeat="i in balls[x.id]['balls'] track by $index"
+            >
+                <div class="number col20">
+                    <span>{{i.name}}</span>
+                </div>
+                <div class="odds col20">
+                    <span class="red">{{i.rate}}</span>
+                </div>
+                <div class="money col60">
+                    <input
+                            type="text"
+                            class="cell-input"
+                            name="{{i.name}}"
+                            rate="{{i.rate}}"
+                            code="{{i.code}}"
+                            keyCode="{{x.id}}-{{$index}}"
+                            rebate="{{i.rebate}}"
+                            pid="{{i.id}}"
+                            tid="{{x.id}}"
+                            maxlength="9"
+                            ng-init="initChange()"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result1.tpl.html'"></div>

@@ -1,0 +1,389 @@
+.lucky-28 {
+  flex: 1;
+  flex-direction: column;
+  padding-bottom: 40px;
+  margin-top: 15px;
+}
+.lucky-28,
+.lucky-28 .lucky-grid {
+  display: flex;
+  align-items: stretch;
+}
+.lucky-28 .lucky-grid {
+  width: 1000px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.lucky-28 .lucky-grid .grid-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 35px;
+  background: linear-gradient(#eceaea, #fff, #e7e7e7);
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 2px 0 #e6e6e6;
+}
+.lucky-28 .lucky-grid .grid-header .label {
+  background-color: #f70;
+  width: 96px;
+  height: 32px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.lucky-28 .lucky-grid .grid-title {
+  display: flex;
+  flex-direction: row;
+  height: 42px;
+  background-color: #fffcfa;
+  margin-top: 2px;
+  border-bottom: 1px solid #ffdab5;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+.lucky-28 .lucky-grid .grid-title .title-col {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.lucky-28 .lucky-grid .grid-title .title-col + .title-col {
+  border-left: 1px solid #ffdab5;
+}
+.lucky-28 .lucky-grid .grid-title .title-col > div {
+  font-size: .875rem;
+  color: #333;
+}
+.lucky-28 .lucky-grid .grid-body {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+.lucky-28 .lucky-grid .grid-body .body-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.lucky-28 .lucky-grid .grid-body .body-col + .body-col {
+  border-left: 1px solid #ffdab5;
+}
+.lucky-28 .lucky-grid .grid-body .body-col .active {
+  background-color: #ffcfcd;
+}
+.lucky-28 .lucky-grid .grid-body .body-col .body-row {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.lucky-28 .lucky-grid .grid-body .body-col .body-row + .body-row {
+  border-top: 1px solid #ffdab5;
+}
+.lucky-28 .lucky-grid .option {
+  width: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ffdab5;
+}
+.lucky-28 .lucky-grid .option div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #38be4f;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.25rem;
+}
+.lucky-28 .lucky-grid .lucky-odds {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ffdab5;
+}
+.lucky-28 .lucky-grid .lucky-odds span {
+  color: red;
+  font-size: 0.875rem;
+}
+.lucky-28 .lucky-grid .money {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lucky-28 .lucky-grid .money input {
+  width: 78px;
+  height: 26px;
+  border: 1px solid #dfe9ef;
+  background-color: #f0f6fa;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.lucky-28 .bao-san {
+  height: 52px;
+  background-color: #fafafa;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.lucky-28 .bao-san .label {
+  margin: 0 3px;
+  width: 90px;
+  height: 32px;
+  border: none;
+  border-radius: 33px;
+  background-color: #27bbd3;
+  box-shadow: 0 1px 2px #999;
+  color: #fff;
+  font-size: 1rem;
+}
+.lucky-28 .bao-san .bs-odds,
+.lucky-28 .bao-san .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lucky-28 .bao-san .bs-odds {
+  color: red;
+  font-size: .875rem;
+  width: 51.58px;
+}
+.lucky-28 .bao-san .bs-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.lucky-28 .bao-san .bs-content .item {
+  width: 78px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #27bbd2;
+  box-shadow: 0 1px 2px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+.lucky-28 .bao-san .bs-content .item .num {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.lucky-28 .bao-san .bs-content .item i {
+  padding-top: 3px;
+  padding-left: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.lucky-28 .bao-san .bs-content .item + .item {
+  margin-left: 20px;
+}
+.lucky-28 .bao-san .bs-content .select-list {
+  width: 78px;
+  height: 131px;
+  border: 1px solid #27bbd2;
+  position: absolute;
+  background-color: #fff;
+  top: 31px;
+  box-shadow: 0 2px 5px #999;
+  cursor: pointer;
+  overflow: scroll;
+}
+.lucky-28 .bao-san .bs-content .select-list .select-list-item {
+  height: 24px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lucky-28 .bao-san .bs-content .select-list .select-list-item > div {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: .75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lucky-28 .bao-san .bs-money {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+}
+.lucky-28 .bao-san .bs-money span {
+  font-size: .875rem;
+  color: #333;
+}
+.lucky-28 .bao-san .bs-money input {
+  width: 78px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #27bbd2;
+  box-shadow: 0 1px 2px #999;
+  margin-right: 10px;
+  padding: 0 10px;
+}
+.lucky-28 .lucky-result {
+  margin-top: 6px;
+  padding-bottom: 40px;
+  border-top: 1px dashed #979797;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.lucky-28 .lucky-result .bet-table {
+  width: 790px;
+  display: flex;
+  flex-direction: column;
+}
+.lucky-28 .lucky-result .bet-table .table-cap {
+  height: 18px;
+  background-color: #fff0e1;
+  border-radius: 100px;
+  border: 1px solid #f3e0cc;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.lucky-28 .lucky-result .bet-table .table-cap .cap-ct {
+  width: 770px;
+  height: 10px;
+  background-color: #e5ccb3;
+  border-radius: 100px;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct {
+  margin-top: -6px;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-header {
+  height: 34px;
+  background-color: #fffdfa;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-header > div {
+  flex: 1;
+  font-size: .75rem;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-header .lk-del {
+  flex: 0.1;
+  width: 32px;
+  margin-right: 10px;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-body {
+  height: 165px;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  overflow: auto;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-body .bd-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px dashed #ddd;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-body .bd-row > div {
+  flex: 1;
+  font-size: .875rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-body .bd-row .lk-del {
+  flex: 0.1;
+  width: 32px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-footer {
+  height: 40px;
+  background-color: #f1f1f1;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-footer .bet-total {
+  padding-right: 10px;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-footer .bet-total span {
+  font-size: .875rem;
+  color: #333;
+}
+.lucky-28 .lucky-result .bet-table .tb-ct .tb-footer .bet-total span span {
+  color: red;
+  padding: 0 2px;
+}
+.lucky-28 .lucky-result .bet-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lucky-28 .lucky-result .bet-actions button {
+  width: 180px;
+  height: 54px;
+  border: none;
+  border-radius: 4px;
+}
+.lucky-28 .lucky-result .bet-actions button + button {
+  margin-top: 20px;
+}
+.lucky-28 .lucky-result .bet-actions .add {
+  background: linear-gradient(#ffb000, #fd7700);
+  box-shadow: inset -2px -4px 1px #e96e11, inset 3px 4px 3px #ffc121;
+  color: #fff;
+  font-size: 1.375rem;
+}
+.lucky-28 .lucky-result .bet-actions .del {
+  background-color: #ddd;
+  box-shadow: inset -2px -4px 1px #d2d2d2, inset 3px 4px 3px #eaeaea;
+  color: #999;
+  font-size: 1.375rem;
+}
+.lucky-28 .lucky-result .bet-actions .confirm {
+  background: linear-gradient(#ff531e, #d82222);
+  box-shadow: inset -2px -4px 1px #be3636, inset 3px 4px 3px #ff7a65;
+  color: #fff;
+  font-size: 1.375rem;
+}

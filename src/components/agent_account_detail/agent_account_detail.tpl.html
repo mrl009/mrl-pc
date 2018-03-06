@@ -1,0 +1,49 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_account_detail">账户明细</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="item item-input item-input-reset">
+                <input class="input-css username" type="text" placeholder="请输入用户名" ng-model="data.username"/>
+                <button class="button button-background button-search" ng-click="getAgentList()">搜索</button>
+            </div>
+            <div class="buyrecord_data table">
+                <table class="table">
+                    <thead>
+                    <th>ID</th>
+                    <th>代理用户名</th>
+                    <th>金额</th>
+                    <th>类型</th>
+                    <th>时间日期</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-if="data==null">
+                        <td colspan="7" class="no_border">
+                            <div class="empty_data">暂无记录</div>
+                        </td>
+                    </tr>
+                    　
+                    <tr ng-repeat="x in items" class="cell">
+                        <td>{{x.uid}}</td>
+                        <td>{{x.username}}</td>
+                        <td>{{x.amount}}</td>
+                        <td>{{x.name}}</td>
+                        <td>{{x.addtime}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-div">
+                <button class='nextPage' id="agent_account_pre" ng-click="nextAgentPage(0)" disabled>上一页
+                </button>
+                <button class='nextPage' id="agent_account_next" ng-click="nextAgentPage(1)" disabled>下一页
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

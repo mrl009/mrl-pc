@@ -1,0 +1,335 @@
+@charset "utf-8";
+.kaijianggonggao {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main {
+  margin-top: 10px;
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header {
+  overflow: hidden;
+  border: 1px solid #FFE3C7;
+  background: #FEF7F4;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top {
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top h1 {
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 100;
+  float: left;
+  display: block;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top span {
+  overflow: hidden;
+  display: block;
+  color: #666;
+  font-size: 14px;
+  line-height: 26px;
+  margin-left: 40px;
+  float: left;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top span.open {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top span.open em {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li {
+  overflow: hidden;
+  float: left;
+  display: inline-block;
+  line-height: 27px;
+  font-size: 12px;
+  margin-left: 40px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li.zs {
+  overflow: hidden;
+  color: #F84D4D;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li.zs a {
+  overflow: hidden;
+  color: #F84D4D;
+  vertical-align: sub;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li.gz {
+  overflow: hidden;
+  color: #60C78C;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li.gz i {
+  font-size: 21px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li.gz a {
+  overflow: hidden;
+  color: #60C78C;
+  vertical-align: sub;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li i {
+  font-size: 20px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top li a {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top .kjq {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .top .kjq i {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom {
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom em {
+  vertical-align: bottom;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv {
+  display: inline-block;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv .number_ball {
+  float: left;
+  border-radius: 50%;
+  background-color: #d91d36;
+  width: 25px;
+  height: 25px;
+  margin-left: 1px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv .number_ball span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  font-weight: 400;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv .number_ball .ball_sub {
+  width: 25px;
+  height: 26px;
+  text-align: center;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .divLiuBall {
+  height: 43px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom span {
+  overflow: hidden;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom span.open {
+  overflow: hidden;
+  margin-left: 20px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom span.open em {
+  overflow: hidden;
+  color: #666;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom select {
+  vertical-align: middle;
+  border: 1px solid #d91d36;
+  border-radius: 4px;
+  padding: 0 3px;
+  height: 26px;
+  line-height: 26px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .kjq {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .kjq i {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .kjq i.qiu {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title {
+  padding: 2px 20px 0px 20px ;
+  height: 31px;
+  border-bottom: 2px solid #ff9d00;
+  line-height: 30px;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title .title1 {
+  float: left;
+  width: 172px;
+  font-size: 14px;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title .title2 {
+  width: 600px;
+  float: left;
+  font-size: 14px;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title .title2 a {
+  display: inline-block;
+  border: 1px solid #dedede;
+  margin-left: -1px;
+  text-align: center;
+  padding: 0px 20px;
+  color: #333;
+  border-bottom: none;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title .title2 .active {
+  background-color: #ea721a;
+  color: #fff;
+  z-index: 100;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title .title3 {
+  width: 180px ;
+  float: left;
+  font-size: 12px;
+  color: #333;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_title .title3 input {
+  width: 100px;
+  height: 20px;
+  border: 1px solid #ccc;
+  padding-left: 2px;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con {
+  line-height: 36px;
+  font-size: 12px;
+  color: #666;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con th {
+  text-align: left;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con span {
+  display: inline-block;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con .red {
+  color: #e10e00;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con .td_span1 {
+  width: 30%;
+  text-align: center;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con .td_span2 {
+  width: 60%;
+  text-align: center;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con .td_span3 {
+  width: 40px;
+  text-align: center;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con .td_span4 {
+  width: 60px;
+  text-align: center;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con .bet_btn {
+  padding: 3px 5px;
+  background-color: #f90;
+  color: #fff;
+  line-height: 14px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con td {
+  border: 1px solid #d2d2d2;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con tr {
+  border: 1px solid #d2d2d2;
+}
+.kaijianggonggao .kaijiang_main .day_list .day_con th {
+  border: 1px solid #d2d2d2;
+  border-top: none;
+}
+.kaijianggonggao .kaijiang_main .data_main {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.kaijianggonggao .kaijiang_main .data_main table {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table thead {
+  background: #f4f4f4;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table thead tr {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table thead tr th {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  font-weight: 100;
+  color: #666666;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table tbody {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table tbody tr {
+  overflow: hidden;
+}
+.kaijianggonggao .kaijiang_main .data_main table.table tbody tr td {
+  border: 1px solid #ddd;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain {
+  padding: 20px 0px;
+  background: #F8F8F8;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  line-height: 40px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain a {
+  color: #333;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain a:hover {
+  color: #E94335;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .in {
+  float: left;
+  width: 290px;
+  margin-left: 70px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .in i {
+  font-size: 40px !important;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .in a {
+  padding-left: 15px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .tz {
+  float: left;
+  width: 280px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .tz img {
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .tz a {
+  padding-left: 15px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .sc {
+  float: left;
+  width: 270px;
+  padding-left: 50px;
+  background: url(../../assets/img/shoucang.png) no-repeat left center;
+  background-size: 40px 40px;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain .indexIcon {
+  font-size: 26px !important;
+  color: #ff8a00;
+  vertical-align: top;
+}
+.kaijianggonggao .kaijiang_main .main_foot .footMain img {
+  height: 40px;
+  line-height: 40px;
+}

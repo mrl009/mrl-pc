@@ -1,0 +1,98 @@
+<!-- 正码过关 -->
+<div class="bet-grid">
+	<div class="row title totle-title title-bg-shen">
+		<div class="col10 cell-div"></div>
+		<div
+			class="col15 cell-div"
+			ng-repeat="ball in balls[0]"
+		>{{ball.name}}</div>
+	</div>
+	<div class="row title title-bg-qian">
+		<div class="cell col10">
+			<div class="td-title cell-div title-bg-shen border-right">号码</div>
+		</div>
+		<div class="cell col15" ng-repeat="ball in balls[0]">
+			<div class="col50 cell-title">赔率</div>
+			<div class="col50 cell-title">选择</div>
+		</div>
+	</div>
+	<div class="row" ng-repeat="(i, item) in balls[0][0].child">
+		<div class="cell col10" ii="{{i}}">
+			<div class="td-title cell-div title-bg-shen border-right">{{item.name}}</div>
+		</div>
+		<div class="cell col15" ng-repeat="ball in balls[0]">
+			<div class="odds col50">
+				<span class="warn-color">{{ball.child[i].rate}}</span>
+			</div>
+			<div
+				class="radio col50"
+				ng-click="handleRadio($event)"
+				rate="{{ball.child[i].rate}}"
+				code="{{ball.child[i].code}}"
+				pid="{{ball.child[i].id}}"
+				keyCode="{{ball.id}}"
+				rebate="{{ball.child[i].rebate}}"
+				colName="{{ball.name}}"
+				rowName="{{item.name}}"
+			>
+				<i class="cell-icon icon-selectors icon-radio-uncheck"></i>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="lhc-bet-result">
+	<div class="desc">
+		<div class="dotted"></div>
+		<div class="info-check">
+			号码组合共
+			<span>{{betNum}}</span>
+			组
+		</div>
+		<div class="dotted"></div>
+	</div>
+	<div class="table">
+	    <div class="theader">
+	        <div class="model">模式</div>
+	        <div class="odds">赔率</div>
+	        <div class="combination">号码组合</div>
+	        <div class="operation">操作</div>
+	    </div>
+	    <div class="tbody">
+	        <div style="position: relative; overflow: hidden; width: 100%; height: 100%; flex: 1 1 0%;">
+	            <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: 0px; margin-bottom: 0px;">
+	                <div class="row" ng-if="betNum" ng-repeat="(i, item) in showRet">
+	                    <div class="model" ng-if="i == 0 ">{{showRet.length}} 串 {{betNum}}</div>
+	                    <div class="model" ng-if="i > 0 "></div>
+	                    <div class="odds" ng-if="i == 0">{{showRate}}</div>
+	                    <div class="odds" ng-if="i > 0"></div>
+	                    <div class="combination">{{item.colName}} {{item.rowName}} @{{item.rate}}</div>
+	                    <div class="operation" ng-click="deleteBall(item.keyCode)">删除</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="info">
+	    <div class="money">
+	        <span>下注金额：</span>
+	        <div>
+	            <input-number
+	            	init-value=""
+	            	name="betMoney"
+	            	placeholder="最低限额1"
+	            	ng-click="showQuickMoney($event, false)"
+	            >
+	        </div>
+	    </div>
+	    <div class="tips">
+	        <span>单注限额：{{max_money_play}}</span><br>
+	        <span>单项（号）限额：{{max_money_stake}}</span>
+	    </div>
+	    <div class="btn-group">
+	        <button class="btn confirm-btn" ng-click="ggSubmit()">确认下注</button>
+	        <button class="btn cancel-btn" ng-click="reset()">取消</button>
+	    </div>
+	</div>
+</div>
+

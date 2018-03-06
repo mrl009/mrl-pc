@@ -1,0 +1,176 @@
+/*变量 购彩部分*/
+/*购彩部分*/
+.icon-android {
+  background: url("../../assets/img/icon-android.png") no-repeat center;
+  background-size: 30px 29px;
+}
+.icon-refresh {
+  background: url("../../assets/img/icon-refresh.png") no-repeat center;
+  background-size: 20px 20px;
+}
+.icon-notice {
+  background: url("../../assets/img/icon-notice.png") no-repeat center;
+  background-size: 20px 20px;
+}
+.icon-home {
+  background: url("../../assets/img/icon-home.png") no-repeat center;
+  background-size: 24px 24px;
+}
+.icon-zs-out {
+  background: url("../../assets/img/icon-zs-out.png") no-repeat center;
+  background-size: 25px 25px;
+}
+.icon-zs-in {
+  background: url("../../assets/img/icon-zs-in.png") no-repeat center;
+  background-size: 20px 20px;
+}
+.icon-rule {
+  background: url("../../assets/img/icon-rule.png") no-repeat center;
+  background-size: 25px 25px;
+}
+.icon-right-cross {
+  background: url("../../assets/img/icon-cross-right.png") no-repeat center;
+  background-size: 16px 16px;
+}
+.icon-dollar {
+  background: url("../../assets/img/icon-dollar.png") no-repeat center;
+  background-size: 25px 25px;
+}
+.icon-selectors {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../../assets/img/select@2x.png") no-repeat center;
+  background-size: 287px;
+}
+.icon-colon {
+  background: url("../../assets/img/icon-colon.png") no-repeat center;
+  background-size: 8px 30px;
+}
+.icon-radio-uncheck {
+  width: 20px;
+  height: 20px;
+  background-position: -1px -63px;
+}
+.icon-radio-uncheck:hover {
+  background-position: -22px -63px;
+}
+.icon-radio-check {
+  width: 20px;
+  height: 20px;
+  background-position: -43px -63px;
+}
+.icon-checkbox-checked {
+  background-position: -56px -33px;
+}
+.icon-checkbox-uncheck {
+  background-position: -2px -33px;
+}
+.icon-checkbox-uncheck:hover {
+  background-position: -28px -33px;
+}
+.col10 {
+  width: 10%;
+}
+.col12d5 {
+  width: 12.5%;
+}
+.col15 {
+  width: 15%;
+}
+.col20 {
+  width: 20%;
+}
+.col25 {
+  width: 25%;
+}
+.col30 {
+  width: 30%;
+}
+.col33 {
+  width: 33.33%;
+}
+.col35 {
+  width: 35%;
+}
+.col40 {
+  width: 40%;
+}
+.col48 {
+  width: 48%;
+}
+.col50 {
+  width: 50%;
+}
+.col60 {
+  width: 60%;
+}
+.col62d5 {
+  width: 62.5%;
+}
+.col70 {
+  width: 70%;
+}
+.col75 {
+  width: 75%;
+}
+.col100 {
+  width: 100%;
+}
+.ball-red {
+  background: #f45959 !important;
+}
+.ball-blue {
+  background: #51abf0 !important;
+}
+.ball-green {
+  background: #6acc7b !important;
+}
+.warn-color {
+  color: #f73131;
+}
+.cancel-btn {
+  background: #ccc;
+}
+.confirm-btn {
+  background: #e94335;
+}
+/*lhc 两面位置 label背景色*/
+.label-bg {
+  background-color: #fff3ee;
+}
+.title-bg-shen {
+  background-color: #fff3ee;
+}
+.title-bg-qian {
+  background: #fffcfa;
+}
+.item-selected {
+  background: #ffd5d5;
+}
+.rate-text-color {
+  color: #f73131;
+}
+.clear-border-right {
+  border-right: 0 !important;
+}
+.border-right {
+  border-right: 1px solid #ffd5d5!important;
+}
+/*tab 选中字体颜色*/
+.tab-selected {
+  background: #e94335;
+}
+.tab-color,
+.active {
+  color: #e94335;
+}
+.green {
+  color: #6acc7b !important;
+}
+.red {
+  color: #f45959 !important;
+}
+.blue {
+  color: #51abf0 !important;
+}

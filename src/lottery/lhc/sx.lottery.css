@@ -1,0 +1,12 @@
+/*生肖*/
+.sx-grid .cell:last-child .money {
+  border-right: 0;
+}
+.sx-grid .cell:last-child .cell-title:last-child {
+  border-right: 0;
+}
+.sx-grid .sx-num {
+  font-size: 14px;
+  color: #333;
+}
+/*生肖*/

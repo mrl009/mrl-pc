@@ -1,0 +1,170 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+<div class="main kaijianggonggao" ng-controller="OpenDetailCtrl">
+	<div class="kaijiang_main">
+		<div ng-include="TPL_ROOT + 'open-nav/zsnav.tpl.html'"></div>
+		<div class="kaijiang_header">
+			<div class="top">
+				<h1>{{currLottery.name}}开奖公告</h1>
+				<span>[{{currLottery.every_time}}]</span>
+				<li class="zs">
+					<i class="iconfont"></i>
+					<a href="/trend_detail/{{currLottery.tmp}}/{{currLottery.gid}}">号码走势</a>
+				</li>
+				<li class="gz">
+					<i class="iconfont"></i>
+					<a href="/rule_detail/{{currLottery.tmp}}/{{currLottery.gid}}">玩法规则</a>
+				</li>
+			</div>
+
+			<div class="bottom">
+				<span>第</span>&nbsp;&nbsp;
+				<select
+					name="name"
+					id="checkNumber"
+					ng-model="selectIssue"
+					ng-change="changeIssue(selectIssue)"
+				>
+  				<option
+  					ng-repeat="issue in issues track by $index"
+  					ng-value="{{issue}}"
+  				>{{issue}}</option>
+				</select>&nbsp;&nbsp;<span>期</span>
+				<span class="open">
+				   <em>开奖日期：</em> <span class="red">{{currLottery.kj_time}}</span>
+				</span>
+				<div class="kjq">
+			  	<div class="ballDiv" ng-if="type!='lhc' ">
+						<div class="number_ball " ng-repeat="ball in currLottery.number track by $index"><span>{{ball}}</span></div>
+					</div>
+					<div class="ballDiv divLiuBall" ng-if="type == 'lhc'">
+			        	<div
+			        		class="number_ball lhc_ball_{{currLottery.color[$index]}}"
+			        		ng-repeat="ball in currLottery.number track by $index">
+			            	<span>{{ball}}</span>
+			            	<div class="ball_sub">{{currLottery.shengxiao[$index]}}
+			            	</div>
+			      		</div>
+        			</div>
+				</div>
+			</div>
+		</div>
+	  	<div class="day_list" ng-if="type!='lhc'">
+			<div class="day_title">
+				<div class="title1"><span>{{currDay}}</span>开奖号码</div>
+				<div class="title2">
+					<a class="dateGet" date="{{_date.date}}" ng-class="{active: _date.date == currDay}" currDay="{{currDay}}" flag="{{_date.date == currDay}}" ng-repeat="_date in dateArr" ng-click="searchByDate(_date.date)">{{_date.name}}</a>
+				</div>
+				<div class="title3">按日期查询
+					<input
+						readonly="readonly"
+						id="date-input"
+						ng-click="showPicker($event)"
+						value="{{currDay}}"
+					>
+				</div>
+			</div>
+			<div class="day_con">
+				<table width="100%" class="htmlDiv">
+					<thead>
+						<tr>
+							<th>
+								<span class="td_span1">期号</span>
+								<span class="td_span2">开奖号</span>
+							<th>
+								<span class="td_span1">期号</span>
+								<span class="td_span2">开奖号</span>
+							</th>
+							<th>
+								<span class="td_span1">期号</span>
+								<span class="td_span2">开奖号</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="r1 in rows1">
+							<td>
+								<span class="td_span1">{{r1.kj_issue}}</span>
+								<span class="td_span2 red">{{r1.number}}</span>
+							</td>
+							<td>
+								<span class="td_span1">{{rows2[$index].kj_issue}}</span>
+								<span class="td_span2 red">{{rows2[$index].number}}</span>
+							</td>
+							<td>
+								<span class="td_span1">{{rows3[$index].kj_issue}}</span>
+								<span class="td_span2 red">{{rows3[$index].number}}</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!--<div class="data_main">
+		   	<table class="table" ng-if="type == 'ssc'">
+			   	<thead>
+						<tr>
+							<th colspan="2">玩法类别</th>
+							<th>中奖规则</th>
+						</tr>
+					</thead>
+				 	<tbody>
+				 		<tr ng-repeat="sscR in sscRules">
+							<td
+								style="width: 100px;"
+								align="center"
+								rowspan="{{sscR.rows}}"
+								ng-if="sscR.name"
+							>
+								{{sscR.name}}
+							</td>
+							<td style="width: 90px; padding-left: 40px" >{{sscR.rules[0]}}</td>
+							<td>{{sscR.rules[1]}}
+							</td>
+				  	</tr>
+				  </tbody>
+				</table>
+				<table class="table" ng-if="type != 'ssc'">
+			   	<thead>
+						<tr>
+							<th >玩法类别</th>
+							<th>中奖规则</th>
+						</tr>
+					</thead>
+				 	<tbody>
+				 		<tr ng-repeat="lhcR in lhcRules">
+							<td
+								style="width: 100px;"
+								align="center"
+								rowspan="{{lhcR.rows}}"
+								ng-if="lhcR.name"
+							>
+								{{lhcR.name}}
+							</td>
+							<td style="width: 90px; padding-left: 40px" >{{lhcR.rules}}</td>
+				  	</tr>
+				  </tbody>
+				</table>
+			</div>-->
+
+		<div class="main_foot">
+
+		  <div class="footMain clearfix">
+				<div class="in">
+					<i class="iconfont indexIcon"></i>
+					<a ng-href="/lottery/buy" target="_blank">购彩大厅</a>
+				</div>
+				<div class="tz">
+					<img ng-src="{{currLottery.img}}" width="32px" height="32px">
+					<a href="/lottery/{{currLottery.tmp}}/{{currLottery.tmp}}/{{currLottery.gid}}" target="_blank">投注{{currLottery.name}}</a>
+				</div>
+				<div class="sc">
+					<a href="" ng-click="save_favorite()">收藏此页面，开奖即时查看</a>
+				</div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

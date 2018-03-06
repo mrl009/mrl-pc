@@ -1,0 +1,31 @@
+<!-- 任选模板 -->
+<div class="bet-grid">
+    <div class="row">
+        <div class="cell col20" ng-repeat="x in p1 track by $index">
+            <div class="cell-title col100">{{x.name}}{{balls[x.id].rate}}</div>
+        </div>
+    </div>
+    <div class="row title title-bg-shen">
+        <div class="cell col20" ng-repeat="x in p1 track by $index">
+            <div class="cell-title col100">号</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="i in r11 track by $index">
+        <div class="cell col20"
+             ng-repeat="idd in p1 track by $index"
+             ng-click="setBalls($event)"
+             sname="{{idd.sname}}"
+             code="{{balls[idd.id]['balls'][i].code}}"
+             name="{{balls[idd.id]['balls'][i].name}}"
+             pid="{{balls[idd.id]['balls'][i].id}}"
+             rate="{{balls[idd.id].rate}}"
+             rebate="{{balls[idd.id].rebate}}"
+             tid="{{idd.id}}"
+        >
+            <div class="number col100">
+                <span class="s-ball">{{balls[idd.id]['balls'][i].name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result2.tpl.html'"></div>

@@ -1,0 +1,94 @@
+<div class="user_header">
+    <div class="user_header_nav">
+        <ul>
+            <li><a ng-click="betRecord(0)">投注记录</a></li>
+            <!--<li class='hover'><a ng-click="getBackNumRecord(1)">追号记录</a></li>-->
+            <li><a ng-click="changeRecord(2)">帐变记录</a></li>
+        </ul>
+    </div>
+</div>
+<div class="user_body">
+    <div class="info_select">
+        <form class="" action="/Log/bettingRecord.html" method="get">
+            <select name="lotteryId">
+                <option value="0" selected="selected">全部游戏</option>
+                <option value="2">新疆时时彩</option>
+                <option value="3">北京时时彩</option>
+                <option value="4">天津时时彩</option>
+                <option value="6">安徽快3</option>
+                <option value="7">吉林快3</option>
+                <option value="8">广西快3</option>
+                <option value="10">湖北快3</option>
+                <option value="11">山东11选5</option>
+                <option value="12">上海11选5</option>
+                <option value="13">江西11选5</option>
+                <option value="14">广东11选5</option>
+                <option value="15">安徽11选5</option>
+                <option value="16">排列三</option>
+                <option value="17">福彩3D</option>
+                <option value="1">重庆时时彩</option>
+                <option value="20">香港⑥合彩</option>
+                <option value="19">北京PK拾</option>
+                <option value="21">北京28</option>
+                <option value="22">幸运28</option>
+                <option value="23">三分时时彩</option>
+                <option value="24">分分时时彩</option>
+                <option value="25">极速PK拾</option>
+            </select>
+
+            <select name="orderState">
+                <option selected="selected" value="0">全部状态</option>
+                <option value="1"><span>未结算</span></option>
+                <option value="2"><span>已中奖</span></option>
+                <option value="3"><span>未中奖</span></option>
+                <option value="4"><span>已取消</span></option>
+            </select>
+
+            <span class="b_search_name"> 时间：</span>
+            <input type="text" class="input_text" id="beginTime" name="beginTime"
+                   value=""><span> 至</span>
+            <input type="text" class="input_text" id="endTime" name="endTime" value="">
+
+            <div class="right select_box_btn">
+                <input
+                        class="btn btn-default"
+                        value="查 询"
+                        ng-click="searchGetBack()"
+                        type="button"
+                />
+            </div>
+        </form>
+    </div>
+    <div class="buyrecord_data table">
+        <table class="table">
+            <thead>
+            <th>彩种</th>
+            <th>玩法</th>
+            <th>期号</th>
+            <th>投注金额</th>
+            <th>状态</th>
+            <th>下注时间</th>
+            <th>详情</th>
+            </thead>
+
+            <tbody>
+            <tr ng-if="data==null">
+                <td colspan="7" class="no_border">
+                    <div class="empty_data">暂无记录</div>
+                </td>
+            </tr>
+            　
+            <tr ng-repeat="x in data">
+                <td>{{x.game}}</td>
+                <td>{{x.tname}}</td>
+                <td>{{x.issue}}</td>
+                <td>{{x.price_sum}}</td>
+                <td ng-if="x.status=='已中奖'" class="red">{{x.status}}</td>
+                <td ng-if="x.status!='已中奖'">{{x.status}}</td>
+                <td>{{x.bet_time}}</td>
+                <td>{{x.names}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

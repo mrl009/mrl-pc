@@ -1,0 +1,541 @@
+@charset "utf-8";
+/* 全站彩球控制处 */
+.number {
+  display: inline-block;
+  width: 18px !important;
+  border: 1px solid #FFAC5A;
+  color: #E94335;
+  background-color: #FFEEDC;
+  line-height: 18px;
+  text-align: center !important;
+  padding: 0px !important;
+}
+.ab {
+  /*background-image: url(#{$skin}all_ball.png);*/
+  background-size: 1814px 231px;
+  display: inline-block;
+}
+.ab.q1 {
+  overflow: hidden;
+  width: 41px;
+  height: 41px;
+}
+.ab.q1.num_1 {
+  background-position: 0px 0px;
+}
+.ab.q1.num_2 {
+  background-position: -41px 0px;
+}
+.ab.q1.num_3 {
+  background-position: -82px 0px;
+}
+.ab.q1.num_4 {
+  background-position: -123px 0px;
+}
+.ab.q1.num_5 {
+  background-position: -164px 0px;
+}
+.ab.q1.num_6 {
+  background-position: -205px 0px;
+}
+.ab.q1.num_7 {
+  background-position: -246px 0px;
+}
+.ab.q1.num_8 {
+  background-position: -287px 0px;
+}
+.ab.q1.num_9 {
+  background-position: -328px 0px;
+}
+.ab.q1.num_10 {
+  background-position: -369px 0px;
+}
+.ab.q1.num_0 {
+  background-position: -410px 0px;
+}
+.ab.q1.num_11 {
+  background-position: -451px 0px;
+}
+.ab.q2 {
+  overflow: hidden;
+  width: 26px;
+  height: 26px;
+}
+.ab.q2.num_1 {
+  background-position: 0px -41px;
+}
+.ab.q2.num_2 {
+  background-position: -27px -41px;
+}
+.ab.q2.num_3 {
+  background-position: -54px -41px;
+}
+.ab.q2.num_4 {
+  background-position: -81px -41px;
+}
+.ab.q2.num_5 {
+  background-position: -108px -41px;
+}
+.ab.q2.num_6 {
+  background-position: -135px -41px;
+}
+.ab.q2.num_7 {
+  background-position: -162px -41px;
+}
+.ab.q2.num_8 {
+  background-position: -189px -41px;
+}
+.ab.q2.num_9 {
+  background-position: -216px -41px;
+}
+.ab.q2.num_10 {
+  background-position: -243px -41px;
+}
+.ab.q2.num_0 {
+  background-position: -270px -41px;
+}
+.ab.q2.num_11 {
+  background-position: -297px -41px;
+}
+.ab.q3 {
+  overflow: hidden;
+  width: 33px;
+  height: 33px;
+}
+.ab.q3.num_1 {
+  background-position: 0px -67px;
+}
+.ab.q3.num_2 {
+  background-position: -33px -67px;
+}
+.ab.q3.num_3 {
+  background-position: -66px -67px;
+}
+.ab.q3.num_4 {
+  background-position: -99px -67px;
+}
+.ab.q3.num_5 {
+  background-position: -132px -67px;
+}
+.ab.q3.num_6 {
+  background-position: -165px -67px;
+}
+.ab.q3.num_7 {
+  background-position: -198px -67px;
+}
+.ab.q3.num_8 {
+  background-position: -231px -67px;
+}
+.ab.q3.num_9 {
+  background-position: -264px -67px;
+}
+.ab.q3.num_10 {
+  background-position: -297px -67px;
+}
+.ab.q3.num_0 {
+  background-position: -330px -67px;
+}
+.ab.q3.num_11 {
+  background-position: -363px -67px;
+}
+.ab.q4 {
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+}
+.ab.q4.num_1 {
+  background-position: 0px -102px;
+}
+.ab.q4.num_2 {
+  background-position: -38px -102px;
+}
+.ab.q4.num_3 {
+  background-position: -75px -102px;
+}
+.ab.q4.num_4 {
+  background-position: -112px -102px;
+}
+.ab.q4.num_5 {
+  background-position: -149px -102px;
+}
+.ab.q4.num_6 {
+  background-position: -186px -102px;
+}
+.ab.q4.num_7 {
+  background-position: -223px -102px;
+}
+.ab.q4.num_8 {
+  background-position: -260px -102px;
+}
+.ab.q4.num_9 {
+  background-position: -297px -102px;
+}
+.ab.q4.num_10 {
+  background-position: -334px -102px;
+}
+.ab.q4.num_11 {
+  background-position: -371px -102px;
+}
+.ab.q4.num_12 {
+  background-position: -408px -102px;
+}
+.ab.q4.num_13 {
+  background-position: -445px -102px;
+}
+.ab.q4.num_14 {
+  background-position: -482px -102px;
+}
+.ab.q4.num_15 {
+  background-position: -519px -102px;
+}
+.ab.q4.num_16 {
+  background-position: -556px -102px;
+}
+.ab.q4.num_17 {
+  background-position: -593px -102px;
+}
+.ab.q4.num_18 {
+  background-position: -630px -102px;
+}
+.ab.q4.num_19 {
+  background-position: -667px -102px;
+}
+.ab.q4.num_20 {
+  background-position: -704px -102px;
+}
+.ab.q4.num_21 {
+  background-position: -741px -102px;
+}
+.ab.q4.num_22 {
+  background-position: -778px -102px;
+}
+.ab.q4.num_23 {
+  background-position: -815px -102px;
+}
+.ab.q4.num_24 {
+  background-position: -852px -102px;
+}
+.ab.q4.num_25 {
+  background-position: -889px -102px;
+}
+.ab.q4.num_26 {
+  background-position: -926px -102px;
+}
+.ab.q4.num_27 {
+  background-position: -963px -102px;
+}
+.ab.q4.num_28 {
+  background-position: -1000px -102px;
+}
+.ab.q4.num_29 {
+  background-position: -1037px -102px;
+}
+.ab.q4.num_30 {
+  background-position: -1074px -102px;
+}
+.ab.q4.num_31 {
+  background-position: -1111px -102px;
+}
+.ab.q4.num_32 {
+  background-position: -1148px -102px;
+}
+.ab.q4.num_33 {
+  background-position: -1185px -102px;
+}
+.ab.q4.num_34 {
+  background-position: -1222px -102px;
+}
+.ab.q4.num_35 {
+  background-position: -1259px -102px;
+}
+.ab.q4.num_36 {
+  background-position: -1296px -102px;
+}
+.ab.q4.num_37 {
+  background-position: -1333px -102px;
+}
+.ab.q4.num_38 {
+  background-position: -1370px -102px;
+}
+.ab.q4.num_39 {
+  background-position: -1407px -102px;
+}
+.ab.q4.num_40 {
+  background-position: -1444px -102px;
+}
+.ab.q4.num_41 {
+  background-position: -1481px -102px;
+}
+.ab.q4.num_42 {
+  background-position: -1518px -102px;
+}
+.ab.q4.num_43 {
+  background-position: -1555px -102px;
+}
+.ab.q4.num_44 {
+  background-position: -1592px -102px;
+}
+.ab.q4.num_45 {
+  background-position: -1629px -102px;
+}
+.ab.q4.num_46 {
+  background-position: -1666px -102px;
+}
+.ab.q4.num_47 {
+  background-position: -1703px -102px;
+}
+.ab.q4.num_48 {
+  background-position: -1740px -102px;
+}
+.ab.q4.num_49 {
+  background-position: -1777px -102px;
+}
+.ab.q4.num_50 {
+  background-position: -1814px -102px;
+}
+.ab.q4.num_51 {
+  background-position: -1851px -102px;
+}
+.ab.q5 {
+  overflow: hidden;
+  width: 26px;
+  height: 43px;
+}
+.ab.q5.num_1 {
+  background-position: 0px -139px;
+}
+.ab.q5.num_2 {
+  background-position: -27px -139px;
+}
+.ab.q5.num_3 {
+  background-position: -54px -139px;
+}
+.ab.q5.num_4 {
+  background-position: -81px -139px;
+}
+.ab.q5.num_5 {
+  background-position: -108px -139px;
+}
+.ab.q5.num_6 {
+  background-position: -135px -139px;
+}
+.ab.q5.num_7 {
+  background-position: -162px -139px;
+}
+.ab.q5.num_8 {
+  background-position: -189px -139px;
+}
+.ab.q5.num_9 {
+  background-position: -216px -139px;
+}
+.ab.q5.num_10 {
+  background-position: -243px -139px;
+}
+.ab.q5.num_11 {
+  background-position: -270px -139px;
+}
+.ab.q5.num_12 {
+  background-position: -297px -139px;
+}
+.ab.q5.num_13 {
+  background-position: -324px -139px;
+}
+.ab.q5.num_14 {
+  background-position: -351px -139px;
+}
+.ab.q5.num_15 {
+  background-position: -378px -139px;
+}
+.ab.q5.num_16 {
+  background-position: -405px -139px;
+}
+.ab.q5.num_17 {
+  background-position: -432px -139px;
+}
+.ab.q5.num_18 {
+  background-position: -459px -139px;
+}
+.ab.q5.num_19 {
+  background-position: -486px -139px;
+}
+.ab.q5.num_20 {
+  background-position: -513px -139px;
+}
+.ab.q5.num_21 {
+  background-position: -540px -139px;
+}
+.ab.q5.num_22 {
+  background-position: -567px -139px;
+}
+.ab.q5.num_23 {
+  background-position: -594px -139px;
+}
+.ab.q5.num_24 {
+  background-position: -621px -139px;
+}
+.ab.q5.num_25 {
+  background-position: -648px -139px;
+}
+.ab.q5.num_26 {
+  background-position: -675px -139px;
+}
+.ab.q5.num_27 {
+  background-position: -702px -139px;
+}
+.ab.q5.num_28 {
+  background-position: -729px -139px;
+}
+.ab.q5.num_29 {
+  background-position: -756px -139px;
+}
+.ab.q5.num_30 {
+  background-position: -783px -139px;
+}
+.ab.q5.num_31 {
+  background-position: -810px -139px;
+}
+.ab.q5.num_32 {
+  background-position: -837px -139px;
+}
+.ab.q5.num_33 {
+  background-position: -864px -139px;
+}
+.ab.q5.num_34 {
+  background-position: -891px -139px;
+}
+.ab.q5.num_35 {
+  background-position: -918px -139px;
+}
+.ab.q5.num_36 {
+  background-position: -945px -139px;
+}
+.ab.q5.num_37 {
+  background-position: -972px -139px;
+}
+.ab.q5.num_38 {
+  background-position: -999px -139px;
+}
+.ab.q5.num_39 {
+  background-position: -1026px -139px;
+}
+.ab.q5.num_40 {
+  background-position: -1053px -139px;
+}
+.ab.q5.num_41 {
+  background-position: -1080px -139px;
+}
+.ab.q5.num_42 {
+  background-position: -1107px -139px;
+}
+.ab.q5.num_43 {
+  background-position: -1134px -139px;
+}
+.ab.q5.num_44 {
+  background-position: -1161px -139px;
+}
+.ab.q5.num_45 {
+  background-position: -1188px -139px;
+}
+.ab.q5.num_46 {
+  background-position: -1215px -139px;
+}
+.ab.q5.num_47 {
+  background-position: -1242px -139px;
+}
+.ab.q5.num_48 {
+  background-position: -1269px -139px;
+}
+.ab.q5.num_49 {
+  background-position: -1296px -139px;
+}
+.ab.q5.num_50 {
+  background-position: -1323px -139px;
+}
+.ab.q6 {
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+}
+.ab.q6.num_1 {
+  background-position: 0px -182px;
+}
+.ab.q6.num_2 {
+  background-position: -21px -182px;
+}
+.ab.q6.num_3 {
+  background-position: -42px -182px;
+}
+.ab.q6.num_4 {
+  background-position: -63px -182px;
+}
+.ab.q6.num_5 {
+  background-position: -84px -182px;
+}
+.ab.q6.num_6 {
+  background-position: -105px -182px;
+}
+.ab.q6.num_7 {
+  background-position: -126px -182px;
+}
+.ab.q6.num_8 {
+  background-position: -147px -182px;
+}
+.ab.q6.num_9 {
+  background-position: -168px -182px;
+}
+.ab.q6.num_10 {
+  background-position: -189px -182px;
+}
+.ab.q6.num_0 {
+  background-position: -210px -182px;
+}
+.ab.q7 {
+  overflow: hidden;
+  width: 29px;
+  height: 29px;
+}
+.ab.q7.num_1 {
+  background-position: 0px -202px;
+}
+.ab.q7.num_2 {
+  background-position: -29px -202px;
+}
+.ab.q7.num_3 {
+  background-position: -58px -202px;
+}
+.ab.q7.num_4 {
+  background-position: -87px -202px;
+}
+.ab.q7.num_5 {
+  background-position: -116px -202px;
+}
+.ab.q7.num_6 {
+  background-position: -145px -202px;
+}
+.ab.q7.num_7 {
+  background-position: -174px -202px;
+}
+.ab.q7.num_8 {
+  background-position: -203px -202px;
+}
+.ab.q7.num_9 {
+  background-position: -232px -202px;
+}
+.ab.q7.num_10 {
+  background-position: -261px -202px;
+}
+.ab.q7.num_0 {
+  background-position: -290px -202px;
+}
+.ab.q7.num_11 {
+  background-position: -319px -202px;
+}
+.lhc_ball_red {
+  background-color: #F45959!important;
+}
+.lhc_ball_blue {
+  background-color: #51ABF0!important;
+}
+.lhc_ball_green {
+  background-color: #6ACC7B!important;
+}

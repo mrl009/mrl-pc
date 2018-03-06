@@ -1,0 +1,23 @@
+<div class="select-row" ng-repeat="x in lottery.balls">
+    <div class="unit">{{x.name}}</div>
+    <div class="items balls">
+        <div ng-repeat="t in x.child" class="ball"
+             ng-click="selBalls($event)"
+             name="{{t.name}}"
+             rate="{{t.rate}}"
+             rate_min="{{t.rate_min}}"
+             rebate="{{t.rebate}}"
+             code="{{t.code}}"
+             pid="{{t.id}}"
+        >{{t.name}}</div>
+    </div>
+    <div class="select-tools"
+         ng-show="p2.d.sname !='dx' && p2.d.sname !='ds'">
+        <span ng-click="toolXz($event,1)">全</span>
+        <span ng-click="toolXz($event,2)">大</span>
+        <span ng-click="toolXz($event,3)">小</span>
+        <span ng-click="toolXz($event,4)">单</span>
+        <span ng-click="toolXz($event,5)">双</span>
+        <span ng-click="toolXz($event,6)">清</span>
+    </div>
+</div>

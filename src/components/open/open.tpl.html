@@ -1,0 +1,95 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+
+<div class="main zoushi">
+	<div class="zoushi_main">
+		<div ng-include="TPL_ROOT + 'open-nav/zsnav.tpl.html'"></div>
+	</div>
+	<div class="zoushi_data">
+		<h1><i class="iconfont"></i> 最新彩票开奖结果</h1>
+		<div class="data">
+			<table class="table">
+				<thead>
+				<tr class="oi-title">
+					<th>彩种</th>
+					<th>期号</th>
+					<th>开奖时间</th>
+					<th>开奖号码</th>
+					<!-- <th>期数（每天）</th> -->
+					<th>开奖频率</th>
+					<th>详情</th>
+					<th>走势</th>
+					<!-- <th>购买彩票</th> -->
+				</tr>
+				</thead>
+				<tbody>
+					<tr ng-class="{'oi-item': $index%2 != 0}" ng-repeat="item in openList">
+						<td>{{item.name}}</td>
+						<td>{{item.kj_issue}}</td>
+						<td>
+							{{item.kj_time}}
+						</td>
+						<td>
+							<div class="ballDivMain" cptype="{{item.tmp}}">
+								<div class="ballDiv" cptype="{{item.tmp}}" ng-if="item.tmp != 'lhc' && item.tmp!= 'pcdd'">
+									<div class="number_ball ball-{{item.color&&item.color[$index]}}" ng-repeat="ball in item.number track by $index" >
+										<span>{{ball}}</span>
+									</div>
+								</div>
+								<div class="ballDiv ballDivLhc" ng-if="item.tmp == 'lhc'">
+									<div class="number_ball ball-{{item.color&&item.color[$index]}}" ng-repeat="ball in item.number track by $index" ng-if="$index<item.number.length-1">
+										<span>{{ball}}</span>
+										<div class="ball_sub">{{item.shengxiao[$index]}}</div>
+									</div>
+									<div class="ballDiv">
+										<div class="number_add">
+											<span><i class="iconfont"></i></span>
+										</div>
+									</div>
+									<div class="number_ball ball-{{item.color&&item.color[$index]}}" ng-repeat="ball in item.number track by $index" ng-if="$index==item.number.length-1">
+										<span>{{ball}}</span>
+										<div class="ball_sub">{{item.shengxiao[$index]}}</div>
+									</div>
+								</div>
+								<div class="ballDiv" cptype="{{item.tmp}}" ng-if="item.tmp== 'pcdd'">
+									<span ng-repeat="ball in item.number track by $index">
+										<div class="number_ball">
+											<span>{{ball}}</span>
+										</div>
+										<div class="number_add" ng-if="$index<item.number.length -1">
+											<span><i class="iconfont"></i></span>
+										</div>
+										<div class="number_add" ng-if="$index==item.number.length -1">
+											<span><i class="iconfont"></i></span>
+										</div>
+									</span>
+									<div class="number_ball ball-{{item.color[0]}}"  >
+										<span>{{item.total}}</span>
+									</div>
+								</div>
+							</div>
+						</td>
+						<!-- <td>120期</td> -->
+						<td>{{item.every_time}}</td>
+						<td>
+							<a class="xq" ng-href="/open/{{item.tmp}}/{{item.gid}}">
+								<i class="iconfont">  </i>
+							</a>
+						</td>
+						<td>
+							<a class="zs" href="/trend_detail/{{item.tmp}}/{{item.gid}}">
+								<i class="iconfont">  </i>
+							</a>
+						</td>
+						<!-- <td>
+							<a onclick="openLotteryWin(&quot;/Lottery/index/bet/1&quot;)" class="btn btn-radius btn-default">投注</a>
+						</td> -->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

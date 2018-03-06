@@ -1,0 +1,177 @@
+@charset "utf-8";
+@import url(rem.less);
+
+* {
+  list-style: none;
+  outline: none !important;
+}
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-overflow-scrolling: touch; /* 0 */
+}
+
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+/* Firefox 19+ */
+input:-moz-placeholder {
+  color: #999999;
+}
+/* Firefox 18- */
+input:-ms-input-placeholder {
+  color: #999999;
+}
+/* IE */
+a{
+ cursor:pointer;
+}
+.login{
+  input::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  input::-moz-placeholder {
+    font-size: 13px;
+  }
+  /* Firefox 19+ */
+  input:-moz-placeholder {
+    font-size: 13px;
+  }
+  /* Firefox 18- */
+  input:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  /* IE */
+}
+
+
+/** 清除内外边距 **/
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+
+body, button, input, select, textarea {
+  // font: 12px/1.5 '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', Verdana;
+  font-family: @baseFontFamily;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* 将斜体扶正 */
+
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace;
+}
+
+/* 统一等宽字体 */
+
+small {
+  font-size: 12px;
+}
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+
+ul, ol {
+  list-style: none;
+}
+
+/** 重置文本格式元素 **/
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/** 重置表单元素 **/
+
+legend {
+  color: #000;
+}
+
+/* for ie6 */
+
+fieldset, img {
+  border: 0;
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 清除浮动 */
+
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.ks-clear, .clear {
+  *zoom: 1;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: @dColor;
+  }
+}
+
+.red {
+  color: red!important;
+}
+
+.dcolor{
+  color: @dColor;
+}
+
+body {
+  width: 100%;
+  min-width: 1000px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

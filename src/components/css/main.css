@@ -1,0 +1,248 @@
+@charset "utf-8";
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form-group label {
+  width: 94px;
+  display: flex;
+  flex-shrink: 0;
+}
+.form-group div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.col-main {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+}
+.col-sub,
+.col-extra {
+  float: left;
+}
+.layout:after,
+.main-wrap:after,
+.col-sub:after,
+.col-extra:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.layout,
+.main-wrap,
+.col-sub,
+.col-extra {
+  zoom: 1;
+}
+/* Common Features */
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+/* Remove Float */
+.clear {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.clearfix:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.left {
+  overflow: hidden;
+  float: left;
+}
+.right {
+  overflow: hidden;
+  float: right;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.col-main {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+}
+.col-sub,
+.col-extra {
+  float: left;
+}
+.layout:after,
+.main-wrap:after,
+.col-sub:after,
+.col-extra:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.layout,
+.main-wrap,
+.col-sub,
+.col-extra {
+  zoom: 1;
+}
+/* Common Features */
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+/* Remove Float */
+/*
+.clear {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.clearfix {
+  &:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  *zoom: 1;
+}
+*/
+.main {
+  width: 1000px !important;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.form {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+.form .form_group {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 18px;
+  position: relative;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  /* IE */
+}
+.form .form_group input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.form .form_group input::-moz-placeholder {
+  font-size: 16px;
+}
+.form .form_group input:-moz-placeholder {
+  font-size: 16px;
+}
+.form .form_group input:-ms-input-placeholder {
+  font-size: 16px;
+}
+.form .form_group label {
+  width: 140px;
+  display: block;
+  float: left;
+  text-align: right;
+  font-size: 16px;
+  line-height: 48px;
+  padding-right: 10px;
+  color: #636363;
+}
+.form .form_group label.three {
+  letter-spacing: 5px;
+}
+.form .form_group input {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  width: 296px;
+  margin-left: 5px;
+  padding-left: 12px;
+  color: #999;
+  padding-top: 14px;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+.form .form_group #input_code {
+  width: 106px;
+  float: left;
+}
+.form .form_group #verify_code {
+  height: 50px;
+  margin-left: 30px;
+}
+.form .form_group .form_required {
+  font-size: 20px;
+  color: #FF4B00;
+  width: 13px;
+  text-align: right;
+  overflow: hidden;
+  position: absolute;
+  left: 51px;
+  top: 3px;
+  height: 40px;
+}
+.form .form_group input:focus {
+  border: 1px solid #E94335;
+}
+.form .form_group select {
+  font-size: 15px;
+  margin-left: 5px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.form .form_group select:focus {
+  border: 1px solid #D51910;
+}
+.form .select-tos {
+  font-size: 14px;
+  color: #a8a7a7;
+  margin-left: 154px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  padding-top: 10px;
+  overflow: hidden;
+  clear: both;
+}
+.form .select-tos a {
+  color: #ff8307;
+}
+.form img.code-img {
+  height: 44px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  margin-left: 12px;
+}
+.form .re-code {
+  color: #656565;
+  font-size: 14px;
+  margin-left: 15px;
+}
+select {
+  background: #fff;
+  border: 1px solid #ddd;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+select:focus {
+  border: #d91d36 solid 1px;
+}
+select:hover {
+  border: #d91d36 solid 1px;
+}

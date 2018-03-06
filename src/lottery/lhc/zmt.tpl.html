@@ -1,0 +1,63 @@
+<!-- 正码特 模板 -->
+<div class="bet-grid">
+    <div class="row title title-bg-shen">
+        <div
+            class="cell col20"
+            ng-repeat="idx in [1, 2, 3, 4, 5] track by $index"
+        >
+            <div class="cell-title col20">号码</div>
+            <div class="cell-title col20">赔率</div>
+            <div class="cell-title col60">金额</div>
+        </div>
+    </div>
+    <div
+        class="row"
+        ng-repeat="i in inarrballs track by $index"
+    >
+        <div
+            class="cell col20"
+            ng-repeat="idd in [0,1,2,3,4] track by $index"
+            ng-if="balls[idd][i]"
+            ng-init="idd == $index && initChange()"
+        >
+            <div class="number col20">
+                <span
+                    class="ball ball-{{colors[balls[idd][i].code]}}"
+                >{{balls[idd][i].code}}</span>
+            </div>
+            <div class="odds col20">
+                <span class="red">{{balls[idd][i].rate}}</span>
+            </div>
+            <div class="money col60">
+                <input
+                    type="text"
+                    class="cell-input"
+                    id="input-{{balls[idd][i].code}}"
+                    name="{{balls[idd][i].code}}"
+                    rate="{{balls[idd][i].rate}}"
+                    code="{{balls[idd][i].code}}"
+                    rebate="{{balls[idd][i].rebate}}"
+                    pid="{{balls[idd][i].id}}"
+                    maxlength="9"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color" id="betNum">{{betNum}}</span>
+            注， 共
+            <span class="warn-color" id="betCount">{{betCount}}</span>
+            元
+            </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button class="cancel-btn" ng-click="reset()">取消</button>
+        <button class="confirm confirm-btn" ng-click="handleSubmit()">确认</button>
+    </div>
+</div>

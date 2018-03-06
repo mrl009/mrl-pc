@@ -1,0 +1,40 @@
+<div class="repair" ng-if="!lotteryStatus"></div>
+<div class="lottery-main" ng-if="lotteryStatus">
+    <div ng-include="LTY_ROOT + 'announcement/lhc.tpl.html'"></div>
+    <div class="lhc">
+        <div class="lhc-play-choice animated shake">
+            <div
+                class="lhc-tag"
+                ng-class="{'play-selected': play.id == playOneGid}"
+                ng-repeat="play in plays"
+                ng-click="handleTagAndUrl(play.sname, play.id)"
+            >
+                {{play.name}}
+            </div>
+        </div>
+        <div class="lhc-bet-area">
+            <div class="tabs" ng-if="playTwo && playTwo.length && !playTwo[0].rate">
+                <div
+                    class="tab-item"
+                    ng-class="{'tab-selected': tid == playt.id}"
+                    ng-repeat="playt in playTwo"
+                    ng-click="chooseTab(playt.id)"
+                >
+                    <label class="tab-label" >{{playt.name}}</label>
+                </div>
+            </div>
+            <div class="tabs" ng-if="playTwo && playTwo.length && playTwo[0].rate">
+                <div
+                    ng-class="{'tab-selected': tid == playt.id}"
+                    class="tab-item tab-color"
+                    ng-repeat="playt in playTwo"
+                    ng-click="chooseTab(playt.id)"
+                >
+                    <label class="ts-label">{{playt.name}}</label>
+                    <span class="ts-rate">{{playt.rate}}</span>
+                </div>
+            </div>
+            <div ng-include="currUrl"></div>
+        </div>
+    </div>
+</div>

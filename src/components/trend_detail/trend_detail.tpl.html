@@ -1,0 +1,20 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+<div class="" id="bodyDiv">
+	<div class="main zoushi">
+		<div ng-include="TPL_ROOT + 'open-nav/zsnav.tpl.html'"></div>
+	</div>
+	<div class="codeNav" ng-if="type != 'lhc'">
+		<div class="codeRight">
+			<a ng-repeat="tag in tags" href="javascript:;" ng-click="chooseData($index)">{{tag.name}}
+			</a>
+		</div>
+	</div>
+	<div class="trend trend2" style="min-height: 450px">
+		<div class="page_list chartsTable clearfix" id="chartsDiv">
+			<div ng-include="TMP" ></div>
+		</div>
+	</div>
+</div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

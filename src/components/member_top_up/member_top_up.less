@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+
+/*注册页面*/
+@import url(../css/rem.less);
+
+/***会员中心***/
+.user_right {
+
+  width: inherit;
+
+  .user_main {
+    margin-top: 0px !important;
+    .user_header {
+      margin-top: 0px !important;
+    }
+  }
+
+  .user_body {
+
+    padding: 15px;
+    overflow: hidden;
+
+    .topup_main {
+
+      padding: 1px;
+      padding-bottom: 20px;
+
+      .main_header {
+
+        overflow: hidden;
+        font-size: 14px;
+
+        .user {
+
+          line-height: 40px;
+          padding-left: 15px;
+          margin-bottom: 10px;
+
+          em {
+
+            width: inherit;
+
+          }
+
+          span {
+
+            width: inherit;
+            margin-left: 10px;
+
+          }
+
+        }
+
+      }
+
+      .pay_type {
+
+        overflow: hidden;
+
+        h2 {
+
+          font-size: 14px;
+          padding-left: 13px;
+          line-height: 31px;
+          margin-top: 20px;
+          font-weight: 200;
+          color: #333;
+          margin-bottom: 12px;
+
+        }
+
+        .pay_main {
+
+          overflow: hidden;
+          margin-bottom: 30px;
+
+          ul {
+
+            width: inherit;
+
+            li {
+
+              float: left;
+              height: 55px;
+              padding-left: 10px;
+              padding-right: 10px;
+              line-height: 14px;
+              border: #E1DBD6 solid 1px;
+              margin-right: 14px;
+              margin-left: 10px;
+              margin-top: 7px;
+
+              &.hover,
+              &:hover {
+
+                border: #d80000 solid 1px;
+                background: url(https://cpweb.kosunmobile.com/cpcp/Public/static/images/dui.png) right bottom;
+                background-size: 33px 34px;
+                background-repeat: no-repeat;
+
+              }
+
+              i {
+
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                font-size: 32px;
+                text-align: center;
+                line-height: 40px;
+
+                &.icon-weixin {
+                  color: #40CD44;
+                }
+
+                &.icon-zhifubaozhifu {
+                  color: #17B0F6;
+                }
+
+                &.icon-weimingming3 {
+                  color: #d80000;
+                }
+
+                &.icon-chongzhi {
+                  color: #57D9CE;
+                }
+
+              }
+
+              a {
+
+                font-size: 18px;
+                color: #000;
+                line-height: 40px;
+                display: inline-block;
+                height: 40px;
+                text-decoration: none;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      input {
+        &.btn {
+
+          width: 240px;
+          height: 45px;
+          text-align: center;
+          line-height: 25px;
+          display: block;
+          margin: 0 auto;
+          margin-top: 20px;
+          overflow: hidden;
+
+        }
+      }
+
+    }
+
+  }
+
+}
+
+/*充值页面*/
+.user_right .user_main  .topup_main .pay_type .pay_main ul li.hover, .user_right .user_main  .topup_main .pay_type .pay_main ul li:hover {
+  border: #D80000 solid 2px;
+  background: url(https://cpweb.kosunmobile.com/cp899/Public/static/images/dui.png) right bottom;
+  background-size: 33px 34px;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 1px 2px 4px 0px #999;
+  box-shadow: 1px 2px 4px 0px #999;
+}
+
+.user_right .user_main  .topup_main .pay_type .pay_main ul li {
+  float: left;
+  border: #E1DBD6 solid 2px;
+  width: 320px;
+  height: 55px;
+}
+
+.user_right .user_main  .topup_main .pay_type .pay_main ul .pay_info {
+  float: left;
+  border: #E1DBD6 solid 2px;
+  width: 600px;
+  height: 55px;
+}
+
+.user_right .user_main  .topup_main .pay_type .pay_main ul li a {
+  margin-top: 4px;
+  font-size: 15px;
+  color: #000;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  text-decoration: none;
+}
+
+.user_right .user_main  .topup_main .pay_type .pay_main {
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.user_right .user_main  .topup_main .pay_type .pay_main ul {
+  width: inherit;
+}
+
+.user_right .user_main  .topup_main .pay_type .pay_main ul li i {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  font-size: 32px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 6px;
+}
+
+/**end**/
+
+#withdraw_submit {
+  margin-left: 5.5rem;
+  margin-bottom: 2rem;
+}
+
+.topuprecord_data .cell td {
+  border: 1px solid #ddd;
+}
+
+.topuprecord_data .table tr{
+  border: 1px solid #ccc;
+  border-left: 0;
+}
+
+.withdrawrecord_data .cell td {
+  border: 1px solid #ddd;
+}
+
+.withdrawrecord_data .table tr{
+  border: 1px solid #ccc;
+  border-left: 0;
+}
+
+.picker-input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+}
+
+.member_topup_input {
+  display: inline;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  width: 296px;
+  margin-left: 5px;
+  padding-left: 12px;
+  color: #999;
+  padding-top: 14px;
+  font-size: 16px;
+  padding-bottom: 15px
+}
+
+.bank_number {
+  font-size: 14px;
+}
+
+.account_name {
+  font-size: 14px;
+}
+
+.member_topup_tips {
+  padding: 0;
+}
+
+.user_right .user_main .topup_main .pay_type .pay_main ul .tanContainer-li {
+  list-style: none;
+  float: left;
+  margin: 0;
+  width: auto;
+  margin-right: 3px;
+  height: 32px;
+  border: none;
+  text-align: center;
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: 14px;
+}
+
+.user_right .user_main .topup_main .pay_type .pay_main ul .active.tanContainer-li {
+  list-style: none;
+  float: left;
+  margin: 0;
+  width: auto;
+  margin-right: 3px;
+  background: none;
+  border-bottom: 2px solid #D80000;
+  color: #000;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.user_right .user_main .topup_main .pay_type .pay_main ul .tanContainer-li.hover, .user_right .user_main .topup_main .pay_type .pay_main ul .tanContainer-li:hover {
+  border: none;
+  border-bottom: 2px solid #D80000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none;
+  margin-bottom: 14px;
+}
+
+#tabCon {
+  clear: both;
+}
+
+#tabCon .tanContent-li {
+  display: none;
+}
+
+#tabCon .tanContent-li.fdiv {
+  display: block;
+}
+
+.topup-Prompt {
+  margin-left: 10px;
+  display: block;
+}
+
+.topup-name{
+  line-height: 30px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.tanContent-li .left .item{
+  padding: 10px;
+  font-size: 14px;
+}
+
+.tanContent-li .left{
+  margin-top: 5px;
+}

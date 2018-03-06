@@ -1,0 +1,39 @@
+<!-- 连码模版 -->
+<div class="bet-grid">
+    <div class="row title title-bg-shen">
+        <div class="cell col20" ng-repeat="x in p1">
+            <div
+                    class="radio col100"
+                    ng-click="setSname(x.id, x.sname)"
+            >
+                <i class="cell-icon icon-selectors"
+                   ng-class="{true: 'icon-radio-check', false: 'icon-radio-uncheck' }[suData.sname == x.sname]"
+                ></i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell col20" ng-repeat="x in p1">
+            <div class="cell-title col100">{{x.name}}{{balls[x.id].rate}}</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="(i, k) in r5 track by $index">
+        <div class="cell col25"
+             ng-repeat="x in r4 track by $index"
+        >
+            <div class="number col30">
+                <span class="s-ball">{{balls[p1[0].id]['balls'][i+x*5].name}}</span>
+            </div>
+            <div
+                    class="select col70"
+                    ng-click="setBalls($event)"
+                    code="{{balls[p1[0].id]['balls'][i+x*5].code}}"
+                    name="{{balls[p1[0].id]['balls'][i+x*5].name}}"
+                    pid="{{balls[p1[0].id]['balls'][i+x*5].id}}"
+            >
+                <i class="icon-selectors icon-checkbox-uncheck"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result2.tpl.html'"></div>

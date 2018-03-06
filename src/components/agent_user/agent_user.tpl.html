@@ -1,0 +1,45 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_user">下级用户</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="item item-input item-input-reset">
+                <input class="input-css username" type="text" placeholder="请输入用户名" ng-model="data.username"/>
+                <button class="button button-background button-search" ng-click="getAgentList()">搜索</button>
+            </div>
+            <div class="buyrecord_data table">
+                <table class="table">
+                    <thead>
+                    <th>用户名</th>
+                    <th>余额</th>
+                    <th>注册时间</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-if="data==null">
+                        <td colspan="7" class="no_border">
+                            <div class="empty_data">暂无记录</div>
+                        </td>
+                    </tr>
+                    　
+                    <tr ng-repeat="x in items" class="cell">
+                        <td>{{x.username}}</td>
+                        <td>{{x.balance}}</td>
+                        <td>{{x.addtime}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-div">
+                <button class='nextPage' id="agent_user_pre" ng-click="nextAgentPage(0)" disabled>上一页
+                </button>
+                <button class='nextPage' id="agent_user_next" ng-click="nextAgentPage(1)" disabled>下一页
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

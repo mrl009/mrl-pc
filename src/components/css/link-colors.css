@@ -1,0 +1,6 @@
+.kaijianggonggao .day_list .title2 a:hover {
+  color: #333;
+}
+.kaijianggonggao .day_list .title2 .active:hover {
+  color: #fff;
+}

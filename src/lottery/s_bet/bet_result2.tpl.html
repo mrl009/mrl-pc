@@ -1,0 +1,25 @@
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="dot-money">
+            &nbsp;&nbsp;金额：<input-number type="text" maxlength="6" init-value="suData.txtmoney" style="width: 80px"/>
+        </div>
+        <div class="info-check">
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{suData.txtmoney*betNum}}</span>
+            元
+        </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button
+                class="cancel-btn"
+                ng-click="reset()"
+        >取消</button>
+        <button
+                class="confirm confirm-btn"
+                ng-click="betSubmit(true)"
+        >确认</button>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+<div class="main register">
+	<div class="register_forms">
+		<h1>会员注册</h1>
+		<div class="form">
+			<form method="post" id="reg_form">
+				<div class="form_group" ng-if="is_show_agent">
+					<div class="column">
+						<label for="" class="three">
+							<span class="form_required" ng-if="is_show_agent == 2">*</span> 邀请码
+						</label>
+						<input
+								type="number"
+								placeholder="{{is_show_agent == 1 ? '可不填' : '必填'}}"
+								name="reg_code"
+								ng-model="data.agent_id"
+								ng-pattern="/\d+/"
+								ng-readonly="is_agent_id"
+						>
+					</div>
+					<div id="reg_code_tip" class="column column_tip" ng-show="is_show_agent == 2">
+						<span id="reg_code_error_tip" class="error_tip">仅限邀请注册,请输入邀请码</span>
+					</div>
+				</div>
+
+				<div class="form_group">
+					<div class="column">
+						<label for="" class="three">
+							<span class="form_required">*</span> 用户名
+						</label>
+						<input
+							type="text"
+							placeholder="请输入用户名"
+							name="username"
+							ng-model="data.username"
+						>
+					</div>
+					<div id="username_tip" class="column column_tip">
+						<span id="username_error_tip" class="error_tip">用户名格式为：用户名必须为<span class="red">4-14</span>位有效字符</span>
+					</div>
+				</div>
+				<div class="form_group">
+					<div class="column">
+						<label for="">
+							<span class="form_required">*</span> 登录密码
+						</label>
+						<input
+							type="password"
+							placeholder="请输入密码"
+							name="password"
+							ng-model="data.password"
+						>
+					</div>
+					<div id="password_tip" class="column column_tip">
+						<span class="error_tip">{{pwd_error}}</span>
+					</div>
+				</div>
+				<div class="form_group">
+					<div class="column">
+						<label for="">
+							<span class="form_required">*</span> 确认密码
+						</label>
+						<input
+							type="password"
+							placeholder="确认密码"
+							name="re_password"
+							ng-model="data.re_password"
+						>
+					</div>
+					<div id="repassword_tip" class="column column_tip">
+						<span class="error_tip">密码不相等,请确认密码一致</span>
+					</div>
+				</div>
+				<div class="form_group" ng-if="is_show_bankname">
+					<div class="column">
+						<label for="">
+							<span class="form_required">*</span> 真实姓名
+						</label>
+						<input
+								type="text"
+								placeholder="请输入真实姓名"
+								name="bank_name"
+								ng-model="data.bank_name"
+						>
+					</div>
+					<div id="bank_name_tip" class="column column_tip">
+						<span id="bank_name_error_tip" class="error_tip">真实姓名格式不正确</span>
+					</div>
+				</div>
+					
+				<div class="form_group" ng-if="is_show_code">
+					<div class="column">
+						<label for="" class="three">
+							<span class="form_required">*</span>验证码
+						</label>
+						<input
+							placeholder="验证码"
+							type="text"
+							class="code-input"
+							name="verify_code"
+							ng-model="data.verify_code"
+						>
+						<img ng-src="{{codeSrc}}" class="code-img" alt="验证码">
+						<a class="re-code" ng-click="codeRefresh()">换一张</a>
+					</div>
+					<div class="column column_tip">
+						<span class="error_tip">请输入验证码</span>
+					</div>
+				</div>
+				<div class="select-tos">
+					<div
+						class="icheckbox_square-blue"
+						ng-class="{'checked': isAgreed, 'hover': isHover}"
+						ng-mouseenter="handleME()"
+						ng-mouseleave="handleML()"
+						ng-click="handleClick()"
+					>
+						<input
+							type="checkbox"
+							id="tiaokuan checkbox"
+							name="tiaokuan"
+							class="tiaokuan"
+						>
+						<ins class="iCheck-helper"></ins>
+					</div> 我已经满合法博彩年龄，且同意各项开户条约,
+					<a
+						href="javascript:;"
+						ng-click="showAgree()">
+						“开户协议”
+					</a>
+				</div>
+				<button
+					class="btn btn-radius btn-default btn-register"
+					ng-click="submit()"
+				>立即注册</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

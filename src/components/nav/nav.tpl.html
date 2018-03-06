@@ -1,0 +1,187 @@
+<div class="nav" ng-controller="NavCtrl">
+	<!--导航 Start-->
+	<div class="menu">
+		<div
+			class="all-sort"
+			ng-mouseenter="showMenu()"
+			ng-mouseleave="hideMenu($event)"
+		>
+			<h2>
+				<a href="">选择彩种</a>
+				<i id="more-sort" class="iconfont icon-gengduo"></i>
+			</h2>
+			<div
+				class="sideNavB"
+				id="wrap-sort-all"
+				ng-class="{'nav-show': isHome}">
+				<div class="hotMain clearfix">
+					<div class="oneLi" ng-repeat="nav in data1">
+						<div class="imgL">
+							<img ng-src="{{nav.img}}" alt="{{nav.name}}">
+						</div>
+						<div class="title">
+							<a target="_blank" ng-href="/lottery/{{nav.tmp}}/{{nav.tmp}}/{{nav.gid}}">{{nav.name}}</a>
+						</div>
+						<div class="desc">
+							<span>{{nav.memo}}~</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="sortMain clearfix">
+					<div class="sortDiv" i="0" id="sortDiv0">
+						<div class="sLeft">
+							<div class="sTitle red">高频彩</div>
+						</div>
+						<div class="sRight">
+							<ul>
+								<li ng-repeat="sub in allSub" ng-if="sub.tmp!='yb'">
+									<a ng-href="/lottery/{{sub.tmp}}/{{sub.tmp}}/{{sub.gid}}" target="_blank">{{sub.name}}</a>
+								</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+						<i class="iconfont sortArrow" style="display: block;"></i>
+					</div>
+					<div class="secondNav" style="display: none; top: 0px;">
+						<div class="title">
+							高频彩
+						</div>
+						<div class="ulDiv">
+							<ul>
+								<li ng-repeat="sub in ALLGAMES" ng-if="sub.tmp!='yb' && sub.tmp != 'lhc'">
+									<a href="/lottery/{{sub.tmp}}/{{sub.tmp}}/{{sub.gid}}" target="_blank">{{sub.name}}</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="sortMain">
+					<div class="sortDiv" i="1" id="sortDiv1" style="border-top: 1px dashed rgb(230, 211, 207);">
+						<div class="sLeft">
+							<div class="sTitle blue">低频彩</div>
+						</div>
+						<div class="sRight clearfix">
+							<ul>
+								<li ng-repeat="sub in dpcSub">
+									<a target="_blank" href="/lottery/{{sub.tmp}}/{{sub.tmp}}/{{sub.gid}}">{{sub.name}}</a>
+								</li>
+								<li>
+									<a target="_blank" href="/lottery/lhc/lhc/3">香港六合彩</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="sortMain">
+					<div
+						class="sortDiv clearfix"
+						style="border-bottom: medium none; border-top: 1px dashed rgb(230, 211, 207);"
+						id="sortDiv2"
+					>
+						<div class="sLeft">
+							<div class="sTitle green">全部</div>
+						</div>
+						<div class="sRight">
+							<ul>
+								<li ng-repeat="sub in allSub">
+									<a target="_blank" href="/lottery/{{sub.tmp}}/{{sub.tmp}}/{{sub.gid}}">{{sub.name}}</a>
+								</li>
+							</ul>
+						</div>
+
+						<i class="iconfont sortArrow"></i>
+					</div>
+
+					<div class="secondNav" style="display: none; top: -140px;">
+						<div class="title">
+							全部
+						</div>
+						<div class="ulDiv">
+							<ul>
+								<li ng-repeat="sub in ALLGAMES">
+									<a target="_blank" href="/lottery/{{sub.tmp}}/{{sub.tmp}}/{{sub.gid}}">{{sub.name}}</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav">
+			<ul class="clearfix" id="headNav">
+				<li><a href="/" ng-class="{'index': path == '/'}">首页</a></li>
+				<li ng-mouseenter="showPlay()"
+					ng-mouseleave="hidePlay($event)"
+				>
+					<a target="_blank"
+					   href="lottery/buy"
+					   ng-class="{'index': path.indexOf('/lottery')>=0}"
+				>购彩大厅</a>
+					<div class="menu-child1" style="display: none" id="lot_sec_menu">
+						<div class="gamelist-1 clear">
+							<div class="official_play">
+								<div class="gamelist_tit clear">
+									<h1 class="red_style">{{GF}}</h1>
+									<div class="color">官</div>
+								</div>
+
+								<div class="high_wrap">
+									<div class="gamelist_l">
+										<ul>
+											<li ng-repeat="v in glist">
+												<a  href="/lottery/{{v.tmp}}/{{v.tmp}}/{{v.id}}"><img ng-src="{{v.img}}">
+													<span class="hot">{{v.name}}</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="credit_play">
+								<div class="gamelist_tit clear">
+									<h1 class="orange_style">{{BY}}</h1>
+									<div class="color">{{BY|limitTo:1}}</div>
+								</div>
+								<div class="high_wrap">
+									<div class="gamelist_r">
+										<ul>
+											<li ng-repeat="v in slist">
+												<a  href="/lottery/{{v.tmp}}/{{v.tmp}}/{{v.id}}"><img ng-src="{{v.img}}">
+													<span class="hot">{{v.name}}</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="triangles_back"></div>
+					</div>
+				</li>
+				<li class="tit">
+					<i class="icon_nav_new"></i>
+					<a href="mobile" ng-class="{'index': path.indexOf('/mobile')>=0}">
+						<i class="icon_nav_mobile"></i>手机购彩
+					</a>
+				</li>
+				<li><a href="activity" ng-class="{'index': path.indexOf('/activity')>=0}">优惠活动</a></li>
+				<li><a href="open" ng-class="{'index': path.indexOf('/open')>=0}">开奖公告</a></li>
+				<li><a href="trend" ng-class="{'index': path.indexOf('/trend')>=0}">走势图表</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="header_error" style="display:none;">
+		<i class="iconfont"></i>
+		<span id="header_error_msg"></span>
+	</div>
+</div>
+
+
+
+<div ng-include="TPL_ROOT + 'sideadv/side.tpl.html'"></div>

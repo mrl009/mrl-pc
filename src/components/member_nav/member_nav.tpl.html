@@ -1,0 +1,56 @@
+<div class="user_menu left">
+    <h2>会员中心</h2>
+    <ul>
+        <li ng-class="{hover: path == '/member/user_center'}">
+            <i class="iconfont">&#xe624;</i>
+            <a ng-href="/member/user_center">个人中心</a>
+        </li>
+        <li ng-class="{hover: path == '/member/member_top_up'}">
+            <i class="iconfont">&#xe626;</i>
+            <a ng-href="/member/member_top_up">财务中心</a>
+        </li>
+        <li ng-class="{hover: path == '/member/member_transaction'}">
+            <i class="iconfont">&#xe658;</i>
+            <a ng-href="/member/member_transaction">交易记录</a>
+        </li>
+        <li ng-class="{hover: path == '/member/member_detail_set'}">
+            <i class="iconfont">&#xe938;</i>
+            <a ng-href="/member/member_detail_set">详细设定</a>
+        </li>
+        <li ng-class="{hover: path == '/member/member_notice'}">
+            <i class="iconfont">&#xe6bf;</i>
+            <a ng-href="/member/member_notice">信息公告</a>
+        </li>
+    </ul>
+    <h2>代理中心</h2>
+    <ul>
+        <li ng-if="!isProxy" ng-class="{hover: path == '/member/agent_apply'}">
+            <i class="iconfont">&#xe624;</i>
+            <a ng-href="/member/agent_apply">代理申请</a>
+        </li>
+        <li ng-if="isProxy" ng-class="{hover: path == '/member/agent_info'}">
+            <i class="iconfont">&#xe624;</i>
+            <a ng-href="/member/agent_info">代理信息</a>
+        </li>
+        <li ng-if="isProxy" ng-class="{hover: path == '/member/agent_report'}">
+            <i class="iconfont">&#xe626;</i>
+            <a ng-href="/member/agent_report">代理报表</a>
+        </li>
+        <li ng-if="isProxy" ng-class="{hover: path == '/member/agent_user'}">
+            <i class="iconfont">&#xe658;</i>
+            <a ng-href="/member/agent_user">下级用户</a>
+        </li>
+        <li ng-if="isProxy" ng-class="{hover: path == '/member/agent_account_detail'}">
+            <i class="iconfont">&#xe938;</i>
+            <a ng-href="/member/agent_account_detail">账户明细</a>
+        </li>
+        <li ng-if="isProxy" ng-class="{hover: path == '/member/agent_bet_record'}">
+            <i class="iconfont">&#xe6bf;</i>
+            <a ng-href="/member/agent_bet_record">投注记录</a>
+        </li>
+        <li ng-if="isProxy" ng-class="{hover: path == '/member/agent_charge'}">
+            <i class="iconfont">&#xe6bf;</i>
+            <a ng-href="/member/agent_charge">代理佣金</a>
+        </li>
+    </ul>
+</div>

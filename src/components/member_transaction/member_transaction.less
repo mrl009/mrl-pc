@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+/****
+   Author: QQ
+   Email : Office.
+   作用  : 重置样式
+****/
+/**
+ 全站共用 REST CSS
+**/
+@import url(../css/rem.less);
+
+* {
+  list-style: none;
+  outline: none !important;
+}
+
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+input::-moz-placeholder {
+  color: #999999;
+}
+
+/* Firefox 19+ */
+input:-moz-placeholder {
+  color: #999999;
+}
+
+/* Firefox 18- */
+input:-ms-input-placeholder {
+  color: #999999;
+}
+
+/* IE */
+a {
+  cursor: pointer;
+}
+
+.login {
+  input::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  input::-moz-placeholder {
+    font-size: 13px;
+  }
+  /* Firefox 19+ */
+  input:-moz-placeholder {
+    font-size: 13px;
+  }
+  /* Firefox 18- */
+  input:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  /* IE */
+}
+
+/** 清除内外边距 **/
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+
+body, button, input, select, textarea {
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+/* 将斜体扶正 */
+
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace;
+}
+
+/* 统一等宽字体 */
+
+small {
+  font-size: 12px;
+}
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+
+ul, ol {
+  list-style: none;
+}
+
+/** 重置文本格式元素 **/
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/** 重置表单元素 **/
+
+legend {
+  color: #000;
+}
+
+/* for ie6 */
+
+fieldset, img {
+  border: 0;
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+
+/* 注：optgroup 无法扶正 */
+
+/** 重置表格元素 **/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 清除浮动 */
+
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.ks-clear, .clear {
+  *zoom: 1;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: red;
+  }
+}
+
+.red {
+  color: red !important;
+}
+
+.dcolor {
+  color: red;
+}
+
+body {
+  width: 100%;
+  min-width: 1000px;
+}
+
+.user_header .user_header_nav ul {
+  background-color: #d80000;
+}
+
+.usercenter .user_right .user_main .user_header .user_header_nav ul li.hover a, .usercenter .user_right .user_main .user_header .user_header_nav ul li a:hover {
+  background: #fff;
+  color: #d80000;
+}
+
+.red {
+  color: #d80000;
+}
+
+.bet_detail_right{
+  float: left;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size:15px;
+}
+
+.bet_detail_left{
+  font-size:15px;
+  margin-bottom: 30px;
+}
+
+.bet_detail_left p{
+  padding: 15px;
+}
+
+.bet_detail_right p{
+  padding: 15px;
+}
+.bet_detail_right .first{
+  background-color: #e3e3e3;
+}
+
+.bet_detail_left .first{
+  background-color: #E3E3E3;
+}
+
+.buyrecord_data .cell td{
+  border-left: none;
+  border-right: 1px solid #ddd;
+}
+
+.buyrecord_data .table tr{
+  border: 1px solid #ccc;
+  border-left: 0;
+}
+
+
+.buyrecord_data .cell:last-child td{
+  border-bottom: 1px solid #ddd;
+}
+
+.picker-input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+}
+
+.page-div{
+  margin-left: 285px;
+}
+
+.nextPage{
+  height: 30px;
+  width: 105px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  background: #E94335;
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.bet_detail_left .balls{
+  margin-left: 3px;
+  color:#fff;
+  background-color: #D80000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.bet_detail_left .win_numer_cell{
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.cancel-bet-btn{
+  height: 30px;
+  width: 105px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  background: #E94335;
+  color: #fff;
+  border: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.buyrecord_data .table tbody{
+  border-bottom: 2px solid #ddd;
+}
+
+

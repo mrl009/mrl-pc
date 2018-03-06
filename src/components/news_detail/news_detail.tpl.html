@@ -1,0 +1,19 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+<div class="main article">
+    <div class="sub_nav">
+        <a href="/">首页</a>
+        <em>&gt;</em><a href="/news/1/0/1">资讯</a>
+        <em>&gt;</em><a href="/news/1/0/1"><span>资讯列表</span></a>
+    </div>
+    <div class="article_content">
+        <div class="art_header">
+            <h1>{{news_detail.title}}</h1>
+        </div>
+        <div class="descr">{{news_detail.remark}}</div>
+        <div class="cont" ng-bind-html="news_detail.content">
+        </div>
+    </div>
+</div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

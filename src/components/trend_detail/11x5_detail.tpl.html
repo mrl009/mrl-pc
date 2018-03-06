@@ -1,0 +1,74 @@
+<table id="chartsTable" border="0" cellpadding="0" cellspacing="1">
+	<tbody>
+	<tr class="th">
+		<td rowspan="2" class="jiangqi">期号</td>
+		<td rowspan="2" colspan="5">开奖号码</td>
+		<td rowspan="1" colspan="11">第一位</td>
+		<td rowspan="1" colspan="11">第二位</td>
+		<td rowspan="1" colspan="11">第三位</td>
+		<td rowspan="1" colspan="11">第四位</td>
+		<td rowspan="1" colspan="11">第五位</td>
+	</tr>
+	<tr class="th">
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+	</tr>
+	<tr name="ball_row" ng-repeat="dt in data">
+		<td class="issue">
+			<div class="issueinfo">{{dt.kithe}}</div>
+		</td>
+		<td align="center" class="codetd" ng-repeat="na in dt.number_arr track by $index">
+			<div class="historycode">{{na}}</div>
+		</td>
+		<td class="td0" ng-class="{true: 'charball', false: 'wdh' }[checkType(wn)]" align="center" ng-repeat="wn in dt.col0 track by $index">
+			<div ng-class="{true: 'ball01', false: 'ball13' }[checkType(wn)]">{{wn}}</div>
+		</td>
+		<td class="td0" ng-class="{true:'charball',false:'wdh'}[checkType(qn)]" align="center" ng-repeat="qn in dt.col1 track by $index">
+			<div ng-class="{true:'ball01 ball01_yellow',false:'ball13'}[checkType(qn)]">{{qn}}</div>
+		</td>
+		<td class="td0" ng-class="{true: 'charball', false: 'wdh' }[checkType(bn)]" align="center" ng-repeat="bn in dt.col2 track by $index">
+			<div ng-class="{true: 'ball01', false: 'ball13' }[checkType(bn)]">{{bn}}</div>
+		</td>
+		<td class="td0" ng-class="{true: 'charball', false: 'wdh' }[checkType(bn)]" align="center" ng-repeat="bn in dt.col3 track by $index">
+			<div ng-class="{true: 'ball01 ball01_yellow', false: 'ball13' }[checkType(bn)]">{{bn}}</div>
+		</td>
+		<td class="td0" ng-class="{true: 'charball', false: 'wdh' }[checkType(bn)]" align="center" ng-repeat="bn in dt.col4 track by $index">
+			<div ng-class="{true: 'ball01', false: 'ball13' }[checkType(bn)]">{{bn}}</div>
+		</td>
+	</tr>
+	<tr class="tb">
+		<td nowrap="">平均遗漏值</td>
+		<td align="center" colspan="5">&nbsp;</td>
+		<td align="center" ng-repeat="ld in loseData[0]">{{ld.avaLose}}</td>
+	</tr>
+	<tr class="tb">
+		<td nowrap="">最大遗漏值</td>
+		<td align="center" colspan="5">&nbsp;</td>
+		<td align="center" ng-repeat="ld in loseData[0]">{{ld.maxLose}}</td>
+	</tr>
+	<tr class="tb">
+		<td nowrap="">最大连出值</td>
+		<td align="center" colspan="5">&nbsp;</td>
+		<td align="center" ng-repeat="ld in loseData[0]">{{ld.maxChu}}</td>
+	</tr>
+	<tr class="th">
+		<td rowspan="2">期号</td>
+		<td rowspan="2" colspan="5">开奖号码</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+		<td class="wdh" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10] track by $index">{{i+1}}</td>
+	</tr>
+	<tr class="th">
+		<td colspan="11">第一位</td>
+		<td colspan="11">第二位</td>
+		<td colspan="11">第三位</td>
+		<td colspan="11">第四位</td>
+		<td colspan="11">第五位</td>
+	</tr>
+	</tbody>
+</table>

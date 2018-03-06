@@ -1,0 +1,19 @@
+<div class="left phb">
+    <div class="head">
+        <i class="iconfont"></i>
+        最新中奖排行榜
+    </div>
+    <div class="sub_head">
+        <em>用户名</em>
+        <em>奖金</em>
+    </div>
+    <div class="list">
+        <myquee isEqual="true" direction="up" scrollDelay="30">
+            <li ng-repeat="prize in prizeData">
+                <span class="number">{{$index + 1}}</span>
+                <span class="username">{{prize.username}}</span>
+                <em class="red">{{prize.price_sum}}元</em>
+            </li>
+        </myquee>
+    </div>
+</div>

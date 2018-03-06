@@ -1,0 +1,827 @@
+@charset "utf-8";
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+/*注册页面*/
+/**注册成功**/
+/***会员中心***/
+.start_light {
+  display: block;
+  background: url("../../../src/assets/img/start_light.png");
+  width: 22px;
+  height: 20px;
+  background-size: 22px 20px;
+  overflow: hidden;
+}
+.start_dark {
+  display: block;
+  background: url("../../../src/assets/img/start_dark.png");
+  width: 22px;
+  height: 20px;
+  background-size: 22px 20px;
+  overflow: hidden;
+}
+.usercenter {
+  width: 998px !important;
+  margin-bottom: 37px;
+}
+.usercenter .user_menu {
+  width: 160px;
+}
+.usercenter .user_menu h2 {
+  background: #E94335;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+}
+.usercenter .user_menu ul {
+  overflow: hidden;
+  border-left: none !important;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-top: none !important;
+}
+.usercenter .user_menu ul li {
+  display: block;
+  clear: both;
+  z-index: 20;
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid #ddd;
+  left: 0px;
+  padding-left: 2px;
+}
+.usercenter .user_menu ul li:hover,
+.usercenter .user_menu ul li.hover {
+  border-left: 2px solid #E94335;
+  background: #E4E4E4;
+  z-index: 110;
+  left: 0px;
+  padding-left: 1px;
+}
+.usercenter .user_menu ul li i {
+  font-size: 23px;
+  color: #e1e1e1;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 9px;
+  margin-bottom: 5px;
+  display: block;
+  float: left;
+}
+.usercenter .user_menu ul li:hover i,
+.usercenter .user_menu ul li.hover i {
+  color: #E94335;
+}
+.usercenter .user_menu ul li a {
+  font-size: 14px;
+  display: block;
+  float: left;
+  line-height: 44px;
+  color: #333;
+  text-decoration: none;
+}
+.usercenter .user_right {
+  width: 820px;
+}
+.usercenter .user_right .usercenter_info {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  padding: 10px 10px 5px 10px;
+}
+.usercenter .user_right .usercenter_info .avatar {
+  padding: 10px;
+}
+.usercenter .user_right .usercenter_info .avatar img {
+  width: 85px;
+  height: 85px;
+  display: block;
+}
+.usercenter .user_right .usercenter_info .user_info {
+  width: 310px;
+  border-right: 1px solid #ddd;
+  margin-top: 10px;
+  line-height: 29px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.usercenter .user_right .usercenter_info ul li {
+  font-size: 12px;
+  overflow: hidden;
+}
+.usercenter .user_right .usercenter_info ul li label {
+  float: left;
+  padding-right: 10px;
+  _padding-right: 10px;
+}
+.usercenter .user_right .usercenter_info ul li i.user_star {
+  float: left;
+  margin-top: 3px;
+}
+.usercenter .user_right .usercenter_info ul li span.userinfo_username {
+  font-size: 16px;
+}
+.usercenter .user_right.right .account_info {
+  width: 310px;
+  padding-right: 25px;
+  overflow: hidden;
+  margin-left: 25px;
+}
+.usercenter .user_right.right .account_info .account_balance {
+  margin-left: 50px;
+  margin-top: 12px;
+}
+.usercenter .user_right.right .account_info .account_topup a.btn {
+  width: 100px;
+  height: 30px;
+  padding: 0px;
+  line-height: 30px;
+  font-size: 15px;
+  float: left;
+  text-decoration: none;
+}
+.usercenter .user_right.right .account_info .account_balance label {
+  font-size: 12px;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+.usercenter .user_right.right .account_info .account_balance em {
+  color: #E94335;
+  font-size: 20px;
+}
+.usercenter .user_right.right .account_info .account_topup {
+  padding-top: 25px;
+  overflow: hidden;
+  margin-left: 50px;
+}
+.usercenter .user_right .user_main {
+  margin-top: 10px;
+  clear: both;
+}
+.usercenter .user_right .user_main .user_header {
+  margin-top: 10px;
+}
+.usercenter .user_right .user_main .user_header .user_header_nav {
+  background: #FFFFFF;
+  height: 40px;
+}
+.usercenter .user_right .user_main .user_header .user_header_nav h3.title {
+  font-size: 16px;
+  font-weight: 100;
+  color: #fff;
+  line-height: 40px;
+  padding-left: 25px;
+}
+.usercenter .user_right .user_main .user_header .user_header_nav ul {
+  overflow: hidden;
+}
+.usercenter .user_right .user_main .user_header .user_header_nav ul li {
+  float: left;
+  font-size: 16px;
+  overflow: hidden;
+  padding-top: 4px;
+  margin-left: 4px;
+}
+.usercenter .user_right .user_main .user_header .user_header_nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  line-height: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.usercenter .user_right .user_main .user_header .user_header_nav ul li.hover a,
+.usercenter .user_right .user_main .user_header .user_header_nav ul li a:hover {
+  background: #fff;
+  color: #FFFFFF;
+}
+.usercenter .user_right .user_main .info_select {
+  padding-left: 15px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.usercenter .user_right .user_main .info_select .sod_select {
+  margin-right: 10px;
+}
+.usercenter .user_right .user_main .info_select span {
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  vertical-align: top;
+  color: #999;
+}
+.usercenter .user_right .user_main .info_select span.to {
+  margin-right: 10px;
+}
+.usercenter .user_right .user_main .info_select .select_box_btn .btn-default {
+  height: 30px;
+  width: 105px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+}
+.usercenter .user_right .user_main .info_select .input_text {
+  width: 120px;
+  margin-right: 10px;
+}
+.usercenter .user_right .user_main .info_select input.input_text {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #333333;
+  overflow: hidden;
+  height: 18px;
+  line-height: 18px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+.usercenter .user_right .user_main .info_select input.input_text:hover {
+  border: 1px solid #d91d36;
+  background: #FFFBF7;
+}
+.usercenter .user_right .user_main .info_select input.input_text:focus {
+  border: 1px solid #d91d36;
+  background: #fff;
+}
+.usercenter .user_body {
+  border: 1px solid #ddd;
+  border-top: none;
+  overflow: hidden;
+}
+.usercenter .user_body .bonus_header {
+  font-size: 16px;
+  color: #E94335;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+}
+.usercenter .user_topuprecord,
+.usercenter .user_withdrawrecord,
+.usercenter .user_team2,
+.usercenter .user_statement,
+.usercenter .user_accountchange_record,
+.usercenter .user_bonusrecord,
+.usercenter .user_gamerecord,
+.usercenter .user_link_manage,
+.usercenter .user_team_statement,
+.usercenter .user_detail_conf {
+  overflow: hidden;
+}
+.usercenter .user_topuprecord .user_main,
+.usercenter .user_withdrawrecord .user_main,
+.usercenter .user_team2 .user_main,
+.usercenter .user_statement .user_main,
+.usercenter .user_accountchange_record .user_main,
+.usercenter .user_bonusrecord .user_main,
+.usercenter .user_gamerecord .user_main,
+.usercenter .user_link_manage .user_main,
+.usercenter .user_team_statement .user_main,
+.usercenter .user_detail_conf .user_main {
+  margin-top: 0px;
+}
+.usercenter .user_topuprecord .user_main .user_header,
+.usercenter .user_withdrawrecord .user_main .user_header,
+.usercenter .user_team2 .user_main .user_header,
+.usercenter .user_statement .user_main .user_header,
+.usercenter .user_accountchange_record .user_main .user_header,
+.usercenter .user_bonusrecord .user_main .user_header,
+.usercenter .user_gamerecord .user_main .user_header,
+.usercenter .user_link_manage .user_main .user_header,
+.usercenter .user_team_statement .user_main .user_header,
+.usercenter .user_detail_conf .user_main .user_header {
+  margin-top: 0px;
+}
+.usercenter .user_topuprecord table,
+.usercenter .user_withdrawrecord table,
+.usercenter .user_team2 table,
+.usercenter .user_statement table,
+.usercenter .user_accountchange_record table,
+.usercenter .user_bonusrecord table,
+.usercenter .user_gamerecord table,
+.usercenter .user_link_manage table,
+.usercenter .user_team_statement table,
+.usercenter .user_detail_conf table {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.usercenter .user_topuprecord table.no_border,
+.usercenter .user_withdrawrecord table.no_border,
+.usercenter .user_team2 table.no_border,
+.usercenter .user_statement table.no_border,
+.usercenter .user_accountchange_record table.no_border,
+.usercenter .user_bonusrecord table.no_border,
+.usercenter .user_gamerecord table.no_border,
+.usercenter .user_link_manage table.no_border,
+.usercenter .user_team_statement table.no_border,
+.usercenter .user_detail_conf table.no_border {
+  border-bottom: none !important;
+  margin-bottom: 0px !important;
+}
+.usercenter .user_topuprecord table thead,
+.usercenter .user_withdrawrecord table thead,
+.usercenter .user_team2 table thead,
+.usercenter .user_statement table thead,
+.usercenter .user_accountchange_record table thead,
+.usercenter .user_bonusrecord table thead,
+.usercenter .user_gamerecord table thead,
+.usercenter .user_link_manage table thead,
+.usercenter .user_team_statement table thead,
+.usercenter .user_detail_conf table thead {
+  background: #f4f4f4;
+}
+.usercenter .user_topuprecord table thead th,
+.usercenter .user_withdrawrecord table thead th,
+.usercenter .user_team2 table thead th,
+.usercenter .user_statement table thead th,
+.usercenter .user_accountchange_record table thead th,
+.usercenter .user_bonusrecord table thead th,
+.usercenter .user_gamerecord table thead th,
+.usercenter .user_link_manage table thead th,
+.usercenter .user_team_statement table thead th,
+.usercenter .user_detail_conf table thead th {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  font-weight: 100;
+  color: #666;
+}
+.usercenter .user_topuprecord table thead th.no_border,
+.usercenter .user_withdrawrecord table thead th.no_border,
+.usercenter .user_team2 table thead th.no_border,
+.usercenter .user_statement table thead th.no_border,
+.usercenter .user_accountchange_record table thead th.no_border,
+.usercenter .user_bonusrecord table thead th.no_border,
+.usercenter .user_gamerecord table thead th.no_border,
+.usercenter .user_link_manage table thead th.no_border,
+.usercenter .user_team_statement table thead th.no_border,
+.usercenter .user_detail_conf table thead th.no_border {
+  border-right: none !important;
+}
+.usercenter .user_topuprecord table tbody.show_border,
+.usercenter .user_withdrawrecord table tbody.show_border,
+.usercenter .user_team2 table tbody.show_border,
+.usercenter .user_statement table tbody.show_border,
+.usercenter .user_accountchange_record table tbody.show_border,
+.usercenter .user_bonusrecord table tbody.show_border,
+.usercenter .user_gamerecord table tbody.show_border,
+.usercenter .user_link_manage table tbody.show_border,
+.usercenter .user_team_statement table tbody.show_border,
+.usercenter .user_detail_conf table tbody.show_border {
+  background: #fff;
+}
+.usercenter .user_topuprecord table tbody.show_border td,
+.usercenter .user_withdrawrecord table tbody.show_border td,
+.usercenter .user_team2 table tbody.show_border td,
+.usercenter .user_statement table tbody.show_border td,
+.usercenter .user_accountchange_record table tbody.show_border td,
+.usercenter .user_bonusrecord table tbody.show_border td,
+.usercenter .user_gamerecord table tbody.show_border td,
+.usercenter .user_link_manage table tbody.show_border td,
+.usercenter .user_team_statement table tbody.show_border td,
+.usercenter .user_detail_conf table tbody.show_border td {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.usercenter .user_topuprecord table tbody td,
+.usercenter .user_withdrawrecord table tbody td,
+.usercenter .user_team2 table tbody td,
+.usercenter .user_statement table tbody td,
+.usercenter .user_accountchange_record table tbody td,
+.usercenter .user_bonusrecord table tbody td,
+.usercenter .user_gamerecord table tbody td,
+.usercenter .user_link_manage table tbody td,
+.usercenter .user_team_statement table tbody td,
+.usercenter .user_detail_conf table tbody td {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.usercenter .user_topuprecord table tbody td a,
+.usercenter .user_withdrawrecord table tbody td a,
+.usercenter .user_team2 table tbody td a,
+.usercenter .user_statement table tbody td a,
+.usercenter .user_accountchange_record table tbody td a,
+.usercenter .user_bonusrecord table tbody td a,
+.usercenter .user_gamerecord table tbody td a,
+.usercenter .user_link_manage table tbody td a,
+.usercenter .user_team_statement table tbody td a,
+.usercenter .user_detail_conf table tbody td a {
+  color: #E94335;
+}
+.usercenter .user_topuprecord table tbody td i.iconfont,
+.usercenter .user_withdrawrecord table tbody td i.iconfont,
+.usercenter .user_team2 table tbody td i.iconfont,
+.usercenter .user_statement table tbody td i.iconfont,
+.usercenter .user_accountchange_record table tbody td i.iconfont,
+.usercenter .user_bonusrecord table tbody td i.iconfont,
+.usercenter .user_gamerecord table tbody td i.iconfont,
+.usercenter .user_link_manage table tbody td i.iconfont,
+.usercenter .user_team_statement table tbody td i.iconfont,
+.usercenter .user_detail_conf table tbody td i.iconfont {
+  color: red;
+}
+.usercenter .user_topuprecord table tbody td.bg,
+.usercenter .user_withdrawrecord table tbody td.bg,
+.usercenter .user_team2 table tbody td.bg,
+.usercenter .user_statement table tbody td.bg,
+.usercenter .user_accountchange_record table tbody td.bg,
+.usercenter .user_bonusrecord table tbody td.bg,
+.usercenter .user_gamerecord table tbody td.bg,
+.usercenter .user_link_manage table tbody td.bg,
+.usercenter .user_team_statement table tbody td.bg,
+.usercenter .user_detail_conf table tbody td.bg {
+  background: #F4F4F4;
+}
+.usercenter .user_topuprecord table tbody td .empty_data,
+.usercenter .user_withdrawrecord table tbody td .empty_data,
+.usercenter .user_team2 table tbody td .empty_data,
+.usercenter .user_statement table tbody td .empty_data,
+.usercenter .user_accountchange_record table tbody td .empty_data,
+.usercenter .user_bonusrecord table tbody td .empty_data,
+.usercenter .user_gamerecord table tbody td .empty_data,
+.usercenter .user_link_manage table tbody td .empty_data,
+.usercenter .user_team_statement table tbody td .empty_data,
+.usercenter .user_detail_conf table tbody td .empty_data {
+  background-image: url(../../../src/assets/img/lion.png);
+  width: 90px;
+  height: 50px;
+  background-size: 40px 46px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding-left: 45px;
+  line-height: 50px;
+  background-position: left;
+  color: #999;
+}
+.usercenter .user_team2 .info_select input {
+  width: 100px!important;
+}
+.usercenter .user_team2 .info_select .select_box_btn {
+  overflow: hidden;
+  width: 700px;
+  margin-top: 15px;
+  clear: both;
+  margin-bottom: 15px;
+}
+.usercenter .user_link_manage .user_body {
+  padding: 18px;
+}
+.usercenter .user_link_manage .user_body .body_nav {
+  border: 1px solid #EBEBEB;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 10px;
+  background: #F5F5F5;
+}
+.usercenter .user_link_manage .user_body .body_nav ul li {
+  float: left;
+  font-size: 14px;
+  position: relative;
+  width: 130px;
+  height: 45px;
+}
+.usercenter .user_link_manage .user_body .body_nav ul li.hover,
+.usercenter .user_link_manage .user_body .body_nav ul li:hover {
+  top: -2px;
+  border-top: 2px solid #D51910;
+  z-index: 1;
+  color: #D51910;
+  background: #fff;
+}
+.usercenter .user_link_manage .user_body .body_nav ul li a {
+  color: #333;
+  display: inline-block;
+  line-height: 45px;
+  width: 130px;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+}
+.usercenter .user_link_manage .user_body .link_manage_data {
+  border: 1px solid #ddd;
+  padding-top: 20px;
+  border-top: none;
+  border-bottom: none;
+}
+.usercenter .user_link_manage .user_body .link_manage_data table {
+  margin-bottom: 0px;
+}
+.usercenter .user_link_manage .user_body .link_manage_form {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-top: none;
+  width: 780px;
+}
+.usercenter .user_link_manage .user_body .link_manage_form .remark {
+  overflow: hidden;
+  padding: 25px;
+}
+.usercenter .user_link_manage .user_body .link_manage_form .remark em {
+  overflow: hidden;
+  color: #333333;
+  font-size: 12px;
+  display: block;
+  float: left;
+  line-height: 27px;
+}
+.usercenter .user_link_manage .user_body .link_manage_form .remark span {
+  overflow: hidden;
+  color: #999999;
+  font-size: 12px;
+  display: block;
+  width: 650px;
+  float: left;
+  line-height: 27px;
+}
+.usercenter .user_link_manage .user_body .user_page {
+  margin-top: 25px;
+}
+.link_manage_form {
+  overflow: hidden;
+}
+.link_manage_form .open_account {
+  overflow: hidden;
+}
+.link_manage_form .open_account.form {
+  width: 565px;
+  margin: 0 auto;
+}
+.link_manage_form .open_account.form .form_group label {
+  font-size: 14px;
+}
+.link_manage_form .open_account.form .form_group p {
+  font-size: 13px;
+}
+.link_manage_form .open_account.form .form_group p.text_info {
+  font-size: 13px;
+  text-align: left;
+  margin-left: 153px;
+  margin-top: 6px;
+  color: #666666;
+}
+.link_manage_form .open_account.form .form_group input {
+  overflow: hidden;
+  height: 28px;
+  padding: 10px;
+}
+.link_manage_form .open_account.form .form_group select {
+  width: 318px;
+  height: 50px;
+}
+.link_manage_form .open_account.form .form_group .iradio_square-blue {
+  margin-top: 12px;
+}
+.link_manage_form .open_account.form .form_group .redio_field {
+  float: left;
+  width: initial;
+  text-align: initial;
+  line-height: inherit;
+}
+.link_manage_form .open_account.form .form_group .redio_field.hover .radio_text {
+  color: #E94335;
+}
+.link_manage_form .open_account.form .form_group .redio_field .radio_text {
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  font-size: 15px;
+  margin-left: 3px;
+  font-weight: bold;
+}
+.link_manage_form .open_account.form button {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.user_page {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.user_page ul {
+  overflow: hidden;
+  text-align: center;
+}
+.user_page ul li {
+  text-align: center;
+  padding: 3px 10px 3px 10px;
+}
+.user_page ul li a {
+  color: #999;
+  text-decoration: none;
+}
+.user_page ul li span {
+  color: #999;
+}
+.user_page ul li.pre,
+.user_page ul li.nex {
+  background: #E7E7E7;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+}
+.user_page ul li.hover a,
+.user_page ul li a:hover,
+.user_page ul li:hover a {
+  color: #E94335;
+}
+.usercenter .buyrecord_data {
+  overflow: hidden;
+}
+.usercenter .buyrecord_data table {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.usercenter .buyrecord_data table thead {
+  background: #f4f4f4;
+}
+.usercenter .buyrecord_data table thead th {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-weight: 100;
+  color: #666;
+}
+.usercenter .buyrecord_data table tbody td {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.usercenter .buyrecord_data table tbody td .daikai {
+  color: #333;
+  font-weight: bold;
+}
+.usercenter .buyrecord_data table tbody td .yizhong {
+  color: #FF0000;
+  font-weight: bold;
+}
+.usercenter .buyrecord_data table tbody td .weizhong {
+  color: #999;
+  font-weight: bold;
+}
+.usercenter .buyrecord_data table tbody td a {
+  color: #E94335;
+}
+.usercenter .buyrecord_data table tbody td i.iconfont {
+  color: red;
+}
+.user_goto_withdraw {
+  background-color: #d0d0d0;
+}
+.user_usersafe {
+  border-top: none;
+  overflow: hidden;
+}
+.user_usersafe .user_body {
+  padding-bottom: 50px;
+}
+.user_usersafe .user_body .safe_item {
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+.user_usersafe .user_body .safe_item .safe_item_head {
+  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: dashed 1px #ddd;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .info_view {
+  width: 520px;
+  line-height: 60px;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .info_view i {
+  float: left;
+  color: #d4d7e1;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .info_view .left h3 {
+  float: left;
+  font-size: 16px;
+  overflow: hidden;
+  margin-left: 10px;
+  color: #323232;
+  line-height: 60px;
+  font-weight: 100;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .info_view .left span {
+  float: left;
+  font-size: 14px;
+  margin-left: 30px;
+  color: #999;
+  line-height: 60px;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control {
+  font-size: 14px;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control .tool_group {
+  float: left;
+  overflow: hidden;
+  line-height: 60px;
+  font-size: 14px;
+  padding-right: 10px;
+  text-align: right;
+  margin-left: 50px;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control .tool_group i.iconfont {
+  color: #5FDD75;
+}
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control .tool_group a {
+  color: #323232;
+}
+.user_usersafe .user_body .safe_item .safe_item_body {
+  padding-top: 15px;
+}
+.user_usersafe .user_body .safe_item .safe_item_body .form .form_group input {
+  margin: 0 auto;
+  width: 268px;
+  display: block;
+  clear: both;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.user_usersafe .user_body .safe_item .safe_item_body .form button {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  overflow: hidden;
+}
+.user_usersafe .user_body .safe_item .safe_item_body .form .form_remark {
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+.user_usersafe .user_body .safe_item .safe_item_body .form .bank_img {
+  margin: 0 auto;
+  width: 70px;
+  display: block;
+  clear: both;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.user_usersafe .form .form_group .memeber_select {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 2px;
+  width: 282px;
+  padding-left: 12px;
+  color: #999;
+  padding-top: 14px;
+  font-size: 16px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  display: block;
+  height: 52px;
+}
+.user_bank_item {
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 20px;
+}
+.user_bank_item .item_title {
+  display: inline-block;
+}
+.user_bank_item .iconfont.icon-duigou1 {
+  color: #D80000;
+}
+.user_bank_item img {
+  margin: 0 auto;
+  width: 70px;
+  display: block;
+  clear: both;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.user_bank_item span {
+  font-size: 16px;
+  color: #999;
+}
+.bank_list_add button {
+  margin: 0 auto;
+  width: 282px;
+  height: 50px;
+  display: block;
+  clear: both;
+}
+.bank_card_img {
+  margin-bottom: 10px;
+}
+.member-logout-btn {
+  width: 100px;
+  height: 30px;
+  padding: 0px;
+  line-height: 30px;
+  font-size: 15px;
+  float: left;
+  text-decoration: none;
+}

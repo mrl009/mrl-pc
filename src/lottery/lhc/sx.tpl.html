@@ -1,0 +1,117 @@
+<!-- 生肖模板 -->
+<!-- 正肖模板一致 -->
+<!-- 一肖模板一致 -->
+<div class="bet-grid sx-grid" ng-if="playTwoId!= 'zhongx' ">
+	<div class="row title-bg-shen">
+		<div class="cell col50">
+			<div class="col20 cell-title ">十二生肖</div>
+			<div class="col35 cell-title ">号码</div>
+			<div class="col20 cell-title ">赔率</div>
+			<div class="col25 cell-title ">金额</div>
+		</div>
+		<div class="cell col50">
+			<div class="col20 cell-title ">十二生肖</div>
+			<div class="col35 cell-title ">号码</div>
+			<div class="col20 cell-title ">赔率</div>
+			<div class="col25 cell-title ">金额</div>
+		</div>
+	</div>
+	<div class="row"  ng-repeat="idx in inarrballs track by $index" ng-init="$last && initChange()">
+		<div class="cell col50">
+			<div class="label col20 title-bg-shen">{{balls[0][idx].name}}</div>
+			<div class="sheng-xiao col35 cell-div">
+				<span class="sx-num">{{sxNums[balls[0][idx].name]}}</span>
+			</div>
+			<div class="odds col20">
+				<span class="red">{{balls[0][idx].rate}}</span>
+			</div>
+			<div class="money col25">
+				<input
+					class="cell-input col75"
+					rate="{{balls[0][idx].rate}}"
+					code="{{balls[0][idx].code}}"
+					rebate="{{balls[0][idx].rebate}}"
+					name="{{balls[0][idx].name}}"
+					pid="{{balls[0][idx].id}}"
+					maxlength="9"
+				>
+			</div>
+		</div>
+		<div class="cell col50">
+			<div class="label col20 title-bg-shen">{{balls[1][idx].name}}</div>
+			<div class="sheng-xiao col35 cell-div">
+				<span class="sx-num">{{sxNums[balls[1][idx].name]}}</span>
+			</div>
+			<div class="odds col20">
+				<span class="red">{{balls[1][idx].rate}}</span>
+			</div>
+			<div class="money col25">
+				<input
+					class="cell-input col75"
+					rate="{{balls[1][idx].rate}}"
+					code="{{balls[1][idx].code}}"
+					rebate="{{balls[1][idx].rebate}}"
+					pid="{{balls[1][idx].id}}"
+					name="{{balls[1][idx].name}}"
+					ng-click="showQuickMoney($event)"
+				>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bet-grid" ng-if="playTwoId == 'zhongx' ">
+	<div class="row cell-title title-bg-shen">总肖</div>
+	<div class="row" ng-repeat="idx in inarrballs track by $index" ng-init="$last && initChange()">
+		<div class="cell col50">
+			<div class="label col25 title-bg-shen">{{balls[0][idx].name}}</div>
+			<div class="odds col25">
+				<span>{{balls[0][idx].rate}}</span>
+			</div>
+			<div class="money col50">
+				<input
+					class="cell-input"
+					rate="{{balls[0][idx].rate}}"
+					code="{{balls[0][idx].code}}"
+					name="{{balls[0][idx].name}}"
+					rebate="{{balls[0][idx].rebate}}"
+					pid="{{balls[0][idx].id}}"
+					ng-click="showQuickMoney($event)"
+				>
+			</div>
+		</div>
+		<div class="cell col50">
+			<div class="label col25 title-bg-shen">{{balls[1][idx].name}}</div>
+			<div class="odds col25">
+				<span>{{balls[1][idx].rate}}</span>
+			</div>
+			<div class="money col50">
+				<input
+					class="cell-input"
+					rate="{{balls[1][idx].rate}}"
+					code="{{balls[1][idx].code}}"
+					name="{{balls[1][idx].name}}"
+					rebate="{{balls[1][idx].rebate}}"
+					pid="{{balls[1][idx].id}}"
+					ng-click="showQuickMoney($event)"
+				>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{betCount}}</span>
+            元
+            </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button class="cancel-btn" ng-click="reset()">取消</button>
+        <button class="confirm confirm-btn" ng-click="handleSubmit()">确认</button>
+    </div>
+</div>

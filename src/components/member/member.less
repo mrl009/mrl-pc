@@ -1,0 +1,898 @@
+@charset "utf-8";
+
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+
+/*注册页面*/
+/**注册成功**/
+@import url(../css/rem.less);
+/***会员中心***/
+
+.start_light {
+  display: block;
+  background: url("../../../src/assets/img/start_light.png");
+  width: 22px;
+  height: 20px;
+  background-size: 22px 20px;
+  overflow: hidden;
+}
+
+.start_dark {
+  display: block;
+  background: url("../../../src/assets/img/start_dark.png");
+  width: 22px;
+  height: 20px;
+  background-size: 22px 20px;
+  overflow: hidden;
+}
+
+.usercenter {
+  width: 998px !important;
+  margin-bottom: 37px;
+
+  .user_menu {
+    width: 160px;
+
+    h2 {
+      background: @dColor;
+      height: 44px;
+      line-height: 44px;
+      font-size: 17px;
+      text-align: center;
+      color: #fff;
+      font-weight: 100;
+    }
+
+    ul {
+      overflow: hidden;
+      border-left: none !important;
+      border-right: 1px solid @borderColorDefault;
+      border-bottom: 1px solid @borderColorDefault;
+      border-top: none !important;
+
+      li {
+        display: block;
+        clear: both;
+        z-index: 20;
+        position: relative;
+        overflow: hidden;
+        border-left: 1px solid @borderColorDefault;
+        left: 0px;
+        padding-left: 2px;
+
+        &:hover, &.hover {
+          border-left: 2px solid @dColor;
+          background: #E4E4E4;
+          z-index: 110;
+          left: 0px;
+          padding-left: 1px;
+        }
+
+        i {
+          font-size: 23px;
+          color: #e1e1e1;
+          margin-left: 15px;
+          margin-right: 15px;
+          margin-top: 9px;
+          margin-bottom: 5px;
+          display: block;
+          float: left;
+        }
+
+        &:hover i, &.hover i {
+          color: @dColor;
+        }
+
+        a {
+          font-size: 14px;
+          display: block;
+          float: left;
+          line-height: 44px;
+          color: @gray3;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .user_right {
+    width: 820px;
+
+    .usercenter_info {
+      border: 1px solid #ddd;
+      overflow: hidden;
+      padding: 10px 10px 5px 10px;
+
+      .avatar {
+        padding: 10px;
+
+        img {
+          width: 85px;
+          height: 85px;
+          display: block;
+        }
+      }
+
+      .user_info {
+        width: 310px;
+        border-right: 1px solid #ddd;
+        margin-top: 10px;
+        line-height: 29px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      ul li {
+        font-size: 12px;
+        overflow: hidden;
+
+        label {
+          float: left;
+          padding-right: 10px;
+          _padding-right: 10px;
+        }
+
+        i.user_star {
+          float: left;
+          margin-top: 3px;
+        }
+
+        span.userinfo_username {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &.right .account_info {
+      width: 310px;
+      padding-right: 25px;
+      overflow: hidden;
+      margin-left: 25px;
+
+      .account_balance {
+        margin-left: 50px;
+        margin-top: 12px;
+      }
+
+      .account_topup a.btn {
+        width: 100px;
+        height: 30px;
+        padding: 0px;
+        line-height: 30px;
+        font-size: 15px;
+        float: left;
+        text-decoration: none;
+      }
+
+      .account_balance {
+        label {
+          font-size: 12px;
+          vertical-align: text-bottom;
+          margin-right: 5px;
+          padding-right: 5px;
+        }
+
+        em {
+          color: @dColor;
+          font-size: 20px;
+        }
+      }
+
+      .account_topup {
+        padding-top: 25px;
+        overflow: hidden;
+        margin-left: 50px;
+      }
+    }
+
+    .user_main {
+      margin-top: 10px;
+      clear: both;
+
+      .user_header {
+        margin-top: 10px;
+
+        .user_header_nav {
+          background: @userNavColor;
+          height: 40px;
+
+          h3 {
+            &.title {
+              font-size: 16px;
+              font-weight: 100;
+              color: #fff;
+              line-height: 40px;
+              padding-left: 25px;
+
+            }
+          }
+
+          ul {
+            overflow: hidden;
+
+            li {
+              float: left;
+              font-size: 16px;
+              overflow: hidden;
+              padding-top: 4px;
+              margin-left: 4px;
+
+              a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                line-height: 36px;
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+
+              &.hover a, a:hover {
+                background: #fff;
+                color: @userNavColor;
+              }
+            }
+          }
+        }
+      }
+
+      .info_select {
+        padding-left: 15px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+
+        .sod_select {
+          margin-right: 10px;
+        }
+
+        span {
+          line-height: 30px;
+          text-align: center;
+          font-size: 13px;
+          vertical-align: top;
+          color: @gray9;
+        }
+
+        span.to {
+          margin-right: 10px;
+        }
+
+        .select_box_btn {
+          .btn-default {
+            height: 30px;
+            width: 105px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+          }
+        }
+
+        .input_text {
+          width: 120px;
+          margin-right: 10px;
+        }
+
+        input {
+          &.input_text {
+            background-color: #fff;
+            border: 1px solid @borderColorDefault;
+            border-radius: 3px;
+            color: #333333;
+            overflow: hidden;
+            height: 18px;
+            line-height: 18px;
+            font-size: 13px;
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 13px;
+
+            &:hover {
+              border: 1px solid @bgColor;
+              background: #FFFBF7;
+            }
+
+            &:focus {
+              border: 1px solid @bgColor;
+              background: #fff;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
+
+  .user_body {
+    border: 1px solid #ddd;
+    border-top: none;
+    overflow: hidden;
+
+    .bonus_header {
+      font-size: 16px;
+      color: @dColor;
+      padding-top: 15px;
+      padding-bottom: 11px;
+      padding-left: 15px;
+    }
+
+  }
+
+  .user_topuprecord,
+  .user_withdrawrecord,
+  .user_team2,
+  .user_statement,
+  .user_accountchange_record,
+  .user_bonusrecord,
+  .user_gamerecord,
+  .user_link_manage,
+  .user_team_statement,
+  .user_detail_conf {
+    overflow: hidden;
+
+    .user_main {
+      margin-top: 0px;
+
+      .user_header {
+        margin-top: 0px;
+      }
+
+    }
+
+    table {
+      border-top: 1px solid @borderColorDefault;
+      border-bottom: 1px solid @borderColorDefault;
+      &.no_border {
+        border-bottom: none !important;
+        margin-bottom: 0px !important;
+      }
+      thead {
+        background: #f4f4f4;
+
+        td {
+
+        }
+
+        th {
+          border-bottom: 1px solid @borderColorDefault;
+          border-right: 1px solid @borderColorDefault;
+          text-align: center;
+          font-weight: 100;
+          color: @gray6;
+          &.no_border {
+            border-right: none !important;
+          }
+        }
+      }
+      tbody {
+        &.show_border {
+          background: #fff;
+          td {
+            border-bottom: 1px solid @borderColorDefault;
+            border-right: 1px solid @borderColorDefault;
+          }
+        }
+        td {
+          text-align: center;
+          font-size: 14px;
+
+          color: @gray3;
+          border-bottom: 1px solid @borderColorDefault;
+
+          a {
+            color: @dColor;
+          }
+
+          i.iconfont {
+            color: red;
+          }
+
+          &.bg {
+            background: #F4F4F4;
+          }
+          &.no_border {
+          }
+          .empty_data {
+            background-image: url(../../../src/assets/img/lion.png);
+            width: 90px;
+            height: 50px;
+            background-size: 40px 46px;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            padding-left: 45px;
+            line-height: 50px;
+            background-position: left;
+            color: #999;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .user_team2{
+
+    .info_select{
+
+      input{
+        width: 100px!important;
+
+
+      }
+
+      .select_box_btn{
+        overflow: hidden;
+        width: 700px;
+        margin-top: 15px;
+        clear: both;
+        margin-bottom: 15px;
+      }
+
+    }
+
+  }
+
+  .user_link_manage {
+
+    .user_body {
+
+      padding: 18px;
+
+      .body_nav {
+        border: 1px solid #EBEBEB;
+        height: 45px;
+        line-height: 45px;
+        padding-left: 10px;
+        background: #F5F5F5;
+
+        ul {
+
+          li {
+
+            float: left;
+            font-size: 14px;
+            position: relative;
+            width: 130px;
+            height: 45px;
+
+            &.hover,
+            &:hover {
+
+              top: -2px;
+              border-top: 2px solid @fColor;
+              z-index: 1;
+              color: @fColor;
+              background: @white;
+
+            }
+
+            a {
+
+              color: #333;
+              display: inline-block;
+              line-height: 45px;
+              width: 130px;
+              text-align: center;
+              text-decoration: none;
+              position: absolute;
+
+            }
+
+          }
+
+        }
+
+      }
+
+      .link_manage_data {
+        border: 1px solid #ddd;
+        padding-top: 20px;
+        border-top: none;
+        border-bottom: none;
+        table {
+          margin-bottom: 0px;
+        }
+      }
+
+      .link_manage_form {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-top: none;
+        width: 780px;
+        .remark {
+          overflow: hidden;
+          padding: 25px;
+          em {
+            overflow: hidden;
+            color: #333333;
+            font-size: 12px;
+            display: block;
+            float: left;
+            line-height: 27px;
+          }
+
+          span {
+            overflow: hidden;
+            color: #999999;
+            font-size: 12px;
+            display: block;
+            width: 650px;
+            float: left;
+            line-height: 27px;
+          }
+
+        }
+
+      }
+
+      .user_page {
+        margin-top: 25px;
+      }
+
+    }
+  }
+
+}
+
+.link_manage_form {
+
+  overflow: hidden;
+  .open_account {
+    overflow: hidden;
+    &.form {
+      width: 565px;
+      margin: 0 auto;
+      .form_group {
+
+        label {
+
+          font-size: 14px;
+
+        }
+
+        p {
+          font-size: 13px;
+          &.text_info {
+            font-size: 13px;
+            text-align: left;
+            margin-left: 153px;
+            margin-top: 6px;
+            color: #666666;
+          }
+        }
+
+        input {
+
+          overflow: hidden;
+          height: 28px;
+          padding: 10px;
+
+        }
+
+        select {
+          width: 318px;
+          height: 50px;
+        }
+
+        .iradio_square-blue {
+          margin-top: 12px;
+        }
+
+        .redio_field {
+          float: left;
+          width: initial;
+          text-align: initial;
+          line-height: inherit;
+          &.hover {
+            .radio_text {
+              color: @dColor;
+            }
+          }
+          .radio_text {
+            display: inline-block;
+            position: relative;
+            top: 8px;
+            font-size: 15px;
+            margin-left: 3px;
+            font-weight: bold;
+          }
+        }
+
+      }
+
+      button {
+        overflow: hidden;
+        margin-top: 30px;
+      }
+
+    }
+
+  }
+
+}
+
+.user_page {
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  ul {
+    overflow: hidden;
+    text-align: center;
+
+    li {
+      text-align: center;
+      padding: 3px 10px 3px 10px;
+
+      a {
+        color: #999;
+        text-decoration: none;
+      }
+
+      span {
+        color: #999;
+      }
+
+      &.pre, &.nex {
+        background: #E7E7E7;
+        border-radius: 5px;
+        border: 1px solid #dedede;
+      }
+
+      &.hover a, a:hover, &:hover a {
+        color: @dColor;
+      }
+    }
+  }
+}
+
+.usercenter {
+  .user_buyrecord {
+  }
+
+  .buyrecord_data {
+    overflow: hidden;
+
+    table {
+      border-top: 1px solid @borderColorDefault;
+      border-bottom: 1px solid @borderColorDefault;
+
+      thead {
+        background: #f4f4f4;
+
+        td {
+        }
+
+        th {
+          border-bottom: 1px solid @borderColorDefault;
+          text-align: center;
+          font-weight: 100;
+          color: @gray6;
+        }
+      }
+
+      tbody td {
+        text-align: center;
+        font-size: 14px;
+        color: @gray3;
+        border-bottom: 1px solid @borderColorDefault;
+        .daikai {
+          color: @gray3;
+          font-weight: bold;
+        }
+
+        .yizhong {
+          color: #FF0000;
+          font-weight: bold;
+        }
+
+        .weizhong {
+          color: @gray9;
+          font-weight: bold;
+        }
+
+        a {
+          color: @dColor;
+        }
+
+        i.iconfont {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.user_goto_withdraw{
+  background-color: #d0d0d0;
+}
+
+.user_usersafe {
+  border-top: none;
+  overflow: hidden;
+
+  .user_body {
+    padding-bottom: 50px;
+
+    .safe_item {
+      padding-left: 10px;
+      padding-right: 10px;
+      overflow: hidden;
+
+      .safe_item_head {
+        background: #fff;
+        padding: 10px;
+        overflow: hidden;
+        border-bottom: dashed 1px @borderColorDefault;
+
+        .info_view {
+          width: 520px;
+          line-height: 60px;
+
+          i {
+            float: left;
+            color: #d4d7e1;
+            font-size: 40px;
+            margin-right: 10px;
+          }
+
+          .left {
+          }
+
+          .left h3 {
+            float: left;
+            font-size: 16px;
+            overflow: hidden;
+            margin-left: 10px;
+            color: #323232;
+            line-height: 60px;
+            font-weight: 100;
+          }
+
+          .left span {
+            float: left;
+            font-size: 14px;
+            margin-left: 30px;
+            color: #999;
+            line-height: 60px;
+          }
+        }
+
+        .tool_control {
+          font-size: 14px;
+
+          .tool_group {
+            float: left;
+            overflow: hidden;
+            line-height: 60px;
+            font-size: 14px;
+            padding-right: 10px;
+            text-align: right;
+            margin-left: 50px;
+
+            i.iconfont {
+              color: #5FDD75;
+            }
+
+            a {
+              color: #323232;
+            }
+          }
+        }
+      }
+
+      .safe_item_body {
+        padding-top: 15px;
+
+        .form {
+          .form_group {
+            input {
+              margin: 0 auto;
+              width: 268px;
+              display: block;
+              clear: both;
+              margin-bottom: 5px;
+              margin-top: 5px;
+            }
+          }
+
+          button {
+            display: block;
+            margin: 0 auto;
+            width: 280px;
+            overflow: hidden;
+          }
+
+          .form_remark {
+            color: #333;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 35px;
+          }
+
+          .bank_img {
+            margin: 0 auto;
+            width: 70px;
+            display: block;
+            clear: both;
+            margin-bottom: 5px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .form .form_group .memeber_select{
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 2px;
+    width: 282px;
+    padding-left: 12px;
+    color: #999;
+    padding-top: 14px;
+    font-size: 16px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    display: block;
+    height: 52px;
+  }
+}
+
+.user_bank_item{
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 20px;
+}
+
+.user_bank_item .item_title{
+  display: inline-block;
+}
+
+.user_bank_item .iconfont.icon-duigou1{
+  color: #D80000;
+}
+
+.user_bank_item img {
+  margin: 0 auto;
+  width: 70px;
+  display: block;
+  clear: both;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.user_bank_item span {
+  font-size: 16px;
+  color: #999;
+}
+
+.bank_list_add button {
+  margin: 0 auto;
+  width: 282px;
+  height: 50px;
+  display: block;
+  clear: both;
+}
+
+.bank_card_img{
+  margin-bottom: 10px;
+}
+
+.member-logout-btn{
+  width: 100px;
+  height: 30px;
+  padding: 0px;
+  line-height: 30px;
+  font-size: 15px;
+  float: left;
+  text-decoration: none;
+}

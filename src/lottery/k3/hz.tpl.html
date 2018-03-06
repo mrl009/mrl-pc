@@ -1,0 +1,18 @@
+<div class="select-row">
+    <div class="items balls">
+        <div ng-repeat="x in lottery.balls track by $index" class="ball"
+             ng-click="selBalls($event)"
+             index = "{{$index}}"
+             name="{{x.name}}"
+             rate="{{x.rate}}"
+             rate_min="{{x.rate_min}}"
+             rebate="{{x.rebate}}"
+             code="{{x.code}}"
+             pid="{{x.id}}"
+        >{{x.name}}
+        </div>
+    </div>
+</div>
+<div class="current-odds">
+    <div ng-repeat="v in orate track by $index">{{v}}</div>
+</div>

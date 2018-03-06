@@ -1,0 +1,91 @@
+
+<!-- 自选不中 -->
+
+<div class="bet-grid">
+	<div class="row title title-bg-shen">
+		<div class="cell col20" ng-repeat="idx in [1,2,3,4,5] track by $index">
+			<div class="number col50 cell-div">号码</div>
+			<div class="select col50 cell-title">勾选</div>
+		</div>
+	</div>
+
+	<div class="row" ng-repeat="idx in inarrballs track by $index">
+		<div
+			class="cell col20"
+			ng-repeat="idd in [0,1,2,3,4] track by $index"
+			ng-show="{{balls[idd][idx]}}"
+		>
+			<div class="number col50">
+				<span
+					class="ball ball-{{colors[balls[idd][idx].code]}}"
+				>{{balls[idd][idx].code}}</span>
+			</div>
+
+			<div
+				class="select col50"
+				ball="{{balls[idd][idx]}}"
+				ng-click="setBalls($event, balls[idd][idx].tid)"
+				code="{{balls[idd][idx].code}}"
+				name="{{balls[idd][idx].code}}"
+				rebate="{{balls[idd][idx].rebate}}"
+				id="{{balls[idd][idx].id}}"
+			>
+				<i class="icon-selectors icon-checkbox-uncheck"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="lhc-bet-result">
+	<div class="desc">
+		<div class="dotted"></div>
+		<div class="info-check">
+			号码组合共
+			<span>{{betNum}}</span>
+			组
+		</div>
+		<div class="dotted"></div>
+	</div>
+	<div class="table">
+	    <div class="theader">
+	        <div class="sequence">序号</div>
+	        <div class="model">模式</div>
+	        <div class="combination">号码组合</div>
+	        <div class="odds">赔率</div>
+	    </div>
+	    <div class="tbody">
+	        <div style="position: relative; overflow: hidden; width: 100%; height: 100%; flex: 1 1 0%;">
+	            <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: 0px; margin-bottom: 0px;">
+	                <div class="row" ng-if="betNum" ng-repeat="(i, item) in zhBalls">
+	                	<div class="sequence">组合{{i+1}}</div>
+	                    <div class="model">{{tabName}}</div>
+	                    <div class="combination">{{item.join(',')}}</div>
+	                    <div class="odds">{{rate}}</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="info">
+	    <div class="money">
+	        <span>下注金额：</span>
+	        <div>
+	            <input
+	            	type="number"
+	            	placeholder="最低限额1"
+	            	name="betMoney"
+	            	ng-click="showQuickMoney($event, false)"
+	            >
+	        </div>
+	    </div>
+	    <div class="tips">
+	        <span>单注限额：{{max_money_play}}</span><br>
+	        <span>单项（号）限额：{{max_money_stake}}</span>
+	    </div>
+	    <div class="btn-group">
+	        <button class="btn confirm-btn" ng-click="duoSubmit()">确认下注</button>
+	        <button class="btn cancel-btn" ng-click="reset()">取消</button>
+	    </div>
+	</div>
+</div>

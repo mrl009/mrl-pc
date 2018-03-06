@@ -1,0 +1,53 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_charge">代理佣金</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="item item-input item-input-reset">
+                <ul>
+                    <li>
+                        <label>可得佣金 : </label> <span class="userinfo_username">{{total_rate_price}}</span>
+                    </li>
+                    <li>
+                        <label>有效打码量 : </label> <span class="userinfo_balace">{{total_now_price}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="buyrecord_data table">
+                <table class="table">
+                    <thead>
+                    <th>期数</th>
+                    <th>有效打码量</th>
+                    <th>佣金</th>
+                    <th>状态</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-if="items==null">
+                        <td colspan="7" class="no_border">
+                            <div class="empty_data">暂无记录</div>
+                        </td>
+                    </tr>
+                    　
+                    <tr ng-repeat="x in items" class="cell">
+                        <td>{{x.report_date}}</td>
+                        <td>{{x.now_price}}</td>
+                        <td>{{x.rate_price}}</td>
+                        <td>{{x.status}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-div">
+                <button class='nextPage' id="agent_charge_pre" ng-click="nextAgentPage(0)" disabled>上一页
+                </button>
+                <button class='nextPage' id="agent_charge_next" ng-click="nextAgentPage(1)" disabled>下一页
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

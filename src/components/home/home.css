@@ -1,0 +1,799 @@
+@charset "utf-8";
+.index .index_main {
+  height: 563px;
+  padding-left: 258px;
+}
+.index .index_main .slide {
+  overflow: hidden;
+  width: 740px;
+  height: 230px;
+  background: #fff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.index .index_main .notice {
+  position: relative;
+  overflow: hidden;
+  background: #FFF6E5;
+  line-height: 29px;
+  height: 29px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.index .index_main .notice marquee {
+  margin-left: 25px ;
+  width: 700px;
+}
+.index .index_main .notice i {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  overflow: hidden;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../../assets/img/laba.png) no-repeat;
+  background-size: 15px 15px;
+  margin-right: 5px;
+}
+.index .index_main .notice span {
+  color: #666666;
+  font-family: 微软雅黑, 宋体, Verdana;
+  font-size: 12px;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none!important;
+}
+.index .index_main .index_box_tz {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.index .index_main .index_box_tz .tz_box {
+  overflow: hidden;
+  width: 493px;
+  height: 272px;
+  border: 1px solid #ddd;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul.tz_box_tab {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 10px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul.tz_box_tab h1 {
+  overflow: hidden;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 100;
+  float: left;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul.tz_box_tab h1 i {
+  overflow: hidden;
+  display: inline-block;
+  width: 22px;
+  height: 27px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background: url(../../assets/img/jinbi.png) no-repeat;
+  background-size: 22px 27px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul.tz_box_tab .tz_tab {
+  width: 370px;
+  float: right;
+  position: relative;
+  height: 40px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul.tz_box_tab .tz_tab li {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 70px;
+  height: 38px;
+  text-align: center;
+  display: block;
+  z-index: 6;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main ul.tz_box_tab .tz_tab li.current {
+  overflow: hidden;
+  color: #d91d36;
+  border-bottom: 2px solid #d91d36;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item {
+  overflow: hidden;
+  display: none;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item.show-curr {
+  display: block;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .t {
+  overflow: hidden;
+  height: 60px;
+  line-height: 70px;
+  margin-bottom: 5px;
+  clear: both;
+  border: 1px solid transparent;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .t .view_qi {
+  overflow: hidden;
+  padding-left: 14px;
+  font-size: 12px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .t .view_qi span {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .t .cho {
+  overflow: hidden;
+  padding-right: 10px;
+  font-size: 12px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .t .cho a {
+  overflow: hidden;
+  color: #276DFF;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .t .cho a a:hover {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .ball-wrap {
+  width: 35px;
+  height: 35px;
+  background-color: #d91d36;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .ball {
+  width: 30px;
+  height: 30px;
+  background-color: #d91d36;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 3px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .ball-wrap + .ball-wrap {
+  margin-left: 10px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .qiu_box {
+  overflow: hidden;
+  /*background: url(../../assets/img/qiuqiu@2x.png);*/
+  background-size: 459px 75px;
+  background-repeat: no-repeat;
+  /* width: 379px;*/
+  height: 75px;
+  margin: 0 auto;
+  padding-left: 20px;
+  line-height: 105px;
+  padding-right: 40px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  clear: both;
+  border: 1px solid transparent;
+  /*  i {
+                  overflow: hidden;
+                }*/
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .qiu_box .qiu_box_number {
+  background-color: #00A1CB;
+  padding: 5px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot {
+  overflow: hidden;
+  margin-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid transparent;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left {
+  overflow: hidden;
+  width: 108px;
+  height: 28px;
+  margin-right: 14px;
+  vertical-align: middle;
+  margin-top: 4px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add {
+  overflow: hidden;
+  width: 108px;
+  height: 28px;
+  margin-right: 14px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span.plus,
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span.sub {
+  overflow: hidden;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 26px;
+  vertical-align: middle;
+  float: left;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add input {
+  overflow: hidden;
+  width: 42px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  vertical-align: middle;
+  float: left;
+  color: #666;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left span {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a.rf {
+  overflow: hidden;
+  font-size: 14px;
+  color: #333333;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a.btn {
+  overflow: hidden;
+  width: 100px;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  font-size: 14px;
+  vertical-align: middle;
+  border-radius: 0px;
+  text-decoration: none;
+}
+.index .index_main .index_box_tz .down_mobile_app {
+  overflow: hidden;
+  width: 240px;
+  height: 271px;
+  border: 1px solid #ddd;
+}
+.index .index_main .index_box_tz .down_mobile_app .head {
+  overflow: hidden;
+  background: #F7F7F7;
+  color: #333333;
+  line-height: 40px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+.index .index_main .index_box_tz .down_mobile_app .head i {
+  overflow: hidden;
+  vertical-align: middle;
+  font-size: 19px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app {
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-l {
+  overflow: hidden;
+  width: 115px;
+  text-align: center;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-l img {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-r {
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 123px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-r li {
+  overflow: hidden;
+  font-size: 14px;
+  text-align: left;
+  line-height: 29px;
+  height: 29px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-r li i {
+  overflow: hidden;
+  color: #666666;
+  margin-left: 0px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-r li a {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_app .app-r li a:hover {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice ul {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice ul.down_box_notice_tab {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 5px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice ul.down_box_notice_tab li {
+  overflow: hidden;
+  float: left;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice ul.down_box_notice_tab li.current {
+  overflow: hidden;
+  color: #d91d36;
+  border-bottom: 2px solid #d91d36;
+  padding-bottom: 11px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice .down_box_notice_content {
+  overflow: hidden;
+  padding-left: 11px;
+  line-height: 23px;
+  margin-top: 4px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice .down_box_notice_content ul {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice .down_box_notice_content ul li {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice .down_box_notice_content ul li a {
+  overflow: hidden;
+  color: #333;
+  font-size: 12px;
+  line-height: 23px;
+}
+.index .index_main .index_box_tz .down_mobile_app .down_box_notice .down_box_notice_content ul li a:hover {
+  overflow: hidden;
+}
+.index .index_box_main {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.index .index_box_main .kj {
+  overflow: hidden;
+  width: 248px;
+  margin-right: 10px;
+}
+.index .index_box_main .kj .head {
+  overflow: hidden;
+  background: #FFF4F4;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 40px;
+  border: 1px solid #E5E5E5;
+}
+.index .index_box_main .kj .head i {
+  overflow: hidden;
+  color: #FF5D5D;
+  font-size: 21px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.index .index_box_main .kj .kjmain {
+  overflow: hidden;
+}
+.index .index_box_main .kj .kjmain .item {
+  overflow: hidden;
+  height: 80px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 8px   17px 8px;
+}
+.index .index_box_main .kj .kjmain .item .top {
+  overflow: hidden;
+  line-height: 35px;
+}
+.index .index_box_main .kj .kjmain .item .top em {
+  color: #333;
+  width: 70px;
+  overflow: hidden;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.index .index_box_main .kj .kjmain .item .top span {
+  overflow: hidden;
+  font-size: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: bottom;
+}
+.index .index_box_main .kj .kjmain .item .med {
+  overflow: hidden;
+  line-height: 25px;
+}
+.index .index_box_main .kj .kjmain .item .med span {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: bold;
+}
+.index .index_box_main .kj .kjmain .item .bott {
+  overflow: hidden;
+  line-height: 24px;
+}
+.index .index_box_main .kj .kjmain .item .bott .left {
+  overflow: hidden;
+  font-size: 10px;
+  color: #999;
+}
+.index .index_box_main .kj .kjmain .item .bott .right {
+  overflow: hidden;
+}
+.index .index_box_main .kj .kjmain .item .bott .right a {
+  color: #286EFF;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.index .index_box_main .news {
+  overflow: hidden;
+  width: 495px;
+}
+.index .index_box_main .news .head {
+  overflow: hidden;
+  background: #F5F7FE;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  font-size: 14px;
+  border: 1px solid #E5E5E5;
+  border-bottom: none;
+}
+.index .index_box_main .news .head i {
+  overflow: hidden;
+  color: #3A69FF;
+  font-size: 27px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.index .index_box_main .news .news_list {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.index .index_box_main .news .news_list .hot {
+  overflow: hidden;
+  line-height: 40px;
+  padding-left: 10px;
+}
+.index .index_box_main .news .news_list .hot span {
+  overflow: hidden;
+  font-size: 14px;
+}
+.index .index_box_main .news .news_list .hot a {
+  overflow: hidden;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.index .index_box_main .news .news_list .hot a:hover {
+  overflow: hidden;
+}
+.index .index_box_main .news .news_list ul {
+  overflow: hidden;
+}
+.index .index_box_main .news .news_list ul li {
+  line-height: 31px;
+  font-size: 14px;
+}
+.index .index_box_main .news .news_list ul li em {
+  overflow: hidden;
+  color: #999999;
+}
+.index .index_box_main .news .news_list ul li a {
+  overflow: hidden;
+  color: #333333;
+}
+.index .index_box_main .phb {
+  overflow: hidden;
+  width: 241px;
+  margin-left: 6px;
+  padding-bottom: 2px;
+}
+.index .index_box_main .phb .head {
+  overflow: hidden;
+  background: #F4FFF7;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 11px;
+  font-size: 14px;
+  border: 1px solid #E5E5E5;
+}
+.index .index_box_main .phb .head i {
+  overflow: hidden;
+  font-size: 25px;
+  color: #4AB163;
+}
+.index .index_box_main .phb .sub_head {
+  overflow: hidden;
+  background: #F6F6F6;
+  height: 42px;
+  line-height: 40px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.index .index_box_main .phb .sub_head em {
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  width: 49%;
+  font-size: 14px;
+}
+.index .index_box_main .phb .list {
+  overflow: hidden;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.index .index_box_main .phb .list ul {
+  overflow: hidden;
+}
+.index .index_box_main .phb .list ul li {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  line-height: 46px;
+  height: 46.4px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.index .index_box_main .phb .list ul li i {
+  vertical-align: middle;
+  overflow: hidden;
+}
+.index .index_box_main .phb .list ul li span {
+  vertical-align: middle;
+  overflow: hidden;
+  width: 80px;
+  display: inline-block;
+  text-align: left;
+  padding-left: 8px;
+}
+.index .index_box_main .phb .list ul li span.username {
+  overflow: hidden;
+}
+.index .index_box_main .phb .list ul li span.number {
+  width: 18px !important;
+  border: 1px solid #FFAC5A;
+  color: #E94335;
+  background-color: #FFEEDC;
+  line-height: 18px;
+  text-align: center !important;
+  padding: 0px !important;
+}
+.index .index_box_main .phb .list ul li em {
+  display: inline-block;
+  width: 100px;
+}
+.index .index_box_main .phb .list ul li em.red {
+  vertical-align: middle;
+  overflow: hidden;
+  text-align: right;
+  float: right;
+}
+.v_out {
+  width: 748px;
+}
+.v_show {
+  width: 740px;
+  overflow: hidden;
+  position: relative;
+  height: 230px;
+  float: left;
+}
+.v_cont {
+  width: 6650px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.v_cont ul {
+  float: left;
+  text-align: center;
+  line-height: 50px;
+}
+.v_cont ul li {
+  width: 740px;
+  height: 230px;
+  float: left;
+}
+.v_cont ul li img {
+  height: 230px;
+}
+.v_out_p {
+  position: relative;
+  overflow: visible;
+}
+.circle {
+  position: absolute;
+  right: 10px;
+  top: 200px;
+}
+.circle li {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: rgba(0, 0, 0, 0.41);
+  float: left;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+.circle .circle-cur {
+  background: rgba(0, 0, 0, 0.54);
+}
+.right-info {
+  background: #fff;
+  float: right;
+  width: 240px;
+  height: 270px;
+}
+.mobile-tab li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+}
+.mobile-tab li a {
+  color: #666;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #d9d9d9;
+}
+.mobile-tab li a.current {
+  overflow: hidden;
+  color: #d91d36;
+  border-bottom: 2px solid #d91d36;
+}
+.mobile-tab li i {
+  color: #666;
+  font-size: 20px;
+  margin-right: 5px;
+  text-decoration: none;
+  vertical-align: initial;
+  position: relative;
+  top: 2px;
+}
+.androidqr p,
+.iosqr p {
+  padding: 10px 0 10px;
+  text-align: center;
+}
+.androidqr img,
+.iosqr img {
+  padding: 0px 0 0px 46px;
+}
+.androidqr p:nth-child(3),
+.iosqr p:nth-child(3) {
+  color: #e4393c;
+}
+/******/
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .lottery-foot {
+  overflow: hidden;
+  margin-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid transparent;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left {
+  overflow: hidden;
+  width: 108px;
+  height: 28px;
+  margin-right: 14px;
+  vertical-align: middle;
+  margin-top: 4px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left:not(.add) {
+  line-height: 28px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add {
+  overflow: hidden;
+  width: 108px;
+  height: 28px;
+  margin-right: 14px;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span.plus,
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span.sub {
+  overflow: hidden;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 26px;
+  vertical-align: middle;
+  float: left;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add input {
+  overflow: hidden;
+  width: 42px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  vertical-align: middle;
+  float: left;
+  color: #666;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left span {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a {
+  overflow: hidden;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a.rf {
+  overflow: hidden;
+  font-size: 14px;
+  color: #333333;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a.btn-bet {
+  padding: 1rem;
+}

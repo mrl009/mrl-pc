@@ -1,0 +1,36 @@
+<div class="user_right right" >
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_info">代理信息</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="agent_info">
+
+            <ul>
+                <li>
+                    <label>代理名称 : </label> <input class="agent-input-left userinfo_username" disabled value="{{data.username}}">
+                </li>
+                <li>
+                    <label>账户余额 : </label> <input class="agent-input-left userinfo_balace" disabled value="{{data.balance}}">
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <label>下级用户 : </label> <input class="agent-input-right userinfo_user" disabled value="{{data.off_sum}}">
+                </li>
+                <li>
+                    <label>推广号码 : </label> <input class="agent-input-right userinfo_extension" disabled value="{{data.extension_num}}">
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <label>推广链接 : </label> <input class="agent-input userinfo_extension_url" id="userinfo_extension_url" readonly value="{{data.extension_url}}">
+                    <button class="agent-btn-copy" data-clipboard-target="#userinfo_extension_url" ng-click="agent_copy()">复制</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

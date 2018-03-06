@@ -1,0 +1,60 @@
+<div class="mainLhc">
+    <div class="trendLhc">
+        <div id="drawTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">期数</th>
+                        <th rowspan="2">开奖时间</th>
+                        <th rowspan="2">正码一</th>
+                        <th rowspan="2">正码二</th>
+                        <th rowspan="2">正码三</th>
+                        <th rowspan="2">正码四</th>
+                        <th rowspan="2">正码五</th>
+                        <th rowspan="2">正码六</th>
+                        <th rowspan="2">&nbsp;&nbsp;特码&nbsp;&nbsp;</th>
+                        <th colspan="4">&nbsp;总和&nbsp;</th>
+                        <th colspan="5">&nbsp;特码&nbsp;</th>
+                    </tr>
+                    <tr>
+                        <th>总数</th>
+                        <th>单双</th>
+                        <th>大小</th>
+                        <th>七色波</th>
+                        <th>单双</th>
+                        <th>大小</th>
+                        <th>合单双</th>
+                        <th>合大小</th>
+                        <th>大小尾</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="chartsTableTr" ng-repeat="lhc in lhcData">
+                        <td class="period">{{lhc.kithe}}</td>
+                        <td class="drawTime">{{lhc.open_time}}</td>
+
+                        <td ng-repeat="ball in lhc.number_arr">
+                            <div class="shengxiao">
+                                <div
+                                    class="number_ball lhc_ball_{{ball.sb}}"
+                                >
+                                    <span>{{ball.num >= 10 ? ball.num : '0' + ball.num}}</span>
+                                    <div class="ball_sub">{{ball.sx}}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="other1 black">{{lhc.sum}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.sumDan == '单']">{{lhc.sumDan}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.sumBig == '大']">{{lhc.sumBig}}</td>
+                        <td class="other {{lhc.bo.color}}">{{lhc.bo.name}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.specialDan == '单']">{{lhc.specialDan}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.specialBig == '大']">{{lhc.specialBig}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.specialSumDan == '单']">和{{lhc.specialSumDan}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.specialSumBig == '和大']">{{lhc.specialSumBig}}</td>
+                        <td class="other" ng-class="{true: 'red', false: 'black'}[lhc.specialWeiBig == '尾大']">{{lhc.specialWeiBig}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

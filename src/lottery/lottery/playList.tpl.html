@@ -1,0 +1,17 @@
+<div class="play-list">
+    <div ng-repeat="x in playlist.play" ng-class="{'play-activity': x.id == showParentId}"
+         ng-click="getPlay(x.id, x.name, x.sname)">
+        {{x.name}}
+    </div>
+</div>
+<div class="method-list">
+    <div class="method-row" ng-repeat="x in p2">
+        <div class="group-label">{{x.name}}</div>
+        <div class="radio-group" ng-repeat="i in x.play" ng-click="getBall(i.id)">
+            <i class="icon-selectors"
+               ng-class="{'icon-radio-check':playInfo.id==i.id,'icon-radio-uncheck':playInfo.id!=i.id}"
+            ></i>
+            <span>{{i.name}}</span>
+        </div>
+    </div>
+</div>

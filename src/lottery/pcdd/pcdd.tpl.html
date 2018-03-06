@@ -1,0 +1,279 @@
+<div class="repair" ng-if="!lotteryStatus"></div>
+<div class="lottery-main" ng-if="lotteryStatus">
+    <div ng-include="LTY_ROOT + 'announcement/pcdd.tpl.html'"></div>
+
+    <div class="lucky-28">
+        <div class="lucky-grid">
+            <div class="grid-header">
+                <div style="width: 100%;">
+                    <div class="label">特码</div>
+                </div>
+            </div>
+            <div class="grid-title">
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+            </div>
+            <div class="grid-body">
+                <div class="body-col" ng-repeat="x in playInfo.tm.balls">
+                    <div class="body-row" ng-repeat="i in x" ng-class="{'active': i.price}">
+                        <div class="option">
+                            <div style="background-color: rgb({{i.color}});">{{i.name}}</div>
+                        </div>
+                        <div class="lucky-odds"><span>{{i.rate}}</span></div>
+                        <div class="money">
+                            <input-number
+                                maxlength="6"
+                                class="ball"
+                                init-value="i.price"
+                                title="{{playInfo.tm.title}}"
+                                tid="{{playInfo.tm.tid}}"
+                                name="{{i.name}}"
+                                rate="{{i.rate}}"
+                                rate_min="{{i.rate_min}}"
+                                rebate="{{i.rebate}}"
+                                code="{{i.code}}"
+                                pid="{{i.id}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bao-san">
+            <div class="label">特码包三</div>
+            <div class="bs-odds">{{playInfo.tmb3.rate}}</div>
+            <div class="bs-content">
+                <div class="item tmb3" ng-repeat="x in tmb3 track by $index" ng-click="getTmb3Select($index)">
+                    <div class="num" style="background-color: rgb({{x.color}});"
+                         color="{{x.color}}"
+                         name="{{x.name}}"
+                         code="{{x.code}}"
+                         pid="{{x.id}}"
+                    >{{x.name}}</div>
+                    <i class="icon-right-cross"></i>
+                </div>
+                <div class="select-list" ng-show="tmb3Select" ng-mouseleave="setTmb3Ball()">
+                    <div class="select-list-item" ng-repeat="x in playInfo.tmb3.balls">
+                        <div
+                            style="background-color: rgb({{x.color}});" ng-click="setTmb3Ball($event)"
+                            color="{{x.color}}"
+                            name="{{x.name}}"
+                            code="{{x.code}}"
+                            pid="{{x.id}}"
+                        >{{x.name}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bs-money"><span>下注金额：</span>
+                <input-number
+                    type="text"
+                    maxlength="6"
+                    class="ball"
+                    title="{{playInfo.tmb3.title}}"
+                    rate="{{playInfo.tmb3.rate}}"
+                    tid="{{playInfo.tmb3.tid}}"
+                    rebate="{{x.rebate}}"
+                    ltype = "tmb3"
+                    init-value=""
+                >
+                <span>元</span>
+            </div>
+        </div>
+        <div class="lucky-grid">
+            <div class="grid-header">
+                <div style="width: 50%;">
+                    <div class="label">混合</div>
+                </div>
+                <div style="width: 25%;">
+                    <div class="label">波色</div>
+                </div>
+                <div style="width: 25%;">
+                    <div class="label">豹子</div>
+                </div>
+            </div>
+            <div class="grid-title">
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+                <div class="title-col">
+                    <div class="option">选项</div>
+                    <div class="lucky-odds">赔率</div>
+                    <div class="money">金额</div>
+                </div>
+            </div>
+            <div class="grid-body">
+                <div class="body-col" ng-repeat="x in playInfo.hh.balls">
+                    <div class="body-row" ng-repeat="i in x" ng-class="{'active': i.price}">
+                        <div class="option">
+                            <div style="background-color: rgb({{i.color}}); font-size: 0.875rem;">{{i.name}}</div>
+                        </div>
+                        <div class="lucky-odds"><span>{{i.rate}}</span></div>
+                        <div class="money">
+                            <input-number
+                                type="text"
+                                maxlength="6"
+                                class="ball"
+                                init-value="i.price"
+                                title="{{playInfo.hh.title}}"
+                                tid="{{playInfo.hh.tid}}"
+                                name="{{i.name}}"
+                                rate="{{i.rate}}"
+                                rate_min="{{i.rate_min}}"
+                                rebate="{{i.rebate}}"
+                                code="{{i.code}}"
+                                pid="{{i.id}}"
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="body-col">
+                    <div class="body-row" ng-repeat="i in playInfo.bs.balls" ng-class="{'active': i.price}">
+                        <div class="option">
+                            <div style="background-color: rgb({{i.color}}); font-size: 0.875rem; width: 54px; border-radius: 24px;">
+                                {{i.name}}
+                            </div>
+                        </div>
+                        <div class="lucky-odds"><span>{{i.rate}}</span></div>
+                        <div class="money">
+                            <input-number
+                                type="text"
+                                maxlength="6"
+                                class="ball"
+                                init-value="i.price"
+                                title="{{playInfo.bs.title}}"
+                                tid="{{playInfo.bs.tid}}"
+                                name="{{i.name}}"
+                                rebate="{{i.rebate}}"
+                                rate="{{i.rate}}"
+                                rate_min="{{i.rate_min}}"
+                                rebate="{{i.rebate}}"
+                                code="{{i.code}}"
+                                pid="{{i.id}}">
+                        </div>
+                    </div>
+                    <div class="body-row">
+                        <div class="option"></div>
+                        <div class="lucky-odds"></div>
+                        <div class="money"></div>
+                    </div>
+                    <div class="body-row">
+                        <div class="option"></div>
+                        <div class="lucky-odds"></div>
+                        <div class="money"></div>
+                    </div>
+                </div>
+                <div class="body-col">
+                    <div class="body-row" ng-repeat="i in playInfo.bz.balls" ng-class="{'active': i.price}">
+                        <div class="option">
+                            <div style="background-color: rgb({{i.color}}); font-size: 0.875rem; width: 54px; border-radius: 24px;">
+                                {{i.name}}
+                            </div>
+                        </div>
+                        <div class="lucky-odds"><span>{{i.rate}}</span></div>
+                        <div class="money">
+                            <input-number
+                                maxlength="6"
+                                class="ball"
+                                init-value="i.price"
+                                title="{{playInfo.bz.title}}"
+                                tid="{{playInfo.bz.tid}}"
+                                name="{{i.name}}"
+                                rate="{{i.rate}}"
+                                rate_min="{{i.rate_min}}"
+                                rebate="{{i.rebate}}"
+                                code="{{i.code}}"
+                                pid="{{i.id}}"
+                            >
+                        </div>
+                    </div>
+                    <div class="body-row">
+                        <div class="option"></div>
+                        <div class="lucky-odds"></div>
+                        <div class="money"></div>
+                    </div>
+                    <div class="body-row">
+                        <div class="option"></div>
+                        <div class="lucky-odds"></div>
+                        <div class="money"></div>
+                    </div>
+                    <div class="body-row">
+                        <div class="option"></div>
+                        <div class="lucky-odds"></div>
+                        <div class="money"></div>
+                    </div>
+                    <div class="body-row">
+                        <div class="option"></div>
+                        <div class="lucky-odds"></div>
+                        <div class="money"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lucky-result">
+            <div class="bet-table">
+                <div class="table-cap">
+                    <div class="cap-ct"></div>
+                </div>
+                <div class="tb-ct">
+                    <div class="tb-header">
+                        <div class="lk-type">下注类型</div>
+                        <div class="lk-num">号码</div>
+                        <div class="lk-betNum">注数</div>
+                        <div class="lk-amout">金额</div>
+                        <div class="lk-del"></div>
+                    </div>
+                    <div class="tb-body">
+                        <div style="position: relative; overflow: hidden; width: 100%; height: 100%; flex: 1 1 0%;">
+                            <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;">
+                                <div class="bd-row" ng-repeat="v in betList track by $index">
+                                    <div class="lk-type">{{v.title}}</div>
+                                    <div class="lk-num">{{v.names}}</div>
+                                    <div class="lk-betNum">{{v.counts}}</div>
+                                    <div class="lk-amout">{{v.price_sum}}元</div>
+                                    <div class="lk-del"><i class="iconfont" ng-click="delOneBet($index)">X</i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tb-footer">
+                        <div class="bet-total"><span>您已经选中<span>{{betSum}}</span>注，共<span>{{betTotal}}</span>元</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bet-actions">
+                <button class="add" ng-click="addBet()">添加注单</button>
+                <button class="del" ng-click="delAllBet()">删除全部</button>
+                <button class="confirm" ng-click="betSubmit()">确认投注</button>
+            </div>
+        </div>
+    </div>
+</div>

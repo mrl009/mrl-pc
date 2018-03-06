@@ -1,0 +1,103 @@
+<!-- 七码五行 -->
+<div class="qima-wuxing">
+	<div class="bet-grid">
+		<div class="row title-bg-shen">
+			<div class="cell col50">
+				<div class="col35 cell-title ">七码</div>
+				<div class="col30 cell-title ">赔率</div>
+				<div class="col35 cell-title ">金额</div>
+			</div>
+			<div class="cell col50">
+				<div class="col35 cell-title ">七码</div>
+				<div class="col30 cell-title ">赔率</div>
+				<div class="col35 cell-title ">金额</div>
+			</div>
+		</div>
+		<div class="row" ng-repeat="idx in inarrballs track by $index" ng-init="$last && initChange()">
+			<div class="cell col50">
+				<div class="label col35 title-bg-shen">{{balls[0][idx].name}}</div>
+				<div class="odds col30">
+					<span class="red">{{balls[0][idx].rate}}</span>
+				</div>
+				<div class="money col35">
+					<input
+						class="cell-input"
+						rate="{{balls[0][idx].rate}}"
+						rebate="{{balls[0][idx].rebate}}"
+						code="{{balls[0][idx].code}}"
+						name="{{balls[0][idx].name}}"
+						pid="{{balls[0][idx].id}}"
+						btitle="七码"
+						tid="{{balls[0][idx].tid}}"
+						maxlength="9"
+					>
+				</div>
+			</div>
+			<div class="cell col50">
+				<div class="label col35 title-bg-shen">{{balls[1][idx].name}}</div>
+				<div class="odds col30">
+					<span class="red">{{balls[1][idx].rate}}</span>
+				</div>
+				<div class="money col35">
+					<input
+						class="cell-input"
+						rate="{{balls[1][idx].rate}}"
+						rebate="{{balls[1][idx].rebate}}"
+						code="{{balls[1][idx].code}}"
+						name="{{balls[1][idx].name}}"
+						pid="{{balls[1][idx].id}}"
+						tid="{{balls[1][idx].tid}}"
+						ng-click="showQuickMoney($event)"
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bet-grid">
+		<div class="row title-bg-shen">
+			<div class="cell col100">
+				<div class="col25 cell-title">五行</div>
+				<div class="col25 cell-title">赔率</div>
+				<div class="col50 cell-title">金额</div>
+			</div>
+		</div>
+		<div class="row" ng-repeat="ball in wxBalls" ng-init="$last && initChange()">
+			<div class="cell col100">
+				<div class="label col25 title-bg-shen">{{ball.name}}</div>
+				<div class="odds col25">
+					<span class="red">{{ball.rate}}</span>
+				</div>
+				<div class="money col50">
+					<input
+						class="cell-input"
+						rate="{{ball.rate}}"
+						rebate="{{ball.rebate}}"
+						code="{{ball.code}}"
+						name="{{ball.name}}"
+						pid="{{ball.id}}"
+						tid="{{ball.tid}}"
+						btitle="五行"
+						ng-click="showQuickMoney($event)"
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{betCount}}</span>
+            元
+            </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button class="cancel-btn" ng-click="reset()">取消</button>
+        <button class="confirm confirm-btn" ng-click="handleSubmit()">确认</button>
+    </div>
+</div>

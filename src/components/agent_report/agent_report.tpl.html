@@ -1,0 +1,66 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/agent_report">代理报表</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="item item-input item-input-reset">
+                <ul>
+                    <li>
+                        <span>时间</span>
+                        <input
+                                readonly="readonly"
+                                id="date-input"
+                                ng-click="showPicker()"
+                                class="picker-input"
+                        >
+                        <button class="button button-background button-time" ng-click="setAgentTime(1)">
+                            昨天
+                        </button>
+                        <button class="button button-background button-time" ng-click="setAgentTime(2)">
+                            本周
+                        </button>
+                        <button class="button button-background button-time" ng-click="setAgentTime(3)">
+                            本月
+                        </button>
+                        <button class="button button-background button-search" ng-click="getTotalReport()">
+                            搜索
+                        </button>
+                    </li>
+                    <li>
+                        <label>可得佣金 : </label> <span class="userinfo_username">{{total_rate_price}}</span>
+                    </li>
+                    <li>
+                        <label>有效打码量 : </label> <span class="userinfo_balace">{{total_now_price}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="buyrecord_data table">
+                <table class="table">
+                    <thead>
+                    <th>代理</th>
+                    <th>有效打码量</th>
+                    <th>提成比例（%）</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-if="items==null">
+                        <td colspan="7" class="no_border">
+                            <div class="empty_data">暂无记录</div>
+                        </td>
+                    </tr>
+                    　
+                    <tr ng-repeat="x in items" class="cell">
+                        <td>{{x.name}}</td>
+                        <td>{{x.bet_amount}}</td>
+                        <td>{{x.rate}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

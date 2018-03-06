@@ -1,0 +1,23 @@
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{betCount}}</span>
+            元
+        </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button
+                class="cancel-btn"
+                ng-click="reset()"
+        >取消</button>
+        <button
+                class="confirm confirm-btn"
+                ng-click="betSubmit()"
+        >确认</button>
+    </div>
+</div>

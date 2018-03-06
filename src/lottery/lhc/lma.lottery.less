@@ -1,0 +1,295 @@
+/*连码*/
+.lianma-area {
+	.subTabs {
+	    margin-top: -20px;
+	    border: 1px solid #e94335;
+	    margin-bottom: 20px;
+	    display: flex;
+	    flex-direction: row;
+
+	    li {
+		    list-style: none;
+		    padding: 10px 20px;
+		    font-size: 14px;
+		    cursor: pointer;
+		}
+
+		.active {
+	    	text-decoration: underline;
+		}
+	}
+
+	.balls-grid {
+	    border: 1px solid #e94335;
+	}
+
+	.icon-selectors {
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		border: 0;
+	}
+}
+
+.zheng-fu-num {
+	.show-area {
+	    display: flex;
+	    flex-direction: row;
+	    border: 1px solid #e94335;
+	    border-top: none;
+	    margin-top: -20px;
+	    margin-bottom: 20px;
+	}
+
+	.selected-shown {
+	    flex: 1;
+	    height: 38px;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    &+.selected-shown {
+		    border-left: 1px solid #e94335;
+		}
+	}
+
+	.label {
+	    font-size: 14px;
+	    color: #333;
+	    padding: 0 20px;
+	    text-align: center;
+	    flex: 1 1 0%;
+	}
+}
+
+/*连码*/
+
+/*肖串位数*/
+.mini-grid {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    border: 1px solid #e94335;
+
+    .label {
+    	cursor: pointer;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+    }
+
+    .nums {
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: flex-start;
+	}
+
+	.nums-ball {
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    font-size: 16px;
+	    color: #333;
+	}
+
+	.cell {
+		border-right: 1px solid #ffd5d5;
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	.icon-selectors {
+		vertical-align: middle;
+		margin-top: -5px;
+	}
+
+	.row:last-child {
+		border-bottom: 0;
+	}
+}
+/*肖串位数*/
+
+/*交叉碰*/
+.jiao-cha-peng {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+	.fl {
+		float: left;
+	}
+    .quick-ball-grid {
+	    width: 48%;
+	    border: 1px solid #e94335;
+	}
+
+	.wei-shu {
+	    display: inline-block;
+	    vertical-align: top;
+	    background-color: #fff3ee;
+	    border-right: 1px solid #ffd5d5;
+	}
+
+	.wsr-item {
+		height: 36px;
+	    font-size: 14px;
+	    font-weight: 700;
+	    cursor: pointer;
+	    display: flex;
+	    flex: 1;
+	    justify-content: center;
+	    align-items: center;
+	    &:last-child {
+		    border-bottom: none;
+		}
+	}
+
+	.ball-grid {
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: top;
+
+	    .cell {
+		    width: 20%;
+		    height: 36px;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    border-right: 1px solid #ffd5d5;
+		    flex-direction: row;
+		    &:last-child {
+		    	border-right: 0;
+		    }
+		}
+
+	}
+
+	.xiao-bo,
+	.xiao-bo .col {
+	    display: inline-block;
+	    vertical-align: top;
+	}
+
+	.xiao-bo {
+	    background-color: #fff3ee;
+	    position: relative;
+	    .row {
+		    width: 100%;
+		    border-bottom: 1px solid #ffd5d5;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+		}
+	}
+
+	.xiao-bo .col {
+		&:first-child {
+		    border-right: 1px solid #ffd5d5;
+		    border-left: 1px solid #ffd5d5;
+		}
+	}
+
+	.xb-item {
+	    height: 36px;
+	    display: flex;
+	    flex: 1;
+	    justify-content: center;
+	    align-items: center;
+	    font-size: 14px;
+	    font-weight: 700;
+	    cursor: pointer;
+	}
+
+	.select-area {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+
+	   	.item {
+		    width: 480px;
+		    border: 2px solid #ffd5d5;
+		    padding: 5px;
+		    min-height: 80px;
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    align-items: flex-start;
+		    position: relative;
+		    &+.item {
+			    margin-top: 10px;
+			}
+		}
+
+		.ball {
+	    	margin-left: 10px;
+	    }
+	}
+
+	.add {
+	    border: none;
+	    background-color: #ffc350;
+	    margin-top: 10px;
+	    color: #fff;
+	    font-size: 14px;
+	    border-radius: 5px;
+	    padding: 5px 20px;
+	}
+}
+/*交叉碰*/
+
+/*胆拖*/
+.dan-tuo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.simple-ball-grid {
+    border: 1px solid #e94335;
+    display: inline-block;
+    vertical-align: top;
+
+    .cell {
+	    height: 36px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    border-right: 1px solid #ffd5d5;
+	}
+}
+
+.dan-sebo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .icon-selectors {
+    	margin-right: 5px;
+    }
+
+    .se-bo {
+    	span {
+    		font-size: 14px;
+    	}
+    }
+}
+
+.dan-shengxiao {
+	.icon-selectors {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+	}
+
+	.nums {
+		display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: flex-start;
+	}
+}
+/*胆拖*/

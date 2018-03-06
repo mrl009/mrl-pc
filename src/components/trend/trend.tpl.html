@@ -1,0 +1,28 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+<div class="main zoushi">
+	<div class="zoushi_main"></div>
+	<div class="item_list">
+		<h1>热门彩种推荐</h1>
+		<div class="l">
+			<a ng-href="/trend_detail/{{x.tmp}}/{{x.gid=='pcdd'?24:x.gid}}" ng-repeat="x in hotData" >
+				<img ng-src="{{x.img}}" alt="">
+				<span>{{x.name}}</span>
+				<button class="btn btn-default btn-radius">号码走势</button>
+			</a>
+		</div>
+
+		<div class="item_list" ng-repeat="(i,j) in allData[0]" ng-if="i != '视讯'">
+			<h1>{{i}}</h1>
+			<div class="l">
+				<a ng-href="/trend_detail/{{k.tmp}}/{{k.gid=='pcdd'?24:k.gid}}" ng-repeat="k in j track by $index" >
+					<img ng-src="{{k.img}}" alt="">
+					<span>{{k.name}}</span>
+					<button class="btn btn-default btn-radius">号码走势</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

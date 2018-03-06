@@ -1,0 +1,21 @@
+<div class="tips">
+    <div class="prompt">
+        <i class="iconfont"></i>
+        <label>玩法提示：</label>
+        <span>{{tips[0]}}</span>
+    </div>
+    <div class="rule">
+        <div class="example" ng-mouseover="toggleTips(2, true)" ng-mouseleave="toggleTips(1, true)">
+            <span>范例</span>
+            <div ng-class="{'hidden': exampleWin == 1}"
+                 class="exampleWin">{{tips[2]}}
+            </div>
+        </div>
+        <div class="winning-notes" ng-mouseover="toggleTips(2, false)" ng-mouseleave="toggleTips(1, false)">
+            <span>中奖说明</span>
+            <div ng-class="{'hidden': notesWin == 1}"
+                 class="notesWin">{{tips[1]}}
+            </div>
+        </div>
+    </div>
+</div>

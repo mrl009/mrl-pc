@@ -1,0 +1,20 @@
+<div class="repair" ng-if="!lotteryStatus"></div>
+<div class="lottery-main" ng-if="lotteryStatus">
+    <div ng-include="LTY_ROOT + 'announcement/announcement.tpl.html'"></div>
+    <div class="lhc">
+        <div class="lhc-bet-area animated shake">
+            <div class="tabs">
+                <div
+                        style="padding: 0 25px"
+                        class="tab-item"
+                        ng-class="{'tab-selected': x.id == showParentId}"
+                        ng-repeat="x in playlist.play"
+                        ng-click="getTmp(x.id, x.sname)"
+                >
+                    <label class="tab-label" >{{x.name}}</label>
+                </div>
+            </div>
+            <div ng-include="LTY_ROOT + tmp"></div>
+        </div>
+    </div>
+</div>

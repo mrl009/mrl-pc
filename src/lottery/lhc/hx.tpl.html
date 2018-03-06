@@ -1,0 +1,114 @@
+<!-- 合肖模板 -->
+<div class="he-xiao">
+	<ul class="subTabs">
+		<li
+			ng-repeat="tool in hxTools"
+			ng-class="{'active': toolType == tool.type}"
+			ng-click="changeTool(tool.type)"
+		>{{tool.name}}</li>
+	</ul>
+	<div class="mini-grid">
+		<div class="row cell-title title-bg-shen">生肖</div>
+		<div class="row" ng-repeat="idx in inarrballs track by $index">
+			<div class="cell col50">
+				<div
+					class="label col30 title-bg-shen"
+					code="{{balls[0][idx].code}}"
+					name="{{balls[0][idx].name}}"
+					rate="{{rates}}"
+					id="{{balls[0][idx].id}}"
+					rebate="{{balls[0][idx].rebate}}"
+					ng-click="handleCb2($event, tid)"
+				>
+					<i class="icon-selectors icon-checkbox-uncheck"></i>
+					<span>{{balls[0][idx].name}}</span>
+				</div>
+				<div class="numbers col70">
+					<div
+						class="num-wrap col20"
+						ng-repeat="ball in handleNums(sxNums[balls[0][idx].name]) track by $index"
+					>
+						<span class="num-item" ball="{{ball}}">{{ball}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="cell col50">
+				<div
+					class="label col30 title-bg-shen"
+					code="{{balls[1][idx].code}}"
+					name="{{balls[1][idx].name}}"
+					id="{{balls[1][idx].id}}"
+					rate="{{rates}}"
+					rebate="{{balls[1][idx].rebate}}"
+					ng-click="handleCb2($event, tid)"
+				>
+					<i class="icon-selectors icon-checkbox-uncheck"></i>
+					<span>{{balls[1][idx].name}}</span>
+				</div>
+				<div class="numbers col70">
+					<div
+						class="num-wrap col20"
+						ng-repeat="ball in handleNums(sxNums[balls[1][idx].name]) track by $index"
+					>
+						<span class="num-item" ball="{{ball}}">{{ball}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="lhc-bet-result">
+	<div class="desc">
+		<div class="dotted"></div>
+		<div class="info-check">
+			号码组合共
+			<span>{{betNum}}</span>
+			组
+		</div>
+		<div class="dotted"></div>
+	</div>
+	<div class="table">
+	    <div class="theader">
+	        <div class="sequence">序号</div>
+	        <div class="model">模式</div>
+	        <div class="combination">号码组合</div>
+	        <div class="odds">赔率</div>
+	    </div>
+	    <div class="tbody">
+	        <div style="position: relative; overflow: hidden; width: 100%; height: 100%; flex: 1 1 0%;">
+	            <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: 0px; margin-bottom: 0px;">
+	                <div class="row" ng-if="betNum">
+	                	<div class="sequence">组合1</div>
+	                    <div class="model">{{tabName}}</div>
+	                    <div class="combination">{{oneBall.name}}</div>
+	                    <div class="odds">{{oneBall.rate}}</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="info">
+	    <div class="money">
+	        <span>下注金额：</span>
+	        <div>
+	            <input-number
+	            	placeholder="最低限额1"
+	            	name="betMoney"
+	            	type="number"
+	            	init-value=""
+	            	ng-click="showQuickMoney($event, false)"
+	            >
+	        </div>
+	    </div>
+	    <div class="tips">
+	        <span>单注限额：{{max_money_play}}</span><br>
+	        <span>单项（号）限额：{{max_money_stake}}</span>
+	    </div>
+	    <div class="btn-group">
+	        <button class="btn confirm-btn" ng-click="duoSubmit()">确认下注</button>
+	        <button class="btn cancel-btn" ng-click="reset()">取消</button>
+	    </div>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+<div class="announcement">
+    <div class="currentLottery animated fadeInLeftBig">
+        <div class="lottery_logo"><img src="{{playlist.img}}" alt="logo"></div>
+        <div class="lottery_info">
+            <div class="lottery_name">{{playlist.name}}</div>
+            <div class="issue">
+                第<span>{{kithe.kithe}}</span>期
+            </div>
+            <div class="btn">
+                <button>
+                    <!--<i class="icon-zs-in"></i>-->
+                    <a href="/trend_detail/{{type}}/{{gid}}">号码走势</a>
+                </button>
+            </div>
+            <div ng-if="isType && PUBAUTH" class="game-type">
+                <a href="/lottery{{url}}" class="highlight">{{playlist.ctg == 'gc'?BY:GF}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="lottery-time animated fadeInDownBig">
+        <div class="prompt">{{openStatus?'已开盘，欢迎投注。距离关盘还有：':'未开盘'}}</div>
+        <div class="timer">
+            <div class="board">{{syTime[0]}}</div>
+            <div class="splice icon-colon"></div>
+            <div class="board">{{syTime[1]}}</div>
+            <div class="splice icon-colon"></div>
+            <div class="board">{{syTime[2]}}</div>
+        </div>
+    </div>
+    <div class="lottery-record animated fadeInRightBig">
+        <div class="record">
+            <div class="one-group">
+                <div class="one_issue">
+                    第<span>{{lottery_log_one.kj_issue}}</span>期
+                </div>
+                <div class="ball-magic">
+                    <div class="false"
+                         ng-class="{true: 'small-right', false: ''}[type == 'pk10' || type == 's_pk10' || type =='lhc' || type == 's_kl10']"
+                         ng-repeat="x in lottery_log_one.number track by $index">
+                        <div ng-class="{true: 'small', false: ''}[type == 'pk10' || type == 's_pk10' || type =='lhc' || type == 's_kl10']">{{x}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="five-group hidden">
+                <div class="group" ng-repeat="x in lottery_log_five">
+                    <span class="five_issue">第<span>{{x.kj_issue}}</span>期：</span>
+                    <div class="ball null" ng-repeat="i in x.number track by $index">{{i}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="issue-select">
+            <button class="btn one-group-btn active" ng-click="showIssue(true)">近一期</button>
+            <button
+                class="btn five-group-btn"
+                ng-click="showIssue(false)"
+            >近五期</button>
+        </div>
+    </div>
+</div>

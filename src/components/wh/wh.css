@@ -1,0 +1,18 @@
+.wh-content {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  padding-top: 150px;
+  text-align: center;
+}
+.wh-content img {
+  width: 427px;
+  height: 377px;
+}
+.wh-content p {
+  margin-top: 20px;
+  font-size: larger;
+}
+.wh-content a {
+  font-size: larger;
+}

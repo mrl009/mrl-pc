@@ -1,0 +1,53 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+
+<div class="main vip">
+    <div class="vip_box accordion-content">
+        <div class="vip-head vip-content flex-between ">
+            <div class="head-left">
+                <i></i>
+                <p class="current-class">当前等级: VIP{{info.vip_id? info.vip_id: '--'}}</p>
+                <p>VIP晋级奖励: {{info.money? info.money: '0'}}</p>
+            </div>
+            <div class="head-center">
+                <h3></h3>
+                <p>最高可得{{info.total_money? info.total_money: '47856'}}元</p>
+                <button class="btn"
+                        ng-click="getAward()"
+                        ng-class="info.is_reward? 'btn-default': 'btn-disabled'">领取</button>
+            </div>
+            <div class="head-right">
+            </div>
+        </div>
+        <h3 class="vip-content">
+            <div>VIP晋级机制</div>
+        </h3>
+        <div class="vip-content">
+            <table class="table-border">
+                <tr>
+                    <th>等级</th>
+                    <th>成长积分</th>
+                    <th>VIP晋级奖励</th>
+                    <th style="border-right:1px solid #999;">跳级奖励</th>
+                </tr>
+                <tr ng-repeat="item in vipList">
+                    <td>{{item.id}}</td>
+                    <td>{{item.integral}}</td>
+                    <td>{{item.jj_money}}</td>
+                    <td>{{item.tj_money}}</td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="vip-content">
+            <div>活动奖励</div>
+        </h3>
+        <div class="pd-l10 pd-r10 vip-content" style="margin-bottom:40px;">
+            <p>1、会员每晋升一个等级，都能获得奖励，最高可达38888元。</p>
+            <p>2、充值1元可获得1成长积分。</p>
+            <p>例1：奥巴马从VIP1直接晋升到VIP4，他将能获得1+5+10=16元奖励。</p>
+            <p>例2：本拉登从VIP2直接晋升到VIP4，他将能获得5+10=15元奖励。</p>
+        </div>
+    </div>
+</div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

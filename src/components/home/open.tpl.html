@@ -1,0 +1,25 @@
+<div class="left kj">
+	<div class="head">
+		<i class="iconfont"></i>
+		开奖公告
+	</div>
+	<div class="kjmain">
+		<div class="item" ng-repeat="open in openData">
+			<div class="top">
+				<em>{{open.name}}</em>
+				<span>{{open.kj_issue}}期</span>
+			</div>
+			<div class="med">
+				<span class="red" ng-repeat="num in open.number track by $index">&nbsp;{{num}}</span>
+			</div>
+			<div class="bott">
+				<div class="left">{{open.kj_time|date:'yyyy-MM-dd'}}</div>
+				<div class="right">
+					<a ng-href="/open/{{open.tmp}}/{{open.gid}}">详细</a>
+					<a ng-href="/trend_detail/{{open.tmp}}/{{open.gid}}">走势</a>
+					<!--<a onclick="openLotteryWin(&quot;/Lottery/index/bet/1&quot;)">投注</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

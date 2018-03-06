@@ -1,0 +1,282 @@
+<div class="user_right right">
+    <div class="usercenter_info">
+        <div class="left">
+            <div class="avatar left"><img ng-src="{{userInfo.img}}" alt="" class="avatar_img">
+            </div>
+            <div class="right user_info">
+                <ul>
+                    <li>
+                        <label for="username">用 户 名 : </label> <span
+                            class="userinfo_username">{{userInfo.username}}</span>
+                    </li>
+                    <li>
+                        <label for="safe_lavel">安全等级: </label>
+                        <i class="user_star start_light"></i> <i class="user_star start_light"></i> <i
+                            class="user_star start_light"></i><i class="user_star start_dark"></i>
+                        <i class="user_star start_dark"></i>
+                    </li>
+                    <li>
+                        <button class="btn btn-default member-logout-btn" ng-click="logout()">退出登录</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="account_info">
+
+                <div class="account_balance">
+                    <label for="_balance">账户总额 :</label>
+                    <em>{{userInfo.balance}}</em><a href="" ng-click="getUser()"
+                                                    style="margin-left: 10px">刷新</a>
+                </div>
+
+                <div class="account_topup">
+
+                    <a class="btn btn-default topup-btn user_goto_recharge" ng-href="/member/member_top_up">充值</a>
+                    <a class="btn btn-dark withdraw-btn user_goto_withdraw" ng-href="/member/member_withdraw">提现</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/user_center">安全中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="user_safe" class="user_body">
+            <div class="safe_item">
+                <div class="safe_item_head login_password pointer" ng-click="showTable(0)">
+                    <div class="left info_view">
+                        <i class="iconfont icon-mima1"></i>
+                        <div class="left"><h3>登录密码</h3>
+                            <span>定期更换密码，让您的账户更安全</span></div>
+                    </div>
+                    <div class="right tool_control">
+                        <div class="tool_group">
+                            <i class="iconfont icon-duigou1"></i>
+                            <span>已设置</span>
+                        </div>
+                        <div class="tool_group tool_change">
+                            <span>修改</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="safe_item_body" style="display:none;">
+                    <div class="change_password">
+                        <div class="form">
+                            <form id="changePwdFrom" autocomplete="off">
+                                <div class="form_group">
+                                    <input type="password" placeholder="请输入旧密码" name="oldpass" id="oldpass"
+                                           ng-model="editpwd.oldpass"
+                                           autocomplete="new-password" maxlength="12"/>
+                                </div>
+                                <div class="form_group">
+                                    <input type="password" placeholder="请输入新密码" name="pass" id="pass"
+                                           ng-model="editpwd.pass"
+                                           autocomplete="new-password" maxlength="12"/>
+                                </div>
+                                <div class="form_group">
+                                    <input type="password" placeholder="请再次确认新密码" name="repass" id="repass"
+                                           ng-model="editpwd.repass"
+                                           autocomplete="new-password" maxlength="12"/>
+                                </div>
+
+                                <div class="form_remark">
+                                    密码规则：密码长度至少
+                                    <span class="red">6 - 12</span>
+                                    位数
+                                </div>
+
+                                <button type="button" class="btn btn-radius btn-default" name="button"
+                                        id="changePwd" ng-click="setLoginPassword()">确 认
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="safe_item" id="fund_password_item">
+                <div class="safe_item_head login_password pointer" ng-click="showTable(1)">
+                    <div class="left info_view">
+                        <i class="iconfont icon-iconfontcolor11"></i>
+                        <div class="left"><h3>资金密码</h3>
+                            <span>为您账户安全，真实姓名要与绑定银行卡姓名一致</span></div>
+                    </div>
+                    <div class="right tool_control" ng-if="!isSetPwd">
+                        <div class="tool_group" id="set_two">
+                            <span class="red">未设置</span></div>
+                        <div class="tool_group tool_change">
+                            <span>设置</span></div>
+                    </div>
+                    <div class="right tool_control" ng-if="isSetPwd">
+                        <div class="tool_group" id="set_two">
+                            <i class="iconfont icon-duigou1"></i>
+                            <span>已设置</span>
+                        </div>
+                        <div class="tool_group tool_change">
+                            <span>修改</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="safe_item_body" style="display:none;" id="fund_password_body">
+                    <div class="change_password">
+                        <div class="form">
+                            <form id="changeTradePwdFrom" autocomplete="off">
+                                <div class="form_group">
+                                    <input type="text" placeholder="请输入真实姓名" ng-if="!isBankName"
+                                           ng-model="bank.name" autocomplete="off">
+                                    <input type="text" ng-if="isBankName" ng-model="bank.name" disabled/>
+                                </div>
+                                <div class="form_group" ng-if="isSetPwd" ng-if="!isBankName">
+                                    <input type="password" placeholder="请输入旧密码" maxlength="6"
+                                           ng-model="editMoneyPwd.old_pass">
+                                </div>
+                                <div class="form_group" ng-if="isSetPwd">
+                                    <input type="password" placeholder="请输入新密码" maxlength="6"
+                                           ng-model="editMoneyPwd.new_pass">
+                                </div>
+                                <div class="form_group" ng-if="isSetPwd">
+                                    <input type="password" placeholder="请再次确认新密码" maxlength="6"
+                                           ng-model="editMoneyPwd.re_new_pass">
+                                </div>
+                                <div class="form_group" ng-if="isPhone&&!isSetPwd&&!isBankName">
+                                    <input type="text" placeholder="请输入电话号码" maxlength="11"
+                                           ng-model="editMoneyPwd.phone">
+                                </div>
+                                <div class="form_group" ng-if="isPhone&&!isSetPwd&&isBankName&&!isEmptyPhone">
+                                    <input type="text" placeholder="请输入电话号码" maxlength="11"
+                                           ng-model="bank.phone" disabled>
+                                </div>
+                                <div class="form_group" ng-if="isPhone&&!isSetPwd&&isBankName&&isEmptyPhone">
+                                    <input type="text" placeholder="请输入电话号码" maxlength="11"
+                                           ng-model="editMoneyPwd.phone">
+                                </div>
+                                <div class="form_group" ng-if="!isSetPwd">
+                                    <input type="password" placeholder="请设置资金密码"
+                                           ng-model="editMoneyPwd.money_pass" ng-init="editMoneyPwd.money_pass=''"
+                                           autocomplete="off" maxlength="6">
+                                </div>
+                                <div class="form_remark">
+                                    密码规则：<span class="red">6位纯数字</span>
+                                </div>
+                                <button type="button" class="btn btn-radius btn-default" name="button"
+                                        id="changeTradePwd" ng-click="setMoneyPassword()">确 认
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="safe_item" id="bindBankHead">
+                <div class="safe_item_head login_password pointer">
+                    <div class="left info_view">
+                        <i class="iconfont icon-icon01"></i>
+                        <div class="left"><h3>我的银行卡</h3>
+                            <span>为保证您的用卡安全，请绑定持卡人本人的银行卡</span></div>
+                    </div>
+                    <div class="right tool_control" ng-if="!iscardFlag" ng-click="showTable(2, true)">
+                        <div class="tool_group" id="set_three">
+                            <span class="red" id="addBankCard">去绑定</span></div>
+                        <div class="tool_group tool_change">
+                            <span id="addBankCard">绑卡</span>
+                        </div>
+                    </div>
+                    <div class="right tool_control" ng-if="iscardFlag" ng-click="showTable(2, false)">
+                        <div class="tool_group" id="set_three">
+                            <i class="iconfont icon-duigou1"></i>
+                            <span>已设置</span>
+                        </div>
+                        <div class="tool_group tool_change">
+                            <span>查看</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="safe_item_body" id="add_bank_card_div" ng-if="bankIsAdd">
+                    <div class="change_password">
+                        <div class="form">
+                            <form id="bindBankCardFrom" method="post" autocomplete="off">
+                                <div class="form_group disabled_group">
+                                    <input type="text" placeholder="请输入真实姓名" ng-model="bank.name" ng-readonly="isBankName">
+                                </div>
+                                <div class="form_group disabled_group" ng-if="isPhone">
+                                    <input type="text" placeholder="请输入手机号" ng-model="bank.phone" ng-readonly="!isEmptyPhone">
+                                </div>
+                                <div class="form_group">
+                                    <select class="select select_k memeber_select" name="bank_id" id="bank_id"
+                                            ng-model="bank_id" ng-change="selectBank(bank_id)">
+                                        <option value="">请选择开户银行</option>
+                                        <option ng-repeat="x in data track by $index" value="{{x.id}}" qrcode="{{x.is_qcode}}">
+                                            {{x.bank_name}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form_group">
+                                    <input type="text" placeholder="{{isQrCode==1?'请输入账号':'请输入银行卡号'}}" ng-model="setBankPwd.bank_account">
+                                </div>
+                                <div class="form_group">
+                                    <input type="text" placeholder="开户行具体地址" ng-model="setBankPwd.bank_address" ng-if="isQrCode != 1">
+                                    <input type="file"
+                                           class="file"
+                                           onchange="angular.element(this).scope().fileUpload()"
+                                           ng-if="isQrCode == 1">
+                                </div>
+                                <div class="form_group">
+                                    <img class="thumb hidden bank_img" src="">
+                                    <input id="img_url" type="hidden" value="">
+                                </div>
+                                <div class="form_group">
+                                    <input type="password" placeholder="校验资金密码" maxlength="6"
+                                           ng-model="setBankPwd.checkpass">
+                                </div>
+                                <button type="button" class="btn btn-radius btn-default" name="button"
+                                        id="bindBankCard" ng-click="setBankCard()">确 认
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="safe_item_body" id="user_bank_list" style="display:none;" ng-if="iscardFlag && !bankIsAdd">
+                    <div class="bank_list_div">
+                        <div class="form" ng-repeat="i in user_card">
+                            <div class="user_bank_item">
+                                <!--<img class="bank_card_img" ng-src="{{i.img}}"
+                                     alt="" class="bank_logo">
+                                <label class="label_bank_name">{{i.name}}</label>
+                                <div class="item_title">
+                                    <label class="label_bank_account">{{i.num}}</label>
+                                    <label class="label_default">(默认)</label>
+                                    <else>
+                                        <label class="label_default"></label>
+                                </div>
+                                <i class="iconfont icon-duigou1"></i></div>-->
+                                <div class="user_bank_item_body">
+                                    <div class="form_group disabled_group">
+                                        <input type="text" ng-model="bank.name" disabled>
+                                    </div>
+                                    <div class="form_group">
+                                        <input readonly type="text" ng-model="i.num" disabled>
+                                    </div>
+
+                                    <div class="form_group">
+                                        <input readonly type="text" ng-model="i.name" disabled>
+                                    </div>
+
+                                    <div class="form_group" ng-if="i.qrcode">
+                                        <span>收款二维码</span>
+                                        <img src="{{i.qrcode}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bank_list_add" ng-if="iscardFlag > 0 && iscardFlag <3">
+                        <button ng-click="showTable(2, true)">添加</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

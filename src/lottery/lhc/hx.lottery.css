@@ -1,0 +1,29 @@
+/*合肖*/
+.he-xiao .subTabs {
+  margin-top: -20px;
+  border: 1px solid #e94335;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.he-xiao .subTabs li {
+  list-style: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+.he-xiao .subTabs .active {
+  color: #e94335;
+  text-decoration: underline;
+}
+.he-xiao .mini-grid {
+  width: 100%;
+}
+.he-xiao .mini-grid .numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+/*合肖*/

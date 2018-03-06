@@ -1,0 +1,47 @@
+/** 导航 **/
+.tool_bar {
+  height: 30px;
+  background: #f3f3f3;
+  line-height: 30px;
+}
+.top_bar_nav ul {
+  float: right;
+}
+.tool_bar .left {
+  width: 300px;
+}
+.tool_bar .welcome {
+  font-size: 13px;
+  color: #333;
+}
+.tool_bar .right {
+  width: 485px;
+}
+.tool_bar li {
+  float: left;
+}
+.tool_bar li.tel {
+  padding-right: 10px;
+  color: #E7441B;
+}
+.tool_bar li em.tel_icon {
+  background-image: url(../../assets/img/tel@2x.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-top: 8px;
+  margin-right: 6px;
+  background-size: 15px 13px;
+}
+.tool_bar li a {
+  color: #333;
+  display: block;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.tool_bar li a:hover {
+  color: #E94335;
+  background: #FFFBF7;
+}

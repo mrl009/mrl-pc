@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@import url(rem.less);
+/* 全站按钮控制 */
+a.btn-register-success {
+  width: 200px;
+  text-decoration: none;
+}
+
+input.code-input {
+  width: 150px !important;
+  margin-right: 4px;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  &.topup-btn {}
+
+  &.withdraw-btn {
+    margin-left: 40px;
+  }
+}
+
+/**按钮初始化**/
+
+.btn {
+  padding: 10px;
+  border: 0px;
+  font-size: 17px;
+  color: @white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/**默认 按钮颜色 (深)**/
+
+a.btn-default, button.btn-default, input.btn-default, .btn-default {
+  background: @dColor;
+  color: @white;
+}
+
+a:hover.btn-default, button.btn-default:hover, input.btn-default:hover, .btn-hover {
+  background: @hColor;
+  color: @white;
+}
+
+a:focus.btn-default, input:focus.btn-default, button:focus.btn-default, .btn-focus {
+  background-color: @fColor;
+  color: @white;
+}
+
+/**默认 按钮颜色 (浅)**/
+
+.d-btn {
+  background: @rdColor;
+  color: @white;
+}
+
+a:hover.d-btn, button.d-btn:hover, input.d-btn:hover, .d-btn-hover {
+  background: @rhColor;
+  color: @white;
+}
+
+a:focus.d-btn, button:focus.d-btn, input:focus.d-btn, .d-btn-focus {
+  background-color: @rfColor;
+  color: @white;
+}
+
+/**灰色按钮**/
+/*
+.btn-dark, a.btn-dark:hover,input.btn-dark:hover, .btn-dark-hover {
+  background: @darkBtnd;
+  color: @white;
+}
+
+a:focus.btn-dark, button:focus.btn-dark, input:focus.btn-dark, .btn-dark-focus {
+  background-color: @darkBtnd;
+  color: @white;
+}
+*/
+input:disabled, button:disabled {
+  background: @disabledColor;
+}
+
+
+/**默认 团队**/
+/*
+.team-btn {
+  background: @userNavColor;
+  color: #fff;
+}
+
+.team-btn-hover {
+  background: #CCCCCC;
+  color: #fff;
+}*/
+
+/**按钮 圆角**/
+
+.btn-radius {
+  border-radius: 4px;
+}
+
+button.btn-register {
+  margin-left: 154px;
+  width: 310px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 22px;
+  height: 50px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}

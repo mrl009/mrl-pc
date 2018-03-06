@@ -1,0 +1,44 @@
+<div ng-include="TPL_ROOT + 'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'nav/nav.tpl.html'"></div>
+
+<div class="main huodong">
+    <div class="huodong_title">
+        <h1>活动专区</h1>
+    </div>
+    <div class="huodong_main">
+        <div class="box">
+            <div class="accordion-header">
+                <div class="show_box" ng-click="showHideAccrod('vip')">
+                    <div class="left img_box">
+                        <img src="https://www.sqxingyun.com/uploads//7ed812a3ab3702f98a381ca0b9f0a65a.jpg"
+                             width="660" height="150" alt="">
+                    </div>
+                    <div class="right box_info">
+                        <h1><i class="iconfont icon-duigou"></i>充值越多惊喜多多</h1>
+                        <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; list-style: none; padding: 0px; font-family: 微软雅黑, 宋体, Verdana; font-size: 12px; line-height: 20px; widows: 1; background-color: rgb(249, 249, 249); outline: none !important;">
+                            起始时间：2017-11-04</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box" ng-repeat="x in data track by $index">
+            <div class="accordion-header">
+                <div class="show_box" ng-click="showHideAccrod($index)">
+                    <div class="left img_box">
+                        <img ng-src="{{x.img_base64}}"
+                             width="660" height="150" alt="">
+                    </div>
+                    <div class="right box_info">
+                        <h1><i class="iconfont icon-duigou"></i> {{x.title}}</h1>
+                        <p style="margin-top: 0px; margin-bottom: 0px; white-space: normal; list-style: none; padding: 0px; font-family: 微软雅黑, 宋体, Verdana; font-size: 12px; line-height: 20px; widows: 1; background-color: rgb(249, 249, 249); outline: none !important;">
+                            起始时间：{{x.start_time}}</p>
+                    </div>
+                </div>
+                <div class="content_box accordion-content" ng-bind-html="x.content" style="display: none">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

@@ -1,0 +1,148 @@
+@charset "utf-8";
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+/*注册页面*/
+.register {
+  background: #fffdfa;
+  border: 1px solid #f4f0ed;
+  width: 998px !important;
+}
+.register .register_forms {
+  width: 570px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  overflow: hidden;
+}
+.register .register_forms h1 {
+  color: #E94335;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.register .register_forms .form_group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.register .register_forms .form_group .column {
+  flex-basis: 100%;
+  display: flex;
+}
+.register .register_forms .form_group .column .error_tip {
+  font-size: 12px;
+  color: red;
+}
+.register .register_forms .form_group .column .success_icon {
+  width: 22px;
+  margin-left: 10px;
+  padding: 15px 0;
+  display: none;
+}
+.register .register_forms .form_group .column_tip {
+  justify-content: center;
+  margin-left: 55px;
+  display: none;
+  padding-left: 100px;
+}
+.register .register_success {
+  padding-bottom: 70px;
+  margin-top: 30px;
+}
+.register .register_success .reg_success_box {
+  width: 477px;
+  overflow: hidden;
+  margin-left: 244px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  padding-left: 95px;
+}
+.register .register_success .reg_success_box h1 {
+  font-size: 30px;
+  color: #E94335;
+  font-weight: 100;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.register .register_success .reg_success_box p {
+  color: #999;
+  font-size: 16px;
+  line-height: 26px;
+  overflow: hidden;
+}
+.register a.btn-register-success {
+  margin-left: 341px;
+  overflow: hidden;
+}
+.register .register_remark {
+  padding-left: 40px;
+  line-height: 29px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.register .register_remark h2 {
+  font-size: 16px;
+  color: red;
+  font-weight: 100;
+}
+.register .register_remark p {
+  font-size: 14px;
+  color: #666;
+}
+.icheckbox_square-blue,
+.iradio_square-blue {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background-image: url(../../assets/img/select@2x.png);
+  background-position: -3px -3px;
+  -webkit-background-size: 287px;
+  background-size: 287px;
+  border: none;
+  cursor: pointer;
+}
+.tiaokuan {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  display: block;
+  width: 140%;
+  height: 140%;
+  margin: 0px;
+  padding: 0px;
+  background: #ffffff;
+  border: 0px;
+  opacity: 0;
+}
+.iCheck-helper {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  display: block;
+  width: 140%;
+  height: 140%;
+  margin: 0px;
+  padding: 0px;
+  background: #ffffff;
+  border: 0px;
+  opacity: 0;
+}
+.icheckbox_square-blue {
+  position: relative;
+}
+.icheckbox_square-blue.hover {
+  background-position: 257px -3px;
+}
+.icheckbox_square-blue.checked {
+  background-position: -57px -3px;
+}

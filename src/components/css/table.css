@@ -1,0 +1,44 @@
+@charset "utf-8";
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table th,
+.table td {
+  padding: 8px;
+}
+.table thead th {
+  text-align: left;
+}
+.table-fixed {
+  table-layout: fixed;
+}
+.table-list td {
+  border-bottom: 1px dashed #ddd;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+.table-line th,
+.table-line td {
+  border-top: 1px solid #ddd;
+}
+.table-line thead:first-child tr:first-child th,
+.table-line thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-radius {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.table-radius th,
+.table-radius td {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.table-col-th th {
+  background-color: #ddd;
+  width: 10%;
+  vertical-align: middle;
+}

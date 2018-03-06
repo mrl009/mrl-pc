@@ -1,0 +1,14 @@
+<div class="left news">
+    <div class="head">
+        <i class="iconfont"></i>
+        资讯信息
+    </div>
+    <div class="news_list">
+        <ul>
+            <li ng-repeat="x in news">
+                <em>【 {{x.category_name}} 】</em>
+                <a href="/news_detail/{{x.id}}" target="_blank">{{x.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

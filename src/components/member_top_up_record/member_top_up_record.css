@@ -1,0 +1,20 @@
+@charset "utf-8";
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+/*注册页面*/
+.topuprecord_data thead {
+  background: #f4f4f4;
+}
+.topuprecord_data thead th {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-weight: 100;
+  color: #666;
+}
+.topuprecord_data .table tbody {
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}

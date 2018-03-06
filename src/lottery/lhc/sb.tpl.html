@@ -1,0 +1,125 @@
+<!-- 色波 -->
+
+<div class="bet-grid" ng-if="playTwoId == '3sb'">
+	<div class="row cell-title title-bg-shen">色波</div>
+	<div class="row">
+		<div
+			class="cell col33"
+			ng-repeat="ball in balls[0]"
+			ng-init="$last && initChange()"
+		>
+			<div class="label col20 label-bg" >{{ball.name}}</div>
+			<div class="odds red col20" >
+				<span>{{ball.rate}}</span>
+			</div>
+			<div class="money col60">
+				<input
+					class="cell-input"
+					rate="{{ball.rate}}"
+					rebate="{{ball.rebate}}"
+					code="{{ball.code}}"
+					pid="{{ball.id}}"
+					name="{{ball.name}}"
+					maxlength="9"
+				>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 七色波 -->
+<div class="bet-grid" ng-if="playTwoId == '7sb' ">
+	<div class="row title title-bg-shen">
+		<div class="cell col25" >
+			<div class="cell-title col20">号码</div>
+			<div class="cell-title col20">赔率</div>
+			<div class="cell-title col60">金额</div>
+		</div>
+		<div class="cell col25">
+			<div class="cell-title col20">号码</div>
+			<div class="cell-title col20">赔率</div>
+			<div class="cell-title col60">金额</div>
+		</div>
+		<div class="cell col25">
+			<div class="cell-title col20">号码</div>
+			<div class="cell-title col20">赔率</div>
+			<div class="cell-title col60">金额</div>
+		</div>
+		<div class="cell col25">
+			<div class="cell-title col20">号码</div>
+			<div class="cell-title col20">赔率</div>
+			<div class="cell-title col60">金额</div>
+		</div>
+	</div>
+	<div class="row">
+		<div
+			class="cell col25"
+			ng-repeat="ball in balls[0]"
+			ng-init="$last && initChange()"
+		>
+			<div class="label col20 label-bg" >{{ball.name}}</div>
+			<div class="odds red col20" >
+				<span>{{ball.rate}}</span>
+			</div>
+			<div class="money col60">
+				<input
+					class="cell-input"
+					rate="{{ball.rate}}"
+					rebate="{{ball.rebate}}"
+					code="{{ball.code}}"
+					pid="{{ball.id}}"
+					name="{{ball.name}}"
+					maxlength="9"
+				>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 半波 半半波 -->
+<div class="bet-grid" ng-if="playTwoId == 'bb' || playTwoId == 'bbb' ">
+	<div class="row title-bg-shen">
+		<div class="cell col100">
+			<div class="cell-title col30">半波</div>
+			<div class="cell-title col30">赔率</div>
+			<div class="cell-title col40">金额</div>
+		</div>
+	</div>
+	<div class="row" ng-repeat="ball in balls[0]" ng-init="$last && initChange()">
+		<div class="cell col100">
+			<div class="label col30 title-bg-shen">{{ball.name}}</div>
+			<div class="odds col30">
+				<span class="red">{{ball.rate}}</span>
+			</div>
+			<div class="money col40">
+				<input
+					class="cell-input"
+					rate="{{ball.rate}}"
+					rebate="{{ball.rebate}}"
+					code="{{ball.code}}"
+					pid="{{ball.id}}"
+					name="{{ball.name}}"
+					maxlength="9"
+				>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{betCount}}</span>
+            元
+            </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button class="cancel-btn" ng-click="reset()">取消</button>
+        <button class="confirm confirm-btn" ng-click="handleSubmit()">确认</button>
+    </div>
+</div>

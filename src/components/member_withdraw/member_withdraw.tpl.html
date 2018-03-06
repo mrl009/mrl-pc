@@ -1,0 +1,78 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div ng-include="TPL_ROOT + 'member_user_nav/member_user_nav.tpl.html'"></div>
+        </div>
+        <div class="user_body">
+            <div class="topup_main">
+                <form method='post' action="/Finance/withdraw.html" id="withdraw_form">
+                    <div class="main_header">
+                        <div class="user">
+                            <em>可提金额:</em>
+                            <span>¥{{(items.balance-items.all_fee).toFixed(3)}}</span>
+                        </div>
+                        <div class="money">
+                            <label><em class="red">＊</em>提现金额:</label>
+                            <input type="text" placeholder="请输入提现金额" class="member_topup_input" ng-model="data.money"
+                                   onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]|^0{1,}\d{1,}|[\,,\.,\|,\{,\}]{1,}/g,'')" name="w_money">
+                        </div>
+                    </div>
+                    <div class="pay_type">
+                        <h2>提现至:</h2>
+                        <div class="pay_main" ng-repeat="i in user_card" ng-click="setType(i.bank_id)">
+                            <ul>
+                                <li class="pay_info" ng-class="{'hover': bank_id == i.bank_id}">
+                                        <span class="bank_logo">
+                                            <img ng-src="{{i.bank_id==51 || i.bank_id == 52?i.qrcode:i.img}}" style="width:32px;height: 32px">
+                                        </span>
+                                    <span class="bank_number">{{i.name}}</span>
+                                    <span class="account_name">{{i.num}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pay_password">
+                        <label><em class="red">＊</em>资金密码:</label>
+                        <input type="password" name="w_pwd" placeholder="请输入资金密码" maxlength="6" ng-model="data.bank_pwd" class="member_topup_input">
+                    </div>
+                    <input type="button" value="下一步" ng-click="withdraw()" class="btn btn-default btn-radius">
+                </form>
+                <br>
+                <div class="account_b">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td width="140">账户余额</td>
+                                <td width="250">{{items.balance}}元</td>
+                                <td width="140">可提金额</td>
+                                <td width="250">{{(items.balance-items.all_fee).toFixed(3)}}元</td>
+                            </tr>
+                            <tr>
+                                <td>存款</td>
+                                <td>{{items.total_price}}元</td>
+                                <td>优惠</td>
+                                <td>{{items.discount_price}}元</td>
+                            </tr>
+                            <tr>
+                                <td>提款需达投注量</td>
+                                <td>{{items.auth_dml}}元</td>
+                                <td>已达投注量</td>
+                                <td>{{items.dml}}元</td>
+                            </tr>
+                            <tr>
+                                <td>手续费</td>
+                                <td>{{items.out_fee}}元</td>
+                                <td>行政费用</td>
+                                <td>{{items.total_ratio_price}}元</td>
+                            </tr>
+                            <tr>
+                                <td>共扣除</td>
+                                <td colspan="3"><span class="red-number">{{items.all_fee}}元</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

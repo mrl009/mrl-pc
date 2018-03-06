@@ -1,0 +1,177 @@
+<div class="bet-result">
+    <div class="order-area">
+        <div class="bet-table">
+            <div class="table-cap">
+                <div class="cap-ct"></div>
+            </div>
+            <div class="tb-ct">
+                <div class="tb-header">
+                    <div class="method">玩法</div>
+                    <div class="betnum">注数</div>
+                    <div class="amount">单注金额</div>
+                    <div class="tb-unit"><!--模式--></div>
+                    <div class="tb-rebate">返点</div>
+                    <div class="total">金额</div>
+                    <div class="tb-del">&nbsp;</div>
+                </div>
+                <div class="tb-body">
+                    <div style="position: relative; overflow: hidden; width: 100%; height: 100%; flex: 1 1 0%;">
+                        <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;">
+                            <div class="tb-row" ng-repeat="v in betList track by $index">
+                                <div class="method">
+                                    <div class="name">[{{v.title}}]</div>
+                                    <div class="content">{{v.names}}</div>
+                                </div>
+                                <div class="betnum">{{v.counts}}</div>
+                                <div class="amount">{{v.price}}
+                                    <!--input type="text" value="287" maxlength="5"-->
+                                </div>
+                                <div class="tb-unit">
+                                    <!--select>
+                                        <option value="yuan">元</option>
+                                        <option value="jiao">角</option>
+                                        <option value="fen">分</option>
+                                    </select-->
+                                </div>
+                                <div class="tb-rebate">{{v.rebate}}%</div>
+                                <div class="total">{{v.price_sum}}&nbsp;元</div>
+                                <div class="tb-del">
+                                    <a href="javascript: void(0)" ng-click="delOneBet($index)"><i class="iconfont">X</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tb-footer">
+                    <div class="zhui-hao">
+                        <div class="chase-choice">我要追号</div>
+                        <div class="switch"><input type="checkbox" ng-model="bb.zhbet"  ng-click="openZh(bb.zhbet)"><label><i></i></label></div>
+                    </div>
+                    <div class="bet-total">
+                        <span>方案注数<span>{{betSum}}</span>注，总金额<span>{{betTotal}}</span>元</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bet-actions">
+            <!--button ng-click="oneBet()">随机一注</button>
+            <button ng-click="fiveBet()">随机五注</button-->
+            <button ng-click="delAllBet()">删除全部</button>
+            <button class="bet-confirm" ng-click="betSubmit()">确认投注</button>
+        </div>
+    </div>
+</div>
+
+<div class="chase-number" ng-if="bb.zhbet">
+    <div class="chase-table">
+        <div class="ct-header">
+            <div class="h-label">
+                <div class="tabs">
+                    <div class="tab" ng-click="swapTab(1)" ng-class="{'active':zhType==1}">普通追号</div>
+                    <div class="tab" ng-click="swapTab(2)" ng-class="{'active':zhType==2}">高级追号</div>
+                </div>
+                <div class="h-control">
+                    <input type="checkbox" ng-model="bb.type"> <span>中奖后停止追号</span>
+                </div>
+            </div>
+
+            <div class="normal-chase" ng-class="{'block':zhType==1,'none':zhType==2}">
+                <span>连续追：</span>
+                <div class="issue-list">
+                    <div ng-click="getLimit(v)" ng-class="{'issue-activity':general.period==v}" ng-repeat="v in general.numArr">{{v}}期</div>
+                </div>
+                <input
+                    ng-model="general.period"
+                    onkeyup="this.value=this.value.replace(/\s/g,'')"
+                >
+                    &nbsp;&nbsp;
+                    <span>期</span>
+                <span style="margin-left: 50px;">倍数：</span><input ng-model="general.multiple" onkeyup="this.value=this.value.replace(/\s/g,'')">
+            </div>
+            <!--高级追号-->
+            <div class="advanced-chase" style="font-size: .875rem;" ng-class="{'block':zhType==2,'none':zhType==1}">
+                <div class="query-conditions">
+                    <div class="query-title">基本参数</div>
+                    <div class="basic-query">
+                        <div>
+                            <span>起始期号：</span>
+                            <select class="start-issue" ng-model="senior.start">
+                                <option ng-selected="3==v.id" ng-repeat="v in kitheAll" value="{{v.id}}">{{v.kithe}}</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>追号期数：</span>
+                            <input class="text-input" ng-model="senior.period" onkeyup="this.value=this.value.replace(/\s/g,'')">
+                            <span>期</span>
+                        </div>
+                        <div>
+                            <span>起始倍数：</span>
+                            <input class="text-input" ng-model="senior.multiple" maxlength="3" onkeyup="this.value=this.value.replace(/\s/g,'')">
+                            <span>倍</span>
+                        </div>
+                    </div>
+                    <div class="query-title">高级参数</div>
+                    <div class="advanced-query">
+                        <div class="advanced-label">
+                            <div class="label-list">
+                                <div style="background-color: rgb(255, 255, 255); border-right: 1px solid rgb(244, 233, 222);">
+                                    翻倍追号
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advanced-content">
+                            <div class="crow">
+                                <input type="radio" ng-value="1" ng-model="senior.type" name="type">
+                                <span>每隔</span><input class="text-input" maxlength="3" ng-model="senior.num1" style="margin-left: 5px;" onkeyup="this.value=this.value.replace(/\s/g,'')">
+                                <span>期 倍数x</span><input class="text-input" maxlength="3" ng-model="senior.mult1" style="margin-left: 5px;" onkeyup="this.value=this.value.replace(/\s/g,'')">
+                            </div>
+                            <div class="crow">
+                                <input type="radio" ng-value="2" ng-model="senior.type" name="type">
+                                <span>前</span><input class="text-input" maxlength="3" ng-model="senior.num2" style="margin-left: 5px;" onkeyup="this.value=this.value.replace(/\s/g,'')">
+                                <span>期 倍数=起始倍数，之后倍数=</span><input class="text-input" maxlength="3" ng-model="senior.mult2" style="margin-left: 5px;" onkeyup="this.value=this.value.replace(/\s/g,'')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="generate">
+                    <button ng-click="getZhBetList()">生成追号计划</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="ct-body">
+            <div class="theader">
+                <div class="ct-index">序号</div>
+                <div class="ct-issue"><span>追号期次</span></div>
+                <div class="ct-multiple">倍数</div>
+                <div class="ct-amount">金额</div>
+                <div class="expected-time">预计开奖时间</div>
+            </div>
+            <div class="tbody">
+                <div style="position: relative; overflow: hidden; width: 100%; height: 100%; flex: 1 1 0%;">
+                    <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: scroll; margin-right: -15px; margin-bottom: -15px;">
+                        <form>
+                            <div class="trow" ng-repeat="v in kitheList track by $index">
+                                <div class="ct-ind ex">{{$index+1}}</div>
+                                <div class="ct-issue"><span>{{v.kithe}}</span></div>
+                                <div class="ct-multiple">
+                                    <input-number
+                                        init-value="v.multiple"
+                                    ></input-number>
+                                </div>
+                                <div class="ct-amount">
+                                    {{(v.multiple*betTotal | number:2)}} 元
+                                </div>
+                                <div class="expected-time">{{v.open_time}}</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+

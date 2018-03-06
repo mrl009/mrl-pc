@@ -1,0 +1,588 @@
+@import url(../css/rem.less);
+
+/*侧导航  不带左边特效*/
+.menu {
+  .all-sort {
+    h2 i.iconfont {
+      font-size: 25px;
+      color: @white;
+      position: absolute;
+      right: 15px;
+      top: 8px;
+    }
+
+    a {
+      color: @white;
+      width: 100%;
+      height: 100%;
+      line-height: 45px;
+      padding-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 100;
+    }
+  }
+
+
+  .nav {
+    width: 740px;
+    left: 260px;
+    position: absolute;
+
+    ul li a {
+      display: block;
+      width: 100%;
+      color: @white;
+      text-align: center;
+      font-family: @baseFontFamily;
+      font-size: 16px;
+
+      &:hover,
+      &.current {
+        background: @hoverColor1;
+        text-decoration: none;
+        color: @white;
+        height: 45px;
+        margin-top: 2px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .ad {
+    right: 0px;
+    width: 141px;
+  }
+
+  .nav {
+    ul {
+      li {
+        float: left;
+        width: 107px;
+        line-height: 45px;
+        margin-right: 2px;
+        margin-left: 2px;
+
+        a {
+          display: block;
+          width: 100%;
+          color: @white;
+          height: 45px;
+          line-height: 45px;
+        }
+      }
+
+      em.nav_sx {
+        background: url(../../assets/img/fenge.png) left;
+        background-repeat: no-repeat;
+        background-size: 1px 16px;
+        display: block;
+        float: left;
+        width: 1px;
+        height: 16px;
+        margin-top: 14px;
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+
+      li a {
+        &:hover,
+        &.current {
+          text-decoration: none;
+          color: @white;
+          height: 43px;
+          margin-top: 2px;
+          line-height: 41px;
+        }
+        &.index{
+          background: @miColor;
+          text-decoration: none;
+          color: @white;
+          height: 43px;
+          margin-top: 2px;
+          line-height: 41px;
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  position: absolute;
+  z-index: 999;
+}
+
+.header_error{
+  display:flex;
+  position:fixed;
+  width:100%;
+  height:40px;
+  background:#000;
+  z-index:2;
+  top:0;
+  left:0;
+  opacity:0.66;
+  color:#FFF;
+  align-items:center;
+  justify-content:center;
+
+  i{
+    font-size: 24px;
+    padding-right:20px;
+    display:flex;
+    padding-top:6px;
+    align-items:center;
+  }
+  span{
+    font-size:16px;
+    letter-spacing:2px;
+  }
+}
+
+.sideNavB {
+  display: none;
+  box-sizing:border-box;
+  border: 2px solid @fColor;
+  border-top: none;
+  width: 250px;
+  line-height: 55px;
+  background-color: #fff;
+  z-index: 333;
+  position: absolute;
+  margin-top: 45px;
+  img {
+    vertical-align: middle;
+  }
+  &.nav-show {
+    display: block;
+  }
+  &.nav-show-sub {
+    display: block;
+  }
+  .hover {
+    position: absolute;
+    left: 0;
+    top:0;
+    border-bottom: 2px solid #FFCCBF !important;
+    border-top:2px solid #FFCCBF !important;
+    padding: 2px 3px 2px 15px !important;
+    z-index: 1000;
+    width: 225px;
+    background-color: #ffffff;
+  }
+
+  .oneLi .title a {
+    color: @gray3;
+    font-size: 16px;
+    padding-left: 0;
+    font-weight: 400;
+  }
+  .oneLi .title a:hover {
+    color: @hColor;
+  }
+
+
+  .hotMain {
+    height: 342px;
+
+    padding-top:7px; ;
+  }
+
+  .oneLi {
+    padding: 4px 0px 4px 15px;
+
+    height: 40px;
+    line-height: 35px;
+    .imgL {
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+      }
+
+      float: left;
+      line-height: 40px;
+
+    }
+    .title {
+      float: left;
+      padding: 0 1px;
+      margin-left: 12px;
+      color: @gray3;
+      font-size: 16px;
+      vertical-align: bottom;
+      a {
+        color: @gray3;
+        font-size: 16px;
+        padding-left: 0;
+        font-weight: 400;
+        &:hover {
+          color: @hColor;
+        }
+      }
+    }
+    .desc {
+      .red{
+        color:#ff6562 ;
+
+        vertical-align: middle;
+      }
+      padding-top: 3px;
+      font-size: 12px;
+      float: left;
+      margin-left: 5px;
+      font-size: 12px;
+      color: @gray9;
+      line-height: 40px;
+      height: 29px;
+      overflow: hidden;
+      span {
+        color: #fff;
+        background-color: #e94335;
+        padding: 4px;
+      }
+    }
+  }
+
+  .sortMain {
+    position: relative;
+
+
+    height: 70px;
+    font-size:14px ;
+  }
+  .sortDiv {
+    position: absolute;
+    left: 0;
+    top:0;
+    padding: 3px 3px 3px 15px;
+    border-top:1px dashed #e6d3cf;
+    width: 230px;
+    color: @gray3;
+
+  }
+  .sortArrow {
+    position: absolute;
+    top:7px;
+    left:224px;
+
+  }
+
+
+  .secondNav {
+    display: none;
+    position: absolute;
+    z-index: 88;
+    left: 246px;
+    border: 2px solid #FFCCBF;
+    width: 742px;
+    height: 208px;
+    top: -2px;
+    background-color: #ffffff;
+    padding-left: 6px;
+
+    .title {
+
+      padding-top:20px ;
+      padding-left:10px ;
+      width: 100%;
+      font-weight: 800;
+      font-size: 18px;
+      color: @gray9;
+      height: 30px;
+      line-height: 30px;
+    }
+    .ulDiv {
+      padding-left: 10px;
+      margin-top: 7px;
+      color: @gray3;
+
+    }
+    ul {
+
+    }
+    li {
+      float: left;
+      width: 94px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+      margin-right: 10px;
+      overflow: hidden;
+      a {
+
+        color: @gray6;
+        line-height: initial;
+        width: initial;
+        padding-left: 0;
+        font-weight: 500;
+        font-size: 14px;
+        &:hover {
+          color: @bgColor;
+        }
+      }
+
+    }
+  }
+
+    .sLeft {
+      float: left;
+
+      .sTitle {
+        width: 14px;
+        line-height: 16px;
+        font-size: 14px;
+        margin-top: 1px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px;
+      }
+      .red {
+        color: #FF0000;
+        background-color: #FFCDCD;
+        border: 1px solid #ffffff;
+      }
+      .blue {
+        color: #0040FF;
+        background-color: #DCE5FF;
+        border: 1px solid #B4C7FF;
+      }
+      .green {
+        padding: 15px 5px 14px 5px;
+        color: #005D19;
+        background-color: #D9F9DF;
+        border: 1px solid #B0E6BB;
+      }
+    }
+
+    .sRight {
+      float: left;
+      width: 180px;
+      line-height: 24px;
+      padding-left: 17px;
+      ul {
+
+        padding-top: 2px;
+        line-height: 25px;
+        font-size: 14px;
+      }
+      li {
+        color: @gray6;
+        float: left;
+        width: 90px;
+        font-weight: 500;
+        a {
+          color: #666;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: inherit;
+          padding-left: 0;
+          &:hover {
+            color: #e94335;
+          }
+        }
+      }
+    }
+
+
+  .item {
+    border-bottom: 1px dashed #dddddd;
+    padding: 10px 0px;
+
+    margin-bottom: -3px;
+  }
+  ul, li {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  .liLeft {
+    float: left;
+    text-align: center;
+
+    .iconImage {
+      height: 40px;
+    }
+  }
+
+  .liRight {
+    float: left;
+
+    font-size: 14px;
+    ul {
+
+    }
+    li {
+      float: left;
+
+      line-height: 30px;
+      overflow: hidden;
+    }
+    a {
+
+      color: @gray3;
+      &:hover {
+        color: @linkColor;
+      }
+    }
+  }
+}
+
+
+.menu-child1 {
+  position: absolute;
+  top: 139px;
+  width: 1000px;
+  margin: 0 5px;
+  padding: 1px;
+  z-index: 9999;
+  border-radius: 0 0 8px 8px;
+  zoom: 1;
+  box-shadow: 0 1px 30px #A9A9A9;
+  left: -268px;
+  margin-top: 49px;
+  padding-top: 5px;
+  padding-bottom: 0;
+
+}
+.menu-child1 .gamelist-1 {
+  background: url(../../assets/img/bg_0909.png) repeat;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  height: auto;
+}
+.gamelist-1 {
+  padding: 0px 34px 0;
+}
+.official_play {
+  border-right: 1px solid #2b2b2b;
+  display: inline-block;
+  width: 464px;
+  zoom: 1;
+  font-size: 0;
+  float: left;
+}
+.gamelist_tit {
+  border-bottom: 1px solid #2b2b2b;
+  width: 464px;
+  display: block;
+  margin: 8px 0 0 0;
+  height: 35px;
+}
+.menu-child1 h1 {
+  width: 70px;
+  height: 20px;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 26px;
+  margin-top: 2px;
+  float: left;
+  color: #fff;
+  line-height: 27px !important;
+}
+.color {
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 15px;
+  margin-left: 12px;
+  margin-top: 0;
+  background: url(../../assets/img/red_bg.png) no-repeat;
+  color: #fff;
+}
+.high_wrap {
+  width: 464px;
+  height: auto;
+  float: none;
+}
+.gamelist-1 .gamelist_l {
+  margin-left: 0;
+}
+.menu-child1 ul {
+  min-height: 62px !important;
+  padding: 11px 0 !important;
+  width: 464px !important;
+}
+.high_wrap ul {
+  float: none !important;
+}
+.menu-child1 li {
+  float: left !important;
+  line-height: 28px  !important;
+  margin: 5px 0 !important;
+  height: 104px !important;
+  width: 92px !important;
+  position: relative !important;
+  text-align: center !important;
+}
+.menu-child1 li a {
+  display: block !important;
+  width: 80px !important;
+  height: 76px !important;
+  padding: 0 0 18px 0 !important;
+  margin: 0 auto !important;
+  color: #222 !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+.menu-child1 li a:hover{
+  background: #141414 !important;
+}
+.menu-child1 li span {
+  font-size: 12px !important;
+  display: block !important;
+  color: #fff !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  overflow: hidden !important;
+  padding-right: 6px !important;
+  background: none !important;
+}
+.menu-child1 li a img {
+  width: 80% !important;
+  height: 80% !important;
+  margin: 10% !important;
+  display: block !important;
+  border-radius: 50%;
+}
+.credit_play {
+  display: inline-block;
+  width: 467px;
+  zoom: 1;
+  font-size: 0;
+  /* margin-left: -4px; */
+  float: left;
+}
+
+.high_wrap {
+  width: 464px;
+  height: auto;
+  float: none;
+}
+.gamelist-1 .gamelist_r {
+  margin-left: 15px;
+}
+
+.triangles_back {
+  width: 26px;
+  height: 19px;
+  position: absolute;
+  background: url(../../assets/img/triangles_back.png) no-repeat;
+  left: 411px;
+  top: -8px !important;
+}
+
+
+
+
+
+

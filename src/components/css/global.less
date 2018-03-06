@@ -1,0 +1,130 @@
+.zoushi_header_nav .lotteryNav,
+.zoushi_header_nav .hideNav,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv,
+.kaijianggonggao .kaijiang_main .day_list .day_title,
+.kaijianggonggao .kaijiang_main .day_list .day_con,
+.kaijianggonggao .kaijiang_main .main_foot .footMain {
+}
+
+.zoushi_header_nav .lotteryNav:before,
+.zoushi_header_nav .hideNav:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:before,
+.kaijianggonggao .kaijiang_main .day_list .day_title:before,
+.kaijianggonggao .kaijiang_main .day_list .day_con:before,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:before,
+.zoushi_header_nav .lotteryNav:after, .zoushi_header_nav .hideNav:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:after,
+.kaijianggonggao .kaijiang_main .day_list .day_title:after,
+.kaijianggonggao .kaijiang_main .day_list .day_con:after,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:after {
+    content: "";
+    display: table;
+}
+
+.zoushi_header_nav .lotteryNav:after,
+.zoushi_header_nav .hideNav:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:after,
+.kaijianggonggao .kaijiang_main .day_list .day_title:after,
+.kaijianggonggao .kaijiang_main .day_list .day_con:after,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:after {
+    clear: both;
+}
+
+.zoushi_header_nav .lotteryNav:before,
+.zoushi_header_nav .hideNav:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:before,
+.kaijianggonggao .kaijiang_main .day_list .day_title:before,
+.kaijianggonggao .kaijiang_main .day_list .day_con:before,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:before,
+.zoushi_header_nav .lotteryNav:after,
+.zoushi_header_nav .hideNav:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:after,
+.kaijianggonggao .kaijiang_main .day_list .day_title:after,
+.kaijianggonggao .kaijiang_main .day_list .day_con:after,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:after {
+    content: "";
+    display: table;
+}
+
+.zoushi .zoushi_data .data table .ballDiv .number_ball {
+  border-radius: 50%;
+  background-color: #E94335;
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+.lhc_ball_red {
+  background-color: #f45959 !important;
+}
+.lhc_ball_green {
+  background-color: #6acc7b !important;
+}
+.lhc_ball_blue {
+  background-color: #51ABF0 !important;
+}
+
+.flex() {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: flex!important;
+}
+.justify-content(@jc) when (@jc = flex-start) {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.justify-content(@jc) when (@jc = flex-end) {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.justify-content(@jc) when (@jc = space-between) {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.justify-content(@jc) when not (@jc = flex-start) and not (@jc = flex-end) and not (@jc = space-between) {
+  -webkit-box-pack: @jc;
+  -ms-flex-pack: @jc;
+  -webkit-justify-content: @jc;
+  justify-content: @jc;
+}
+.align-items(@ai) when (@ai = flex-start) {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.align-items(@ai) when (@ai = flex-end) {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.align-items(@ai) when not (@ai = flex-start) and not (@ai = flex-end) {
+  -webkit-box-align: @ai;
+  -ms-flex-align: @ai;
+  -webkit-align-items: @ai;
+  align-items: @ai;
+}
+.flex-middle{
+  .flex();
+  .align-items(center);
+}
+.flex-between{
+  .flex();
+  .justify-content(space-between);
+  .align-items(center)!important;
+}

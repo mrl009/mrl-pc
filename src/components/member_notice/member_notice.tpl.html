@@ -1,0 +1,24 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div class="user_header_nav">
+                <ul>
+                    <li class='hover'><a ng-href="/member/member_notice">信息公告</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user_body">
+            <div class="accordion">
+                <div ng-repeat="x in data track by $index" ng-click="showTables($index)">
+                    <div class="title">
+                        <span class="hd">{{x.title}}</span>
+                        <span class="time">{{x.time}}</span>
+                    </div>
+                    <div class="content" style="display: none">
+                        <p><span>{{x.content}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

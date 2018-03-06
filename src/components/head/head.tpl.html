@@ -1,0 +1,87 @@
+<div class="header" ng-controller="HeadCtrl">
+    <div class="main">
+        <div class="left logo">
+            <a href="/" class="logo-link">
+                <img ng-src="{{LOGO}}" width="227px" height="68px" alt="">
+            </a>
+        </div>
+        <div class="right login_and_userinfo" ng-if="!isLogin">
+            <div class="login">
+
+                <form method="POST" id="login_form" style="">
+
+                    <div class="username left">
+                        <i class="iconfont icon-mail"></i>
+                        <input
+                                type="text"
+                                ng-model="data.username"
+                                placeholder="用户名"
+                                name="user_name"
+                                id="username"
+                                autocomplete="off"
+                        >
+                    </div>
+                    <div class="password left">
+                        <i class="iconfont icon-mima"></i>
+                        <input
+                                type="password"
+                                placeholder="密码"
+                                ng-model="pwd.pwd"
+                                autocomplete="off"
+                        >
+                    </div>
+                    <div class="code left" ng-if="data.isCode">
+                        <input
+                                type="text"
+                                size="4"
+                                placeholder="验证码"
+                                ng-model="data.code"
+                                class="login_code_input"
+                                autocomplete="off"
+                        >
+                        <div class="login_code" id="login_code" ng-click="codeRefresh()">
+                            <img ng-src="{{codeSrc}}">
+                        </div>
+                    </div>
+                    <div class="login-btn-right" style="">
+                        <button
+                                type="button"
+                                class="left btn-default login-btn btn"
+                                name="login"
+                                ng-click="login()"
+                        >登录
+                        </button>
+
+                        <button
+                                type="button"
+                                class="left d-btn reg-btn btn"
+                                name="register"
+                                id="register"
+                                ng-click="goPath('register')"
+                        >注册
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="right login_and_userinfo" ng-if="!!isLogin">
+            <div class="logined">
+                <em>您好，</em>
+                <span class="username"><a href="/member/user_center">{{data.username||''}}</a></span>
+                <em>可用余额:</em>
+                <span class="money">{{data.balance}}</span>
+                <a href="javascript:;" ng-click="refresh()">刷新</a>
+                <a ng-href="/member/user_center" target="_blank">会员中心</a>
+                <a ng-href="/member/member_top_up" style="color: #E94335;" target="_blank">充值</a>
+                <a ng-href="/member/member_withdraw" target="_blank">提现</a>
+                <a ng-href="/member/member_transaction" target="_blank">投注记录</a>
+                <a ng-click="logout()">退出</a>
+            </div>
+        </div>
+        <div class="right red_packet_button_show" ng-if="isShow" style="position: absolute;bottom:220px;">
+            <div class="btn-red_packet_login_show animated bounce" ng-click="red_packet_login_show()"></div>
+            <div class="btn-close animated bounce" ng-click="red_packet_close()"></div>
+        </div>
+    </div>
+</div>

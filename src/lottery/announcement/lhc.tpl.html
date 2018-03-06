@@ -1,0 +1,62 @@
+<div class="announcement">
+    <div class="currentLottery animated fadeInLeftBig">
+        <div class="lottery_logo"><img src="{{playlist.img}}" alt="logo"></div>
+        <div class="lottery_info">
+            <div class="lottery_name">{{playlist.name}}</div>
+            <div class="issue">
+                第<span>{{kithe.kithe}}</span>期
+            </div>
+            <div class="btn">
+                <button>
+                    <i class="icon-zs-in"></i>
+                    <a href="/trend_detail/{{type}}/{{gid}}">号码走势</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="lottery-time animated fadeInDownBig">
+        <div class="prompt">{{openStatus?'已开盘，欢迎投注。距离关盘还有：':'未开盘'}}</div>
+        <div class="timer">
+            <div class="board">{{syTime[0]}}</div>
+            <div class="splice icon-colon"></div>
+            <div class="board">{{syTime[1]}}</div>
+            <div class="splice icon-colon"></div>
+            <div class="board">{{syTime[2]}}</div>
+        </div>
+    </div>
+    <div class="lottery-record animated fadeInRightBig">
+        <div class="record">
+            <div class="one-group">
+                <div class="one_issue">
+                    第<span>{{lottery_log_one.kj_issue}}</span>期
+                </div>
+                <div class="ball-magic">
+                    <div class="lhc-record" ng-repeat="x in lottery_log_one.number track by $index" style="margin-right: 5px;">
+                        <div class="small ball-{{lottery_log_one.color[$index]}}">{{x}}</div>
+                        <span ng-if="$index == 6">➕</span>
+                        <label>{{lottery_log_one.shengxiao[$index]}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="five-group hidden">
+                <div class="group" ng-repeat="x in lottery_log_five">
+                    <span class="five_issue">第<span>{{x.kj_issue}}</span>期：</span>
+                    <div ng-repeat="i in x.number track by $index">
+                        <span ng-if="$index == 6" class="plus">➕</span>
+                        <div class="ball lhc-record ball-{{lottery_log_one.color[$index]}}"
+                             ng-class="{true: 'last-margin', false: ''}[$index == 6]"
+                        >{{i}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue-select">
+            <button class="btn one-group-btn active" ng-click="showIssue(true)">近一期</button>
+            <button
+                    class="btn five-group-btn"
+                    ng-click="showIssue(false)"
+            >近五期
+            </button>
+        </div>
+    </div>
+</div>

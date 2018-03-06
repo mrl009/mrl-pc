@@ -1,0 +1,37 @@
+<!-- 第1～8球模版 -->
+<div class="bet-grid">
+    <div class="row title title-bg-shen">
+        <div class="cell col100">
+            <div class="cell-title col100">{{p1[0].name}}</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="(i, k) in r9 track by $index">
+        <div class="cell col25"
+             ng-repeat="x in r4 track by $index"
+        >
+            <div class="number col20">
+                <span ng-class="{'s-ball':isBall(balls[p1[0].id]['balls'][x+i*4].name)}">{{balls[p1[0].id]['balls'][x+i*4].name}}</span>
+            </div>
+            <div class="odds col20">
+                <span class="red">{{balls[p1[0].id]['balls'][x+i*4].rate}}</span>
+            </div>
+            <div class="money col60">
+                <input
+                        type="text"
+                        class="cell-input"
+                        name="{{balls[p1[0].id]['balls'][x+i*4].name}}"
+                        rate="{{balls[p1[0].id]['balls'][x+i*4].rate}}"
+                        code="{{balls[p1[0].id]['balls'][x+i*4].code}}"
+                        keyCode="{{x}}-{{k}}"
+                        rebate="{{balls[p1[0].id]['balls'][x+i*4].rebate}}"
+                        pid="{{balls[p1[0].id]['balls'][x+i*4].id}}"
+                        tid="{{p1[0].id}}"
+                        maxlength="9"
+                        ng-init="initChange()"
+                        ng-if="balls[p1[0].id]['balls'][x+i*4]"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result1.tpl.html'"></div>

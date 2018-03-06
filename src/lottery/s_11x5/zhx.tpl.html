@@ -1,0 +1,46 @@
+<!-- 直选模板 -->
+<div class="bet-grid">
+    <div class="row">
+        <div class="cell col40">
+            <div class="cell-title col100">{{p1[0].name}}{{balls[p1[0].id].rate}}</div>
+        </div>
+        <div class="cell col60">
+            <div class="cell-title col100">{{p1[1].name}}{{balls[p1[1].id].rate}}</div>
+        </div>
+    </div>
+    <div class="row title title-bg-shen">
+        <div class="cell col20">
+            <div class="cell-title col100">{{balls[p1[0].id]['balls'][0].name}}</div>
+        </div>
+        <div class="cell col20">
+            <div class="cell-title col100">{{balls[p1[0].id]['balls'][1].name}}</div>
+        </div>
+        <div class="cell col20">
+            <div class="cell-title col100">{{balls[p1[1].id]['balls'][0].name}}</div>
+        </div>
+        <div class="cell col20">
+            <div class="cell-title col100">{{balls[p1[1].id]['balls'][1].name}}</div>
+        </div>
+        <div class="cell col20">
+            <div class="cell-title col100">{{balls[p1[1].id]['balls'][2].name}}</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="(i, k) in r11 track by $index">
+        <div class="cell col40"
+             ng-repeat="idd in r5 track by $index"
+             ng-click="setBalls($event)"
+             sname="{{$index>1?p1[1].sname:p1[0].sname}}-{{$index}}"
+             code="{{balls[$index>1?p1[1].id:p1[0].id]['balls'][$index>1?$index-2:$index]['child'][i].code}}"
+             name="{{balls[$index>1?p1[1].id:p1[0].id]['balls'][$index>1?$index-2:$index]['child'][i].name}}"
+             pid="{{balls[$index>1?p1[1].id:p1[0].id]['balls'][$index>1?$index-2:$index]['child'][i].id}}"
+             rate="{{balls[$index>1?p1[1].id:p1[0].id].rate}}"
+             rebate="{{balls[$index>1?p1[1].id:p1[0].id].rebate}}"
+             tid="{{$index>1?p1[1].id:p1[0].id}}"
+        >
+            <div class="number col100">
+                <span class="s-ball">{{balls[$index>1?p1[1].id:p1[0].id]['balls'][$index>1?$index-2:$index]['child'][i].name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="LTY_ROOT + 's_bet/bet_result2.tpl.html'"></div>

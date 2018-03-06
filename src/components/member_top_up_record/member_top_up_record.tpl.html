@@ -1,0 +1,57 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div ng-include="TPL_ROOT + 'member_user_nav/member_user_nav.tpl.html'"></div>
+        </div>
+        <div class="user_body">
+            <div class="info_select">
+                <!-- 注意不要改变ID的值 -->
+                <select name="recharge_category" id="topUpReordSelect">
+                    <option value="">全部类型</option>
+                    <option value="1">转账汇款</option>
+                    <option value="2">在线充值</option>
+                    <option value="3">彩豆充值</option>
+                </select>
+                <span>时间</span>
+                <input
+                        readonly="readonly"
+                        id="date-input"
+                        ng-click="showPicker()"
+                        class="picker-input"
+                >
+                <div class="right select_box_btn">
+                    <button class="btn btn-default" value="查 询" ng-click="search_fun()">查 询</button>
+                </div>
+            </div>
+            <div class="topuprecord_data table">
+                <table class="table">
+                    <thead>
+                        <th>订单号</th>
+                        <th>充值方式</th>
+                        <th>充值金额</th>
+                        <th>充值优惠</th>
+                        <th>存款日期</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-if="!topUpRecordData">
+                            <td colspan="6" class="no_border">
+                                <div class="empty_data">暂无记录</div>
+                            <td>
+                        </tr>
+                        <tr ng-if="topUpRecordData" class="cell" ng-repeat="x in topUpRecordData">
+                            <td>{{x.order_num}}</td>
+                            <td>{{x.style}}</td>
+                            <td>{{x.price}}</td>
+                            <td>{{x.discount_price}}</td>
+                            <td>{{x.addtime}}</td>
+                            <td>{{x.status}}</td>
+                            <td>{{x.remark}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

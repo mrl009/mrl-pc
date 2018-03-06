@@ -1,0 +1,38 @@
+.pagination {
+	margin: 5px auto;
+}
+.pagination .page-btn {
+	float: left;
+	border: 0!important;
+}
+.pagination .page-btn a {
+	display: block;
+	padding: 6px 12px;
+	border: 1px solid #ddd;
+	border-right: 0;
+	color: #ccc;
+}
+.pagination .page-btn a:hover {
+	background: #eee;
+	color: #E94335;
+}
+.pagination .page-btn.page-pre a {
+	border-radius: 5px 0 0 5px;
+}
+.pagination .page-btn.page-next a {
+	border-radius: 0 5px 5px 0;
+	border-right: 1px solid #ddd;
+}
+.pagination .page-btn a[disabled="disabled"] {
+	cursor: not-allowed;
+	background: #eee;
+	color: #fff;
+}
+.pagination .page-btn .current {
+	background: #E94335;
+	color: #fff;
+}
+.pagination .page-btn .current:hover {
+	background: #E94335;
+	color: #fff;
+}

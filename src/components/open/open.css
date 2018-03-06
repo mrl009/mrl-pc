@@ -1,0 +1,418 @@
+@charset "utf-8";
+.zoushi_header_nav {
+  position: relative;
+  background-color: #fff7f0;
+}
+.zoushi_header_nav .lotteryNav .active {
+  background-color: #ffcd9b;
+}
+.zoushi_header_nav .liHead {
+  width: 100px !important;
+  height: 40px;
+}
+.zoushi_header_nav .liHead .headTitle {
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  margin-top: 12px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: #bd10e0;
+  line-height: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.zoushi_header_nav .liDiv {
+  width: 128.5px;
+  float: left;
+  line-height: 40px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+}
+.zoushi_header_nav .liDiv img {
+  margin-left: 20px;
+  margin-right: 12px;
+  height: 26px;
+  width: 26px;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+.zoushi_header_nav .liDiv .navTitle {
+  cursor: pointer;
+}
+.zoushi_header_nav .liDiv a {
+  color: #333;
+}
+.zoushi_header_nav .liDiv a:hover {
+  color: #d91d36;
+}
+.zoushi_header_nav .blackDiv {
+  height: 75px ;
+}
+.zoushi_header_nav .hideNav {
+  background-color: #fff;
+  top: 40px;
+  left: 0;
+  border: 1px solid #ffcd9b;
+  width: 974px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+}
+.zoushi_header_nav .hideNav .active {
+  color: #d91d36;
+}
+.zoushi_header_nav .hideNav li {
+  float: left;
+  line-height: 27px;
+}
+.zoushi_header_nav .hideNav em {
+  margin-left: 11px;
+  margin-right: 11px;
+}
+.zoushi_header_nav .hideNav a {
+  color: #666;
+}
+.zoushi_header_nav .hideNav a:hover {
+  color: #d91d36;
+}
+.zoushi_main {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.zoushi {
+  overflow: hidden;
+}
+.zoushi .remencaizhong h1 {
+  background: url(../../assets/img/remencaizhongtuijian.png) left center;
+  background-size: 134px 24px;
+  background-repeat: no-repeat;
+}
+.zoushi .shishicai h1 {
+  background: url(../../assets/img/shishicai.png) left center;
+  background-size: 74px 24px;
+  background-repeat: no-repeat;
+}
+.zoushi .shiyixuanwu h1 {
+  background: url(../../assets/img/shiyixuanwu.png) left center;
+  background-size: 71px 24px;
+  background-repeat: no-repeat;
+}
+.zoushi .item_list,
+.zoushi .item_list_row {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.zoushi .item_list h1,
+.zoushi .item_list_row h1 {
+  overflow: hidden;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  color: #666;
+  font-weight: bolder;
+  padding-left: 10px;
+  border-left: 4px solid #d91d36;
+}
+.zoushi .item_list .l,
+.zoushi .item_list_row .l {
+  overflow: hidden;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+.zoushi .item_list .l a,
+.zoushi .item_list_row .l a {
+  overflow: hidden;
+  background: #FFFDFC;
+  border: 1px solid #FFF0E1;
+  padding: 10px;
+  display: inline-block;
+  float: left;
+  width: 139px;
+  height: 139px;
+  margin-right: 48px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.zoushi .item_list .l a.no,
+.zoushi .item_list_row .l a.no {
+  margin-right: 0px;
+}
+.zoushi .item_list .l a img,
+.zoushi .item_list_row .l a img {
+  overflow: hidden;
+  display: block;
+  width: 50%;
+  margin: 0px auto;
+}
+.zoushi .item_list .l a span,
+.zoushi .item_list_row .l a span {
+  overflow: hidden;
+  display: block;
+  clear: both;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+.zoushi .item_list .l a button,
+.zoushi .item_list_row .l a button {
+  overflow: hidden;
+}
+.zoushi .item_list .l a button.btn,
+.zoushi .item_list_row .l a button.btn {
+  overflow: hidden;
+  width: 80px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.zoushi .item_list .l a.hover,
+.zoushi .item_list_row .l a.hover,
+.zoushi .item_list .l a:hover,
+.zoushi .item_list_row .l a:hover {
+  background: #fff;
+  border: 1px solid #FFC58B;
+}
+.zoushi .item_list .l a.hover img,
+.zoushi .item_list_row .l a.hover img,
+.zoushi .item_list .l a:hover img,
+.zoushi .item_list_row .l a:hover img {
+  overflow: hidden;
+}
+.zoushi .item_list .l a.hover span,
+.zoushi .item_list_row .l a.hover span,
+.zoushi .item_list .l a:hover span,
+.zoushi .item_list_row .l a:hover span {
+  overflow: hidden;
+}
+.zoushi .item_list .l a.hover a,
+.zoushi .item_list_row .l a.hover a,
+.zoushi .item_list .l a:hover a,
+.zoushi .item_list_row .l a:hover a {
+  text-decoration: none;
+}
+.zoushi .item_list .l a.focus,
+.zoushi .item_list_row .l a.focus,
+.zoushi .item_list .l a:focus,
+.zoushi .item_list_row .l a:focus {
+  background: #FFF5F0;
+  border: 1px solid #FFF0E1;
+}
+.zoushi .item_list .l a.focus img,
+.zoushi .item_list_row .l a.focus img,
+.zoushi .item_list .l a:focus img,
+.zoushi .item_list_row .l a:focus img {
+  overflow: hidden;
+}
+.zoushi .item_list .l a.focus span,
+.zoushi .item_list_row .l a.focus span,
+.zoushi .item_list .l a:focus span,
+.zoushi .item_list_row .l a:focus span {
+  overflow: hidden;
+}
+.zoushi .item_list .l a.focus a,
+.zoushi .item_list_row .l a.focus a,
+.zoushi .item_list .l a:focus a,
+.zoushi .item_list_row .l a:focus a {
+  overflow: hidden;
+}
+.zoushi .item_list .row_title,
+.zoushi .item_list_row .row_title {
+  overflow: hidden;
+}
+.zoushi .item_list .row_title h1,
+.zoushi .item_list_row .row_title h1 {
+  width: 146px;
+  float: left;
+  margin-right: 48px;
+}
+.zoushi .item_list .row_title h1.shishile,
+.zoushi .item_list_row .row_title h1.shishile {
+  background-size: 74px 24px;
+  background-repeat: no-repeat;
+}
+.zoushi .item_list .row_title h1.pk10,
+.zoushi .item_list_row .row_title h1.pk10 {
+  background-size: 60px 24px;
+  background-repeat: no-repeat;
+}
+.zoushi .item_list .row_title h1.kuaile8,
+.zoushi .item_list_row .row_title h1.kuaile8 {
+  background-size: 66px 24px;
+  background-repeat: no-repeat;
+}
+.zoushi .item_list_row {
+  margin-bottom: 20px;
+}
+.zoushi .zoushi_data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.zoushi .zoushi_data h1 {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 200;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.zoushi .zoushi_data h1 i {
+  overflow: hidden;
+  color: #D51910;
+  font-size: 22px;
+  vertical-align: middle;
+}
+.zoushi .zoushi_data .oi-title {
+  background-color: #eaeaea;
+  display: table-row;
+}
+.zoushi .zoushi_data .data {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table .ballDivLhc {
+  height: 40px !important;
+}
+.zoushi .zoushi_data .data table .ballDivMain {
+  display: flex;
+  justify-content: center;
+}
+.zoushi .zoushi_data .data table .ballDiv {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 50px;
+  max-width: 290px;
+}
+.zoushi .zoushi_data .data table .ballDiv .number_add {
+  width: 15px;
+  height: 25px;
+  line-height: 25px;
+  margin-left: 1px;
+  margin-bottom: 2px;
+  color: #333;
+  font-weight: 400;
+  display: inline-block;
+}
+.zoushi .zoushi_data .data table .ballDiv .number_add i {
+  color: #666;
+  vertical-align: middle;
+}
+.zoushi .zoushi_data .data table .ballDiv .number_ball {
+  border-radius: 50%;
+  background-color: #d91d36;
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+.zoushi .zoushi_data .data table .ballDiv .number_ball span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  font-weight: 400;
+}
+.zoushi .zoushi_data .data table .ballDiv .number_ball .ball_sub {
+  width: 25px;
+  height: 26px;
+  text-align: center;
+}
+.zoushi .zoushi_data .data table .ballDiv .ball-blue {
+  background: #1b88e0;
+}
+.zoushi .zoushi_data .data table .ballDiv .ball-green {
+  background: #3ebe55;
+}
+.zoushi .zoushi_data .data table.table {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table.table thead {
+  overflow: hidden;
+  background: #FFF2C9;
+}
+.zoushi .zoushi_data .data table.table thead tr {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table.table thead tr th {
+  overflow: hidden;
+  color: #673300;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px !important;
+}
+.zoushi .zoushi_data .data table.table tbody {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table.table tbody tr {
+  background: #fff;
+  color: #333333;
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table.table tbody tr.oi-item {
+  background: #eaeaea;
+}
+.zoushi .zoushi_data .data table.table tbody tr.neq {
+  background: #F8F8F8;
+  color: #333333;
+}
+.zoushi .zoushi_data .data table.table tbody tr td {
+  overflow: hidden;
+  font-size: 14px;
+  text-align: center;
+  border: 0;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a {
+  text-decoration: none;
+  overflow: hidden;
+  height: 25px;
+  line-height: 20px;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a i {
+  overflow: hidden;
+  height: 20px;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a.xq {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a.xq i {
+  overflow: hidden;
+  text-align: center;
+  color: #78B931;
+  text-decoration: none;
+  font-size: 28px;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a.zs {
+  overflow: hidden;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a.zs i {
+  overflow: hidden;
+  text-align: center;
+  color: #4990E2;
+  text-decoration: none;
+  font-size: 26px;
+}
+.zoushi .zoushi_data .data table.table tbody tr td a.btn {
+  display: inline-block;
+  overflow: hidden;
+  width: 50px;
+  height: 24px;
+  padding: 0px;
+  font-size: 13px;
+  line-height: 24px;
+}

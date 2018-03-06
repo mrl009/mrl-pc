@@ -1,0 +1,85 @@
+<div ng-include="TPL_ROOT+'tool/tool.tpl.html'"></div>
+<div ng-include="TPL_ROOT+'head/head.tpl.html'"></div>
+<div ng-include="TPL_ROOT+'nav/nav.tpl.html'"></div>
+<div class="main index">
+    <div class="index_main">
+        <div class="slide">
+            <div class="v_out v_out_p">
+                <div class="v_show">
+                    <div class="v_cont">
+                        <ul>
+                            <li index="{{$index}}" repeat-listener ng-repeat="el in COURSEDATA">
+                                <img ng-src="{{el.pic}}" width="740" height="230" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="circle">
+                    <li ng-repeat="idx in COURSEDATA">{{$index+1}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="notice">
+            <i class="iconfont"></i>
+            <marquee onmouseout="this.start()" onmouseover="this.stop()">
+                <p>
+                    <span>
+                        {{NOTICEMSG}}
+                    </span>
+                </p>
+            </marquee>
+        </div>
+        <div class="index_box_tz">
+            <div ng-include="TPL_ROOT + 'home/fast.tpl.html'"></div>
+            <div class="right down_mobile_app">
+                <div class="right-info">
+                    <div class="health-tab">
+                        <ul class="mobile-tab">
+                            <li class="tab-mobile" data-val="0">
+                                <a ng-mouseover="showQrCode(0)" ng-class="{'current': 0 == qrCode}">
+                                    <i class="icon-appleinc"></i>Android版
+                                </a>
+                            </li>
+                            <li class="tab-mobile" data-val="1">
+                                <a ng-mouseover="showQrCode(1)" ng-class="{'current': 1 == qrCode}">
+                                    <i class="icon-android"></i>iOS版
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear: both;">
+                        <div class="mobile-main">
+                            <div class="tab-mobileapp">
+                                <div class="androidqr">
+                                    <p>适用于Android及以上平台</p>
+                                    <p><img style="width:125px;" src="{{ANDROID_QRCODE}}"></p>
+                                    <p>扫一扫二维码下载Android版</p>
+                                </div>
+                            </div>
+                            <div class="hidden tab-mobileapp">
+                                <div class="iosqr" ng-show="!IOS_QRCODE">
+                                    <p style="padding: 55px;font-size: large;color: red">敬请期待iOS版本上线</p>
+                                </div>
+                                <div class="iosqr" ng-show="IOS_QRCODE">
+                                    <p>适用于IOS及以上平台</p>
+                                    <p><img style="width:125px;" src="{{IOS_QRCODE}}"></p>
+                                    <p>扫一扫二维码下载IOS版</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="index">
+    <div class="index_box_main main">
+        <div ng-include="TPL_ROOT + 'home/open.tpl.html'"></div>
+        <div ng-include="TPL_ROOT + 'home/news.tpl.html'"></div>
+        <div ng-include="TPL_ROOT + 'home/prize.tpl.html'"></div>
+    </div>
+</div>
+<div ng-include="TPL_ROOT + 'sideadv/side.tpl.html'"></div>
+<div ng-include="TPL_ROOT + 'footer/footer.tpl.html'"></div>

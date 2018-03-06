@@ -1,0 +1,14 @@
+@charset "utf-8";
+/****
+   Author: QQ
+   Email: Office.
+   作用  : 会员中心CSS
+****/
+/*注册页面*/
+.show_border .first {
+  border-left: none;
+}
+.show_border {
+  border-bottom: 2px solid #ddd;
+}
+/**end**/

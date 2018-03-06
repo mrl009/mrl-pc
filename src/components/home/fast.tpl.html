@@ -1,0 +1,59 @@
+<div class="left tz_box">
+	<div class="tz_box_main" id="tz_box_main">
+		<ul class="tz_box_tab" id="tz_box_tab">
+			<h1>
+				<i class="jinbi"></i>快速投注
+			</h1>
+			<div class="tz_tab">
+				<li
+					ng-repeat="fd in fastData"
+					ng-class="{'current': $index == fastCurrIdx}"
+					ng-mouseenter="changeTab($index)"
+				>{{fd.name}}</li>
+			</div>
+		</ul>
+		<div class="show_box_main" id="show_box_main">
+			<div
+				class="tz_item"
+				ng-repeat="fd in fastData"
+				ng-class="{'show-curr': $index == fastCurrIdx}"
+				index="{{$index}}"
+			>
+				<div class="t">
+					<div class="left view_qi">
+						第
+						<span class="issure">{{fd.kithe}}</span>
+						期截止：
+						<span class="red restTime1">{{syTimeCache[fd.gid]}}</span>
+					</div>
+					<div class="right cho">
+						<a ng-href="/lottery/{{fd.tmp}}/{{fd.tmp}}/{{fd.gid}}" target="_blank">手动选号</a>
+						<a ng-href="/trend_detail/{{fd.tmp}}/{{fd.gid}}">走势图</a>
+					</div>
+				</div>
+				<div class="list qiu_box">
+					<div class="ball-wrap" ng-repeat="num in fd.number track by $index">
+						<div class="ball" >{{num}}</div>
+					</div>
+				</div>
+				<div class="foot">
+					<div class="left add">
+						<span class="plus" ng-click="setMultiple(true)">+</span>
+						<input type="text" class="plus_value" ng-model="lotteryData.multiple" onkeyup="this.value=this.value.replace(/\D/g,'')">
+						<span class="sub" ng-click="setMultiple(false)">-</span>
+					</div>
+					<div class="left">倍，共
+						<span class="red bet_money">{{lotteryData.multiple*2}}</span> 元
+					</div>
+					<div class="right">
+						<a class="rf" ng-click="randomOne()">
+							<i class="iconfont"></i>
+							换一注
+						</a>
+						<a class="btn btn-bet btn-default" ng-click="setLottery()" href="/lottery/{{fd.tmp}}/{{fd.tmp}}/{{fd.gid}}" target="_blank">立即投注</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,106 @@
+<div class="register-wrap">
+	<div class="register-win">
+		<div class="register-content">
+			<div class="form-row" ng-if="is_show_agent">
+				<label class="label">
+					<b ng-if="is_show_agent == 2">*</b>
+					邀请码
+				</label>
+				<div class="typeCt">
+					<input
+							type="number"
+							placeholder="{{is_show_agent == 1 ? '可不填' : '必填'}}"
+							value=""
+							ng-model="regData.tcode"
+							ng-pattern="/\d+/"
+							ng-readonly="isRegCode"
+					>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<label class="label">
+					<b>*</b>
+					用户名
+				</label>
+				<div class="typeCt">
+					<input
+						placeholder="请输入用户名"
+						value=""
+						ng-model="regData.username"
+					>
+				</div>
+			</div>
+			<div class="form-row">
+				<label class="label">
+					<b>*</b>登录密码
+				</label>
+				<div class="typeCt">
+					<input
+						type="password"
+						placeholder="请输入登录密码"
+						value=""
+						ng-model="regData.password"
+					>
+				</div>
+			</div>
+			<div class="form-row">
+				<label class="label"><b>*</b>确认密码</label>
+				<div class="typeCt">
+					<input
+						type="password"
+						placeholder="请确认密码"
+						value=""
+						ng-model="regData.repassword"
+					>
+				</div>
+			</div>
+			<div class="form-row" ng-if="is_show_bankname">
+				<label class="label">
+					<b>*</b>
+					真实姓名
+				</label>
+				<div class="typeCt">
+					<input
+							placeholder="请输入真实姓名"
+							value=""
+							ng-model="regData.bank_name"
+					>
+				</div>
+			</div>
+			
+			<div class="form-row" ng-if="is_show_code">
+				<label class="label">
+					<b>*</b>
+					验证码
+				</label>
+				<div class="typeCt">
+					<input
+						class="verfyCodeInput"
+						placeholder="请输入验证码"
+						value=""
+						ng-model="regData.vcode"
+					>
+					<img class="verfyCode" ng-src="{{regCodeSrc}}" ng-click="regCodeRefresh()">
+				</div>
+			</div>
+			<div class="form-row">
+				<label class="label"></label>
+				<div class="typeCt">
+					<i class="icon-selectors protocol" ng-class="{true: 'icon-checkbox-check', false: 'icon-checkbox-uncheck'}[isAgree]" ng-click="toggleAgree()"></i>
+					<label>我已经满合法博彩年龄，且同意各项开户条约，</label>
+					<a
+						href="javascript: void(0);"
+						ng-click="showAgree()"
+					>“开户协议”</a>
+				</div>
+			</div>
+			<div class="form-row">
+				<label class="label"></label>
+				<div class="typeCt">
+					<button id="buy-register" ng-click="register()">立即注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

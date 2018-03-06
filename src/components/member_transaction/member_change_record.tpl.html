@@ -1,0 +1,66 @@
+<div class="user_header">
+    <div class="user_header_nav">
+        <ul>
+            <li><a ng-click="betRecord(0)">投注记录</a></li>
+            <!--<li><a ng-click="getBackNumRecord(1)">追号记录</a></li>-->
+            <li class='hover'><a ng-click="changeRecord(2)">帐变记录</a></li>
+        </ul>
+    </div>
+</div>
+<div class="user_body">
+    <div class="info_select">
+
+        <span class="b_search_name"> 账单类别：</span>
+        <select name="lotteryId" id="changeRecordSelect">
+            <option value="0">全部</option>
+            <option ng-repeat="x in cashType" ng-if="!$last" value="{{x.value}}">
+                {{x.label}}
+            </option>
+        </select>
+        <span>时间</span>
+        <input
+            readonly="readonly"
+            id="date-input"
+            ng-click="showPicker()"
+            class="picker-input"
+            placeholder="请选择日期"
+        >
+
+        <div class="right select_box_btn">
+            <input
+                class="btn btn-default"
+                value="查 询"
+                ng-click="searchChange()"
+                type="button"
+            />
+        </div>
+
+    </div>
+    <div class="buyrecord_data table">
+        <table class="table">
+            <thead>
+            <th>账单类别</th>
+            <th>金额</th>
+            <th>操作时间</th>
+            </thead>
+
+            <tbody>
+            <tr ng-if="changeRecordVal==null">
+                <td colspan="7" class="no_border">
+                    <div class="empty_data">暂无记录</div>
+                </td>
+            </tr>
+            　
+            <tr ng-repeat="x in changeRecordVal" class="cell">
+                <td>{{x.name}}</td>
+                <td>{{x.amount}}</td>
+                <td>{{x.addtime}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-div">
+        <button class='nextPage' id="change_record_pre" ng-click="nextChangePage(0)" disabled>上一页</button>
+        <button class='nextPage' id="change_record" ng-click="nextChangePage(1)" disabled>下一页</button>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+.zoushi_header_nav .lotteryNav:before,
+.zoushi_header_nav .hideNav:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:before,
+.kaijianggonggao .kaijiang_main .day_list .day_title:before,
+.kaijianggonggao .kaijiang_main .day_list .day_con:before,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:before,
+.zoushi_header_nav .lotteryNav:after,
+.zoushi_header_nav .hideNav:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:after,
+.kaijianggonggao .kaijiang_main .day_list .day_title:after,
+.kaijianggonggao .kaijiang_main .day_list .day_con:after,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:after {
+  content: "";
+  display: table;
+}
+.zoushi_header_nav .lotteryNav:after,
+.zoushi_header_nav .hideNav:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:after,
+.kaijianggonggao .kaijiang_main .day_list .day_title:after,
+.kaijianggonggao .kaijiang_main .day_list .day_con:after,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:after {
+  clear: both;
+}
+.zoushi_header_nav .lotteryNav:before,
+.zoushi_header_nav .hideNav:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:before,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:before,
+.kaijianggonggao .kaijiang_main .day_list .day_title:before,
+.kaijianggonggao .kaijiang_main .day_list .day_con:before,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:before,
+.zoushi_header_nav .lotteryNav:after,
+.zoushi_header_nav .hideNav:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom:after,
+.kaijianggonggao .kaijiang_main .kaijiang_header .bottom .ballDiv:after,
+.kaijianggonggao .kaijiang_main .day_list .day_title:after,
+.kaijianggonggao .kaijiang_main .day_list .day_con:after,
+.kaijianggonggao .kaijiang_main .main_foot .footMain:after {
+  content: "";
+  display: table;
+}
+.zoushi .zoushi_data .data table .ballDiv .number_ball {
+  border-radius: 50%;
+  background-color: #E94335;
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+.lhc_ball_red {
+  background-color: #f45959 !important;
+}
+.lhc_ball_green {
+  background-color: #6acc7b !important;
+}
+.lhc_ball_blue {
+  background-color: #51ABF0 !important;
+}
+.flex-middle {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: flex!important;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flex-between {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: flex!important;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  -webkit-align-items: center !important;
+  align-items: center !important;
+}

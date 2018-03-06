@@ -1,0 +1,247 @@
+.zs_box {
+  background: #E94335;
+  width: 126px;
+  position: fixed;
+  top: 30%;
+  z-index: 999;
+}
+.zs_box a.qr {
+  display: inline-block;
+  width: 116px;
+  margin: 0px 5px;
+}
+.zs_box a.qr img {
+  display: inline-block;
+  width: 116px;
+}
+.zs_box a.zs_close {
+  overflow: hidden;
+  position: absolute;
+  top: -18px;
+  background: url(../../assets/img/top_head.png);
+  background-size: 110px 18px;
+  display: block;
+  height: 18px;
+  width: 110px;
+  left: 7px;
+  text-indent: -999px;
+}
+.zs_box a.zs_top {
+  overflow: hidden;
+  display: block;
+  color: #FFF;
+  font-size: 12px;
+  text-align: center;
+  border-top: 5px solid #fff;
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+}
+.zs_box a.zs_top i {
+  overflow: hidden;
+  vertical-align: middle;
+  background: url(../../assets/img/go_top.png);
+  background-size: 12px 14px;
+  width: 12px;
+  height: 14px;
+  display: inline-block;
+}
+.zs_box.zs_left {
+  left: 0px;
+}
+.zs_box.zs_right {
+  right: 0px;
+}
+.zs_box li {
+  overflow: hidden;
+  width: 116px;
+  height: 30px;
+  color: #333;
+  font-size: 14px;
+  background: #fff;
+  margin: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+.zs_box li i {
+  overflow: hidden;
+}
+.zs_box li a {
+  color: #333333;
+}
+.zs_box li.free_play {
+  overflow: hidden;
+}
+.zs_box li.help_center {
+  overflow: hidden;
+}
+.zs_box li.online_sup {
+  overflow: hidden;
+}
+.zs_box li.line_exa {
+  overflow: hidden;
+}
+.zs_box span {
+  overflow: hidden;
+}
+.zs_box span.foot {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-top: 5px;
+}
+.zs_box span.foot em {
+  overflow: hidden;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.zs_box span.foot em.b {
+  overflow: hidden;
+  font-size: 14px;
+}
+.zs_box span.foot em.s {
+  overflow: hidden;
+  font-size: 10px;
+}
+.zs_right {
+  background-color: #E94335;
+  height: 221px;
+}
+.zs_right .float_main {
+  height: 360px;
+  width: 100%;
+  position: relative;
+}
+.zs_right a {
+  color: #E94335;
+  cursor: pointer;
+}
+.zs_right a:hover {
+  color: #E94335;
+}
+.zs_right .float_main .title1 {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  font-weight: 900;
+  background-color: #ffffff;
+  font-size: 17px;
+  padding: 1px 24px;
+}
+.zs_right .float_main .title2 {
+  position: absolute;
+  top: 41px;
+  left: 5px;
+  font-weight: 900;
+  background-color: #ffffff;
+  font-size: 17px;
+  padding: 1px 24px;
+}
+/*.zs_right .float_main .title3 { text-align: center; position: absolute; top: 145px; left: 10px; font-weight: 900; color: #ffffff; font-size: 14px; }*/
+.zs_right .float_main span {
+  color: #fcf309;
+}
+.zs_right .float_main .title4 img {
+  width: 116px;
+  height: 116px;
+}
+.zs_right .float_main .title4 {
+  position: absolute;
+  top: 75px;
+  left: 5px;
+}
+.zs_right .float_main .title5 {
+  position: absolute;
+  top: 199px;
+  left: 23px;
+}
+.zs_right .float_main .title6 {
+  position: absolute;
+  top: 222px;
+  left: 52px;
+}
+.zs_right .float_main .title6 img {
+  width: 16px;
+  margin-bottom: 1px;
+}
+/*.zs_right .float_main .title2 .qq-num {  position: absolute;  top: 27px;  left: -27px;  font-size: 16px;  text-align: center;}*/
+.zs_left {
+  background-color: #E94335;
+  height: 221px;
+}
+.zs_left .float_main {
+  height: 360px;
+  width: 100%;
+  position: relative;
+}
+.zs_left a {
+  color: #E94335;
+  cursor: pointer;
+}
+.zs_left a:hover {
+  color: #E94335;
+}
+.zs_left .float_main .title1 {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  font-weight: 900;
+  background-color: #ffffff;
+  font-size: 17px;
+  padding: 1px 24px;
+}
+.zs_left .float_main .title2 {
+  position: absolute;
+  top: 41px;
+  left: 5px;
+  font-weight: 900;
+  background-color: #ffffff;
+  font-size: 17px;
+  padding: 1px 24px;
+}
+.zs_left .float_main span {
+  color: #fcf309;
+}
+.zs_left .float_main .title4 img {
+  width: 116px;
+  height: 116px;
+}
+.zs_left .float_main .title4 {
+  position: absolute;
+  top: 75px;
+  left: 5px;
+}
+.zs_left .float_main .title5 {
+  position: absolute;
+  top: 199px;
+  left: 34px;
+}
+.zs_left .float_main .title6 {
+  position: absolute;
+  top: 222px;
+  left: 52px;
+}
+.zs_left .float_main .title6 img {
+  width: 16px;
+  margin-bottom: 1px;
+}
+.title6 .side-close-btn {
+  color: #ffffff;
+  border-top: 100px;
+  height: 0;
+}
+.title6 .side-close-btn:hover {
+  color: #ffffff;
+}
+.float_main .trapezoid {
+  width: 59px;
+  left: 19px;
+  position: absolute;
+  top: 221px;
+  border-top: 21px solid #ff4f20;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}

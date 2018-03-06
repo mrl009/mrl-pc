@@ -1,0 +1,74 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div ng-include="TPL_ROOT + 'member_user_nav/member_user_nav.tpl.html'"></div>
+        </div>
+        <div class="user_body">
+            <div class="table-header">
+                <table class="table top_up_company_table">
+                    <thead>
+                    <th>银行</th>
+                    <th>收款人</th>
+                    <th>汇款资讯</th>
+                    </thead>
+                    <tbody class="show_border">
+                    <tr>
+                        <td>{{items.bank_name}}</td>
+                        <td ng-bind="items.user"></td>
+                        <td>账号：{{items.num}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="left-side">
+                <p>存入时间：</p>
+                <p>存款人姓名：</p>
+                <p>存入金额：</p>
+                <p>存款方式：</p>
+            </div>
+            <div class="right-side">
+                <p><input class="input-text" value="{{time|date:'yyyy-MM-dd HH:mm:ss'}}" readonly type="text"
+                          placeholder="请输入存款时间"></p>
+                <p><input class="input-text" type="text" ng-model="data.name" id="bankName" placeholder="请输入存款人姓名"></p>
+                <p><input class="input-text" type="text" ng-model="data.money"
+                          onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]|^0{1,}\d{1,}|[\,,\.]{1,}/g,'')"
+                          placeholder="请输入存入金额" disabled></p>
+                <p>
+                <div id="recharge_type">
+                    <label class="redio_field" ng-if="items.pay_type=='bank'">
+                        <input ng-click="bankStyle(1)" type="radio" value="1" name="type"/>
+                        <span id="recharge_name_1" class="radio_text">网银转账</span>
+                    </label>
+                    <label class="redio_field" ng-if="items.pay_type=='bank'">
+                        <input ng-click="bankStyle(2)" type="radio" value="2" name="type"/>
+                        <span id="recharge_name_2" class="radio_text">ATM自动柜员机</span>
+                    </label>
+                    <label class="redio_field" ng-if="items.pay_type=='bank'">
+                        <input ng-click="bankStyle(3)" type="radio" value="3" name="type"/>
+                        <span id="recharge_name_3" class="radio_text">ATM现金入款</span>
+                    </label>
+                    <label class="redio_field" ng-if="items.pay_type=='bank'">
+                        <input ng-click="bankStyle(4)" type="radio" value="4" name="type"/>
+                        <span id="recharge_name_4" class="radio_text">银行柜台</span>
+                    </label>
+                    <label class="redio_field" ng-if="items.pay_type=='bank'">
+                        <input ng-click="bankStyle(5)" type="radio" value="5" name="type"/>
+                        <span id="recharge_name_5" class="radio_text">手机转账</span>
+                    </label>
+                    <label class="redio_field">
+                        <input ng-click="bankStyle(6)" type="radio" value="6" name="type" ng-checked="items.pay_type!='bank'"/>
+                        <span id="recharge_name_6" class="radio_text">支付宝转账</span>
+                    </label>
+                    <!--<label class="redio_field" ng-if="items.pay_type=='bank'">-->
+                        <!--<input ng-click="bankStyle(7)" type="radio" value="7" name="type"/>-->
+                        <!--<span id="recharge_name_7" class="radio_text">微信转账</span>-->
+                    <!--</label>-->
+                </div>
+                </p>
+            </div>
+            <div>
+                <button class='next-step' ng-click="topUp()">确认充值</button>
+            </div>
+        </div>
+    </div>
+</div>

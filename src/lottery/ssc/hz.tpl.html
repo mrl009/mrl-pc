@@ -1,0 +1,14 @@
+<div class="select-row" style="height: 130px">
+    <div class="items balls" style="display: block;height: 96px;">
+        <div ng-repeat="t in lottery.balls" class="ball"
+             style="margin-bottom: 12px;float: left"
+             ng-click="selBalls($event)"
+             name="{{t.name}}"
+             rate="{{t.rate}}"
+             rate_min="{{t.rate_min}}"
+             rebate="{{t.rebate}}"
+             code="{{t.code}}"
+             pid="{{t.id}}"
+        >{{t.name}}</div>
+    </div>
+</div>

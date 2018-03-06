@@ -1,0 +1,93 @@
+<!-- 特码ab模板 -->
+<div class="bet-grid">
+    <div class="row title title-bg-shen">
+        <div class="cell col20" ng-repeat="idx in [0,1,2,3,4]">
+            <div class="cell-title col20">号码</div>
+            <div class="cell-title col20">赔率</div>
+            <div class="cell-title col60">金额</div>
+        </div>
+    </div>
+    <div class="row" ng-repeat="i in inarrballs track by $index">
+        <div
+            class="cell col20"
+            ng-repeat="idd in [0,1,2,3,4] track by $index"
+            ng-if="balls[idd][i]"
+        >
+            <div class="number col20">
+                <span
+                    class="ball ball-{{colors[balls[idd][i].code]}}"
+                >{{balls[idd][i].code}}</span>
+            </div>
+            <div class="odds col20">
+                <span class="red">{{balls[idd][i].rate}}</span>
+            </div>
+            <div class="money col60">
+                <input
+                    type="text"
+                    class="cell-input"
+                    id="input-{{balls[idd][i].code}}"
+                    name="{{balls[idd][i].code}}"
+                    rate="{{balls[idd][i].rate}}"
+                    code="{{balls[idd][i].code}}"
+                    rebate="{{balls[idd][i].rebate}}"
+                    pid="{{balls[idd][i].id}}"
+                    maxlength="9"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bet-grid">
+    <div class="row" ng-repeat="idx in inarrqt track by $index" >
+        <div
+            class="cell col20"
+            ng-repeat="idd in [0,1,2,3,4] track by $index"
+            ng-if="qtBalls[idd][idx]"
+            ng-init="idd == $index && initChange()"
+        >
+            <div class="number col20">
+                <span class="cell-text">{{qtBalls[idd][idx].name}}</span>
+            </div>
+            <div class="odds col20" rate="{{qtBalls[idd][idx].rate}}">
+                <span class="red">{{qtBalls[idd][idx].rate}}</span>
+            </div>
+            <div class="money col60">
+                <input
+                    class="cell-input"
+                    btitle="{{qtTitle}}"
+                    name="{{qtBalls[idd][idx].name}}"
+                    id="input-{{qtBalls[idd][idx].code}}"
+                    code="{{qtBalls[idd][idx].code}}"
+                    tid="{{qtBalls[idd][idx].tid}}"
+                    rate="{{qtBalls[idd][idx].rate}}"
+                    rebate="{{qtBalls[idd][idx].rebate}}"
+                    pid="{{qtBalls[idd][idx].id}}"
+                    maxlength="9"
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{betCount}}</span>
+            元
+            </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button
+            class="cancel-btn"
+            ng-click="reset()"
+        >取消</button>
+        <button
+            class="confirm confirm-btn"
+            ng-click="handleSubmit()"
+        >确认</button>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<!-- 正码1-6 -->
+
+<div class="bet-grid">
+	<div class="row title title-bg-shen">
+		<div class="col10 cell-div"></div>
+		<div class="col15 cell-div" ng-repeat="play in playTwoCp">{{play.name}}</div>
+	</div>
+	<div class="row title title-bg-qian">
+		<div class="cell col10 cell-div title-bg-shen">
+			号码
+		</div>
+		<div class="cell col15" ng-repeat="play in playTwoCp">
+			<div class="col30 cell-title">赔率</div>
+			<div class="col70 cell-title">金额</div>
+		</div>
+	</div>
+	<div class="row" ng-repeat="(idx, ball) in balls">
+		<div class="cell col10 cell-div title-bg-shen">
+			{{ball.name}}
+		</div>
+		<div class="cell col15" ng-repeat="play in playTwoCp" ng-init="$last && initChange()">
+			<div class="odds false col30">
+				<span class="rate-text-color">{{play.balls[idx].rate}}</span>
+			</div>
+			<div class="money false col70">
+				<input
+					rate="{{play.balls[idx].rate}}"
+					keyCode="{{play.id + '_' + play.balls[idx].code}}"
+					code="{{play.balls[idx].code}}"
+					name="{{play.balls[idx].name}}"
+					rebate="{{play.balls[idx].rebate}}"
+					btitle="{{play.balls[idx].name}}"
+					pid="{{play.balls[idx].id}}"
+					tid="{{play.id}}"
+					class="cell-input"
+					maxlength="9"
+				>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="lhc-bet-result">
+    <div class="desc">
+        <div class="dotted"></div>
+        <div class="info-check">
+            您已经选中了
+            <span class="warn-color">{{betNum}}</span>
+            注， 共
+            <span class="warn-color">{{betCount}}</span>
+            元
+            </div>
+        <div class="dotted"></div>
+    </div>
+    <div class="btn-group">
+        <button class="cancel-btn" ng-click="reset()">取消</button>
+        <button class="confirm confirm-btn" ng-click="handleSubmit()">确认</button>
+    </div>
+</div>

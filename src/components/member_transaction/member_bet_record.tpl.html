@@ -1,0 +1,62 @@
+<div class="user_header">
+    <div class="user_header_nav">
+        <ul>
+            <li class='hover'><a ng-click="betRecord(0)">投注记录</a></li>
+            <!--<li><a ng-click="getBackNumRecord(1)">追号记录</a></li>-->
+            <li><a ng-click="changeRecord(2)">帐变记录</a></li>
+        </ul>
+    </div>
+</div>
+<div class="user_body">
+    <div class="info_select">
+        <select name="orderState" id="betRecordSelect">
+            <option selected="selected" value="0">全部状态</option>
+            <option value="1"><span>已中奖</span></option>
+            <option value="3"><span>已撤单</span></option>
+            <option value="4"><span>待开奖</span></option>
+        </select>
+        <div class="right select_box_btn">
+            <input
+                class="btn btn-default"
+                value="查 询"
+                ng-click="search_fun()"
+                type="button"
+            />
+        </div>
+    </div>
+    <div class="buyrecord_data table">
+        <table class="table">
+            <thead>
+            <th>彩种</th>
+            <th>玩法</th>
+            <th>期号</th>
+            <th>投注金额</th>
+            <th>状态</th>
+            <th>下注时间</th>
+            <th>下注详情</th>
+            </thead>
+            <tbody>
+            <tr ng-if="data==null">
+                <td colspan="7" class="no_border">
+                    <div class="empty_data">暂无记录</div>
+                </td>
+            </tr>
+            　
+            <tr ng-repeat="x in data" class="cell">
+                <td>{{x.game}}</td>
+                <td>{{x.tname}}</td>
+                <td>{{x.issue}}</td>
+                <td>{{x.price_sum}}</td>
+                <td ng-if="x.status=='已中奖'" class="red">{{x.status}}</td>
+                <td ng-if="x.status!='已中奖'">{{x.status}}</td>
+                <td>{{x.bet_time}}</td>
+                <td><a ng-click="bet_detail(x)">{{x.names_sub}}</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-div">
+        <button class='nextPage' id="bet_record_pre" ng-click="nextBetPage(0)" disabled>上一页</button>
+        <button class='nextPage' id="bet_record" ng-click="nextBetPage(1)" disabled>下一页</button>
+    </div>
+</div>

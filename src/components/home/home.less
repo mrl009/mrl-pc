@@ -1,0 +1,910 @@
+@charset "utf-8";
+@import url(../css/rem.less);
+
+.index {
+  .index_main {
+    height: 563px;
+    padding-left: 258px;
+
+    .slide {
+      overflow: hidden;
+      width: 740px;
+      height: 230px;
+      background: #fff;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+    }
+
+    .notice {
+      position: relative;
+      overflow: hidden;
+      background: #FFF6E5;
+      line-height: 29px;
+      height: 29px;
+      padding-left: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+
+      marquee{
+        margin-left:25px ;
+        width: 700px;
+      }
+
+      i {
+        position: absolute;
+        left:10px;
+        top:8px;
+        overflow: hidden;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url(../../assets/img/laba.png) no-repeat;
+        background-size: 15px 15px;
+        margin-right: 5px;
+
+      }
+
+      span {
+        overflow: hidden;
+        color: rgb(102, 102, 102);
+        font-family: 微软雅黑, 宋体, Verdana;
+        font-size: 12px;
+        list-style: none;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0);
+        outline: none!important;
+      }
+
+    }
+
+    .index_box_tz {
+      overflow: hidden;
+      margin-top: 10px;
+      .tz_box {
+        overflow: hidden;
+        width: 493px;
+        height: 272px;
+        border: 1px solid #ddd;
+
+        .tz_box_main {
+          overflow: hidden;
+          ul {
+            overflow: hidden;
+            &.tz_box_tab {
+              height: 40px;
+              line-height: 40px;
+              border-bottom: 1px solid #ddd;
+              padding-left: 10px;
+              h1 {
+                overflow: hidden;
+                color: #666666;
+                font-size: 12px;
+                font-weight: 100;
+                float: left;
+                i {
+                  overflow: hidden;
+                  display: inline-block;
+                  width: 22px;
+                  height: 27px;
+                  vertical-align: middle;
+                  margin-right: 10px;
+                  background: url(../../assets/img/jinbi.png) no-repeat;
+                  background-size: 22px 27px;
+                }
+
+              }
+              .tz_tab {
+                width: 370px;
+                float: right;
+                position: relative;
+                height: 40px;
+                li {
+                  float: left;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  width: 70px;
+                  height: 38px;
+                  text-align: center;
+                  display: block;
+                  z-index: 6;
+                  font-size: 14px;
+                  color: #333333;
+                  cursor:pointer;
+                  &.current {
+                    overflow: hidden;
+                    color: @bgColor;
+                    border-bottom: 2px solid @bgColor;
+                  }
+                }
+              }
+
+            }
+
+          }
+
+          .show_box_main {
+            overflow: hidden;
+            .tz_item {
+              &.show-curr {
+                display: block;
+              }
+              overflow: hidden;
+              display: none;
+              .t {
+                overflow: hidden;
+                height: 60px;
+                line-height: 70px;
+                margin-bottom: 5px;
+                clear: both;
+                border: 1px solid transparent;
+                .view_qi {
+                  overflow: hidden;
+                  padding-left: 14px;
+                  font-size: 12px;
+                  span {
+                    overflow: hidden;
+                  }
+                }
+
+                .cho {
+                  overflow: hidden;
+                  padding-right: 10px;
+                  font-size: 12px;
+                  a {
+                    overflow: hidden;
+                    color: #276DFF;
+                    a:hover {
+                      overflow: hidden;
+                    }
+                  }
+
+                }
+
+              }
+              .list {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 20px;
+                margin-top: 20px;;
+              }
+              .ball-wrap {
+                width: 35px;
+                height: 35px;
+                background-color: @bgColor;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+              }
+              .ball {
+                width: 30px;
+                height: 30px;
+                background-color: @bgColor;
+                border-radius: 50%;
+                display: inline-block;
+                text-align: center;
+                line-height: 30px;
+                margin-top: 3px;
+                font-size: 16px;
+                color: #FFFFFF;
+              }
+              .ball-wrap + .ball-wrap {
+                margin-left: 10px;
+              }
+
+              .qiu_box {
+                overflow: hidden;
+                /*background: url(../../assets/img/qiuqiu@2x.png);*/
+                background-size: 459px 75px;
+                background-repeat: no-repeat;
+                /* width: 379px;*/
+                height: 75px;
+                margin: 0 auto;
+                padding-left: 20px;
+                line-height: 105px;
+                padding-right: 40px;
+                margin-bottom: 20px;
+                margin-top: 5px;
+                clear: both;
+                border: 1px solid transparent;
+              /*  i {
+                  overflow: hidden;
+                }*/
+             .qiu_box_number{
+                    background-color: #00A1CB;
+                    padding: 5px;
+               }
+              }
+
+              .foot {
+                overflow: hidden;
+                margin-top: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 1px solid transparent;
+                .left {
+                  overflow: hidden;
+                  width: 108px;
+                  height: 28px;
+                  margin-right: 14px;
+                  vertical-align: middle;
+                  margin-top: 4px;
+                  &.add {
+                    overflow: hidden;
+                    width: 108px;
+                    height: 28px;
+                    margin-right: 14px;
+                    span {
+                      overflow: hidden;
+                      &.plus, &.sub {
+                        overflow: hidden;
+                        display: inline-block;
+                        width: 26px;
+                        height: 26px;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        text-align: center;
+                        line-height: 26px;
+                        vertical-align: middle;
+                        float: left;
+                      }
+
+
+                    }
+
+                    input {
+                      overflow: hidden;
+                      width: 42px;
+                      height: 26px;
+                      margin: 0;
+                      padding: 0;
+                      border-top: 1px solid #ddd;
+                      border-bottom: 1px solid #ddd;
+                      border-left: none;
+                      border-right: none;
+                      vertical-align: middle;
+                      float: left;
+                      color: #666;
+                      padding-left: 5px;
+                      padding-right: 5px;
+                      text-align: center;
+                    }
+
+                  }
+
+                  span {
+                    overflow: hidden;
+                  }
+
+                }
+
+                .right {
+                  overflow: hidden;
+                  vertical-align: middle;
+                  a {
+                    overflow: hidden;
+                    &.rf {
+                      overflow: hidden;
+                      font-size: 14px;
+                      color: #333333;
+                      vertical-align: middle;
+                      text-decoration: none;
+                    }
+
+                    &.btn {
+                      overflow: hidden;
+                      width: 100px;
+                      height: 36px;
+                      padding: 0;
+                      line-height: 36px;
+                      font-size: 14px;
+                      vertical-align: middle;
+                      border-radius: 0px;
+                      text-decoration: none;
+                    }
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      .down_mobile_app {
+        overflow: hidden;
+        width: 240px;
+        height: 271px;
+        border: 1px solid #ddd;
+        .head {
+
+          overflow: hidden;
+          background: #F7F7F7;
+          color: #333333;
+          line-height: 40px;
+          height: 40px;
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 14px;
+          i {
+            overflow: hidden;
+            vertical-align: middle;
+            font-size: 19px;
+          }
+
+        }
+
+        .down_app {
+          overflow: hidden;
+          border-top: 1px solid #ddd;
+          padding-top: 8px;
+          padding-bottom: 5px;
+          .app-l {
+            overflow: hidden;
+            width: 115px;
+            text-align: center;
+            img {
+              overflow: hidden;
+            }
+
+          }
+
+          .app-r {
+            overflow: hidden;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 123px;
+            li {
+              overflow: hidden;
+              font-size: 14px;
+              text-align: left;
+              line-height: 29px;
+              height: 29px;
+              i {
+                overflow: hidden;
+                color: #666666;
+                margin-left: 0px;
+              }
+
+              a {
+                overflow: hidden;
+                &:hover {
+                  overflow: hidden;
+                }
+
+              }
+
+            }
+          }
+
+        }
+
+        .down_box_notice {
+          overflow: hidden;
+          ul {
+            overflow: hidden;
+            &.down_box_notice_tab {
+              padding-left: 10px;
+              padding-right: 10px;
+              border-bottom: 1px solid #ddd;
+              margin-top: 5px;
+              li {
+                overflow: hidden;
+                float: left;
+                width: 100px;
+                text-align: center;
+                font-size: 14px;
+                margin-left: 5px;
+                padding-right: 5px;
+                cursor:pointer;
+                &.current {
+                  overflow: hidden;
+                  color: @bgColor;
+                  border-bottom: 2px solid @bgColor;
+                  padding-bottom: 11px;
+
+                }
+              }
+            }
+          }
+          .down_box_notice_content {
+            overflow: hidden;
+            padding-left: 11px;
+            line-height: 23px;
+            margin-top: 4px;
+            ul {
+              overflow: hidden;
+              li {
+                overflow: hidden;
+                a {
+                  overflow: hidden;
+                  color: #333;
+                  font-size: 12px;
+                  line-height: 23px;
+                  &:hover {
+                    overflow: hidden;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .index_box_main {
+    overflow: hidden;
+    margin-bottom: 20px;
+    .kj {
+      overflow: hidden;
+      width: 248px;
+      margin-right: 10px;
+      .head {
+        overflow: hidden;
+        background: #FFF4F4;
+        height: 40px;
+        padding-left: 15px;
+        font-size: 14px;
+        line-height: 40px;
+        border: 1px solid #E5E5E5;
+        i {
+          overflow: hidden;
+          color: #FF5D5D;
+          font-size: 21px;
+          vertical-align: middle;
+          margin-right: 4px;
+        }
+
+      }
+
+      .kjmain {
+        overflow: hidden;
+        .item {
+
+          overflow: hidden;
+          height: 80px;
+          border-left: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          padding: 5px 8px   17px 8px;
+
+          .top {
+
+            overflow: hidden;
+            line-height: 35px;
+
+            em {
+              color: @gray3;
+               width: 70px;
+              overflow: hidden;
+              font-size: 14px;
+              display: inline-block;
+              vertical-align: middle;
+
+            }
+
+            span {
+              overflow: hidden;
+              font-size: 10px;
+              display: inline-block;
+              margin-left: 10px;
+              vertical-align: bottom;
+            }
+
+          }
+
+          .med {
+            overflow: hidden;
+            line-height: 25px;
+            span {
+              overflow: hidden;
+              font-size: 12px;
+              font-weight: bold;
+            }
+
+          }
+
+          .bott {
+            overflow: hidden;
+            line-height: 24px;
+            .left {
+              overflow: hidden;
+              font-size: 10px;
+              color: #999;
+            }
+            .right {
+              overflow: hidden;
+              a {
+
+                color: #286EFF;
+                display: inline-block;
+                font-size: 12px;
+                margin-left: 10px;
+                margin-right: 10px;
+
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .news {
+      overflow: hidden;
+      width: 495px;
+      .head {
+        overflow: hidden;
+        background: #F5F7FE;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        font-size: 14px;
+        border: 1px solid #E5E5E5;
+        border-bottom: none;
+        i {
+          overflow: hidden;
+          color: #3A69FF;
+          font-size: 27px;
+          vertical-align: middle;
+          margin-right: 4px;
+        }
+
+      }
+
+      .news_list {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        padding: 10px;
+        .hot {
+          overflow: hidden;
+          line-height: 40px;
+          padding-left: 10px;
+          span {
+            overflow: hidden;
+            font-size: 14px;
+          }
+
+          a {
+            overflow: hidden;
+            margin-left: 10px;
+            font-size: 16px;
+            &:hover {
+              overflow: hidden;
+            }
+
+          }
+
+        }
+        ul {
+          overflow: hidden;
+          li {
+            line-height: 31px;
+            font-size: 14px;
+            em {
+              overflow: hidden;
+              color: #999999;
+            }
+
+            a {
+              overflow: hidden;
+              color: #333333;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .phb {
+      overflow: hidden;
+      width: 241px;
+      margin-left: 6px;
+      padding-bottom: 2px;
+      .head {
+        overflow: hidden;
+        background: #F4FFF7;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 11px;
+        font-size: 14px;
+        border: 1px solid #E5E5E5;
+        i {
+          overflow: hidden;
+          font-size: 25px;
+          color: #4AB163;
+        }
+      }
+      .sub_head {
+        overflow: hidden;
+        background: #F6F6F6;
+        height: 42px;
+        line-height: 40px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        em {
+          overflow: hidden;
+          display: inline-block;
+          text-align: center;
+          width: 49%;
+          font-size: 14px;
+        }
+
+      }
+
+      .list {
+        overflow: hidden;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        ul {
+          overflow: hidden;
+          li {
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+            line-height: 46px;
+            height: 46.4px;
+            font-size: 12px;
+            padding-left: 10px;
+            padding-right: 10px;
+            i {
+              vertical-align: middle;
+              overflow: hidden;
+            }
+
+            span {
+              vertical-align: middle;
+              overflow: hidden;
+              width: 80px;
+              display: inline-block;
+              text-align: left;
+              padding-left: 8px;
+              &.username {
+                overflow: hidden;
+              }
+
+              &.number {
+                width: 18px !important;
+                border: 1px solid #FFAC5A;
+                color: #E94335;
+                background-color: #FFEEDC;
+                line-height: 18px;
+                text-align: center !important;
+                padding: 0px !important;
+              }
+
+            }
+
+            em {
+              display: inline-block;
+              width: 100px;
+              &.red {
+                vertical-align: middle;
+                overflow: hidden;
+                text-align: right;
+                float: right;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.v_out {
+  width: 748px;
+}
+
+.v_show {
+  width: 740px;
+  overflow: hidden;
+  position: relative;
+  height: 230px;
+  float: left;
+}
+
+.v_cont {
+  width: 6650px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  ul {
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    li {
+      width: 740px;
+      height: 230px;
+      float: left;
+      img{height:230px}
+    }
+  }
+}
+
+.v_out_p {
+  position: relative;
+  overflow: visible;
+}
+
+.circle {
+  position: absolute;
+  right: 10px;
+  top: 200px;
+  li {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: rgba(0, 0, 0, 0.41);
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .circle-cur {
+    background: rgba(0, 0, 0, 0.54);
+  }
+}
+
+.right-info {
+  background:#fff;
+  float:right;
+  width: 240px;
+  height: 270px;
+}
+
+.mobile-tab {
+  li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    a {
+      color: #666;
+      display: block;
+      font-size: 15px;
+      text-decoration:none;
+      border-bottom: 1px solid #d9d9d9;
+      &.current {
+        overflow: hidden;
+        color: @bgColor;
+        border-bottom: 2px solid @bgColor;
+      }
+    }
+    i {
+      color: #666;
+      font-size: 20px;
+      margin-right: 5px;
+      text-decoration: none;
+      vertical-align: initial;
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+.androidqr,.iosqr {
+  p {
+    padding: 10px 0 10px;
+    text-align: center;
+  }
+  p:nth-child(3) {
+    color:#e4393c;
+  }
+}
+
+/******/
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .lottery-foot {
+  overflow: hidden;
+  margin-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid transparent
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left {
+  overflow: hidden;
+  width: 108px;
+  height: 28px;
+  margin-right: 14px;
+  vertical-align: middle;
+  margin-top: 4px
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left:not(.add) {
+  line-height: 28px
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add {
+  overflow: hidden;
+  width: 108px;
+  height: 28px;
+  margin-right: 14px
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span {
+  overflow: hidden
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span.plus, .index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add span.sub {
+  overflow: hidden;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 26px;
+  vertical-align: middle;
+  float: left
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left.add input {
+  overflow: hidden;
+  width: 42px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  vertical-align: middle;
+  float: left;
+  color: #666;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .left span {
+  overflow: hidden
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right {
+  overflow: hidden;
+  vertical-align: middle
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a {
+  overflow: hidden
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a.rf {
+  overflow: hidden;
+  font-size: 14px;
+  color: #333333;
+  vertical-align: middle;
+  text-decoration: none
+}
+
+.index .index_main .index_box_tz .tz_box .tz_box_main .show_box_main .tz_item .foot .right a.btn-bet {
+  padding: 1rem;
+}
+

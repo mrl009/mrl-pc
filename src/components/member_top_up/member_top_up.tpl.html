@@ -1,0 +1,123 @@
+<div class="user_right right">
+    <div class="user_main">
+        <div class="user_header">
+            <div ng-include="TPL_ROOT + 'member_user_nav/member_user_nav.tpl.html'"></div>
+        </div>
+        <div class="user_body">
+            <div class="topup_main">
+                <form method="post">
+                    <div class="main_header">
+                        <div class="user">
+                            <em>会员账号:</em>
+                            <span>{{user.username}}</span>
+                        </div>
+                        <div class="money">
+                            <label>
+                                <em class="red">＊</em>充值金额:
+                            </label>
+                            <input
+                                    ng-if="pay.type!='card'"
+                                    placeholder="请输入金额"
+                                    onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]|^0{1,}\d{1,}|[\,,\|,\{,\}]{1,}/g,'')"
+                                    class="member_topup_input"
+                                    ng-model="pay.money"
+                                    ng-keyup="filter($event)"
+                            >
+                            <input
+                                    ng-if="pay.type=='card'"
+                                    onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]|^0{1,}\d{1,}|[\,,\.,\|,\{,\}]{1,}/g,'')"
+                                    class="member_topup_input"
+                                    value=""
+                                    disabled
+                            >
+                            <span class="remark" ng-if="pay.info.catm_min">单笔充值限额:最低</span>
+                            <span class="red">{{pay.info.catm_min}}</span> 元，最高
+                            <span class="red">{{pay.info.catm_max}}</span> 元
+                        </div>
+                    </div>
+                    <div class="pay_type">
+                        <h2>请选择充值方式：</h2>
+                        <div class="pay_main" id="pay_main">
+                            <div id="tanContainer">
+                                <div id="tab">
+                                    <ul>
+                                        <li
+                                                class="tanContainer-li"
+                                                ng-repeat="x in payList track by $index"
+                                                ng-click="changeTab($index,x.type)" ng-class="{'active':$index==0}"
+                                        >{{x.name}}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tabCon">
+                                    <div
+                                            class="tanContent-li"
+                                            ng-class="{'fdiv':$index==0}"
+                                            ng-repeat="x in payList"
+                                    >
+                                        <ul>
+                                            <li
+                                                    ng-repeat="i in x.list track by $index"
+                                                    ng-if="x.type!='bank'&&x.type!='card'&&x.type!='wy'"
+                                                    ng-click="selPayMent(x.type,i,$index)"
+                                                    ng-class="{'hover':$index==pay.bj && x.type==pay.type && i.id==pay.info.id}">
+                                                <div class="left">
+                                                    <img class="topup-img" ng-src="{{i.img}}" style="width: 40px;">
+                                                </div>
+                                                <div class="left">
+                                                    <b class='topup-name'>{{i.title}}</b>
+                                                    <div class="topup-Prompt">{{i.Prompt}}</div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                    ng-repeat="i in x.list track by $index"
+                                                    ng-if="x.type=='wy'"
+                                                    ng-click="selPayMent(x.type,i,$index)"
+                                                    ng-class="{'hover':$index==pay.bj && x.type==pay.type && i.id==pay.info.id}">
+                                                <div class="left">
+                                                    <img class="topup-img" ng-src="{{i.img}}" style="width: 40px;">
+                                                </div>
+                                                <div class="left">
+                                                    <b class='topup-name'>{{i.name}}</b>
+                                                </div>
+                                            </li>
+                                            <li ng-repeat="i in x.list track by $index"
+                                                ng-click="selPayMent(x.type,i,$index)" ng-if="x.type=='bank'"
+                                                style="height:150px"
+                                                ng-class="{'hover':$index==pay.bj && x.type==pay.type && i.id==pay.info.id}">
+                                                <div class="left">
+                                                    <p class="item">银行</p>
+                                                    <p class="item">收款人</p>
+                                                    <p class="item">开户行</p>
+                                                    <p class="item">卡号</p>
+                                                </div>
+                                                <div class="left">
+                                                    <p class="item bank_name">{{i.bank_name}}
+                                                    <p/>
+                                                    <p class="item user">{{i.name}}
+                                                    <p/>
+                                                    <p class="item card_address">{{i.card_address}}
+                                                    <p/>
+                                                    <p class="item num">{{i.num}}
+                                                    <p/>
+                                                </div>
+                                            </li>
+
+                                            <div ng-if="x.type=='card'" style="text-align: center;padding-top: 35px">
+                                                <span>卡号</span>
+                                                <span><input type="text" class="member_topup_input"
+                                                             ng-model="pay.card_pwd"></span>
+                                            </div>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" value="下一步" ng-click="subPay()" class="btn btn-default btn-radius">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

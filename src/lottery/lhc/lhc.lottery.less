@@ -1,0 +1,649 @@
+@import url(../css/_vars.less);
+.cell-div {
+	justify-content: center;
+	border-right: 1px solid #ffd5d5;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35px;
+}
+
+.lhc {
+	.lhc-play-choice {
+	    display: flex;
+	    flex-wrap: wrap;
+	    background: linear-gradient(#eceaea,#fff,#e7e7e7);
+	    border: 1px solid #dbdbdb;
+	    border-radius: 4px;
+	    box-shadow: 0 2px 0 #e6e6e6;
+	    width: 1000px;
+	    margin: 0 auto;
+	    margin-bottom: 20px;
+	    padding: 2px;
+	}
+
+	&-tag {
+		width: 80px;
+	    height: 32px;
+	    color: #666;
+	    font-size: 14px;
+	    cursor: pointer;
+	    border: none;
+	    border-radius: 4px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    margin: 0 1px;
+	    &:hover {
+		    background-color: #ffdddc;
+		}
+	}
+
+	.play-selected {
+	    background-color: #e94335;
+	    color: #fff;
+	}
+
+	.lhc-bet-area {
+	    width: 1000px;
+	    position: relative;
+	    margin: 0 auto;
+	    margin-bottom: 80px;
+	    display: flex;
+	    flex-direction: column;
+	    .tool-bar {
+		    margin-bottom: 20px;
+		    display: flex;
+		    flex-direction: column;
+		}
+
+		.funs {
+		    display: flex;
+		    flex-direction: row;
+		    justify-content: space-between;
+		    align-items: center;
+		}
+
+		.quick-money-setting {
+		    width: 137px;
+		    height: 32px;
+		    background-color: #ff5755;
+		    border-radius: 4px;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+		    justify-content: center;
+		    cursor: pointer;
+		    &:hover {
+			    background-color: #ff7c7a;
+			}
+		}
+
+		.qms-text {
+		    font-size: 14px;
+		    color: #fff;
+		}
+
+		.icon-dollar {
+			display: inline-block;
+			width: 28px;
+			height: 32px;
+		}
+		.tabs {
+		    position: relative;
+		    background-color: #fff3ee;
+		    margin-bottom: 20px;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+		}
+		.tab {
+			&-item {
+		    	display: flex;
+			    cursor: pointer;
+			    justify-content: center;
+			    align-items: center;
+			    flex-direction: column;
+			    padding: 0 30px;
+			    transition: background-color .3s linear;
+		    }
+
+		    &-label {
+		    	height: 36px;
+			    line-height: 36px;
+			    font-size: 14px;
+			    color: #e94335;
+		    }
+		    &-selected {
+			    .tab-label {
+			    	color: #fff;
+			    }
+
+			    .ts-label,
+			    .ts-rate {
+			    	color: #fff;
+			    }
+			}
+		}
+
+		.ts-label {
+			height: 36px;
+		    line-height: 36px;
+		    font-size: 14px;
+		}
+
+		.ts-rate {
+			font-size: 14px;
+		    margin-top: -8px;
+		    line-height: 25px;
+		}
+	}
+
+	/*特码ab 表格模板*/
+
+	.bet-grid {
+	    border: 1px solid #e94335;
+	    display: flex;
+	    flex-direction: column;
+	    &+.bet-grid {
+			margin-top: 30px;
+	    }
+	}
+
+	.row {
+	    width: 100%;
+	    border-bottom: 1px solid #ffd5d5;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	}
+
+	.cell {
+	    position: relative;
+	    display: flex;
+	    flex-direction: row;
+	    align-items: center;
+
+	    &-title {
+	    	.cell-div;
+	    	font-size: 16px;
+	    }
+
+	    .label {
+	    	display: inline-block;
+		    vertical-align: top;
+		    text-align: center;
+		    height: 35px;
+		    line-height: 35px;
+		    border-right: 1px solid #ffd5d5;
+		    font-size: 14px;
+	    }
+
+	    .number {
+	    	color: #4c4c4c;
+	    	position: relative;
+		    .cell-div;
+	    }
+
+	    .odds {
+			.cell-div;
+			font-size: 14px;
+	    }
+
+	    .radio {
+	    	.cell-div;
+	    	cursor: pointer;
+	    }
+
+	    .select {
+	    	.cell-div;
+		    cursor: pointer;
+		}
+
+	    .money {
+    		position: relative;
+    		.cell-div;
+    		font-size: 14px;
+	    }
+
+	    &-input {
+	    	background-color: #f0f7fb;
+		    font-size: 14px;
+		    width: 75%;
+		    height: 25px;
+		    border: 1px solid #e9f0f4;
+		    border-radius: 10px;
+		    padding: 0 5px;
+	    }
+
+	    &-text {
+	    	background: #fff3ee;
+	    	width: 100%;
+		    height: 100%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    font-size: 14px;
+	    }
+
+	    &-div {
+	    	.cell-div;
+	    	font-size: 14px;
+	    	&:last-child {
+	    		border-right: 0;
+	    	}
+	    }
+
+	    .td-title {
+	    	width: 100%;
+	    }
+
+	    &-icon {
+	    	display: inline-block;
+	    	width: 20px;
+	    	height: 20px;
+	    }
+
+	    &:last-child {
+    		.radio {
+    			border-right: 0;
+    		}
+
+    		.cell-title {
+    			&:last-child {
+    				border-right: 0;
+    			}
+    		}
+	    }
+	}
+
+	.ball {
+		font-size: 12px;
+		background-size: 100%;
+		cursor: default;
+		width: 28px;
+		height: 28px;
+		text-align: center;
+		line-height: 28px;
+		color: rgb(255, 255, 255);
+		border: none;
+		border-radius: 50%;
+	}
+
+
+	.s-ball {
+		font-size: 12px;
+		background-size: 100%;
+		cursor: default;
+		width: 28px;
+		height: 28px;
+		text-align: center;
+		line-height: 28px;
+		border: 1.5px solid red;
+		border-radius: 50%;
+	}
+	/*特码ab 表格模板*/
+
+	.btn-group {
+	    padding-top: 20px;
+	    text-align: center;
+
+	    button {
+		    border-radius: 4px;
+		    border: none;
+		    font-size: 20px;
+		    width: 120px;
+		    height: 40px;
+		    color: #fff;
+		}
+
+		.confirm {
+			margin-left: 50px;
+		}
+	}
+
+	.main-title {
+		font-weight: 700;
+		border-right: 0;
+	}
+
+	.num-item {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    position: relative;
+	    font-size: 16px;
+	    color: #333;
+	}
+
+	.num-wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	.lball {
+	    font-size: 12px;
+	    background-size: 100%;
+	    cursor: default;
+	    width: 28px;
+	    height: 28px;
+	    text-align: center;
+	    line-height: 28px;
+	    color: rgb(255, 255, 255);
+	    border: none;
+	    border-radius: 50%;
+	}
+
+	.lball-red {
+		background-color: #f45959;
+	}
+
+	.lball-green {
+		background-color: #6acc7b;
+	}
+
+	.lball-blue {
+		background-color: #51abf0;
+	}
+
+	.balls {
+		padding-left: 20px;
+		display: flex;
+		.lball {
+			&+.lball {
+				margin-left: 3px;
+			}
+		}
+	}
+
+	.quick-bet-area {
+	    display: none;
+	    flex-direction: column;
+	    background: linear-gradient(#ffa1a0,#fff3f2);
+	    margin-top: 10px;
+	    .quick-money,
+	    .quick-money>div {
+	    	display: flex;
+		    flex-direction: row;
+		    justify-content: center;
+		    align-items: center;
+	    }
+	    .quick-money {
+		    height: 66px;
+		    >div {
+			    width: 222px;
+			    height: 38px;
+			    background-color: #ff6460;
+			    border: none;
+			    border-radius: 4px;
+			    label {
+				    font-size: 14px;
+				    color: #fff;
+				}
+				input {
+				    width: 120px;
+				    height: 26px;
+				    border: 1px solid #e94335;
+				    border-radius: 4px;
+				    background-color: #fff;
+				    padding: 0 10px;
+				    font-size: 14px;
+				}
+			}
+	    }
+
+	    .quick-bet-select {
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    justify-content: flex-start;
+
+		    div {
+			    width: 64px;
+			    height: 32px;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    background-color: #fff;
+			    border: 1px solid #ff9e9b;
+			    border-radius: 4px;
+			    color: #e82e29;
+			    font-size: 14px;
+			    cursor: pointer;
+			    margin-left: 7px;
+			    margin-bottom: 9px;
+			}
+		}
+	}
+
+	.quick-bet {
+	    width: 110px;
+	    height: 32px;
+	    border: none;
+	    border-radius: 4px;
+	    background-color: #538dff;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: center;
+	    align-items: center;
+	    cursor: pointer;
+	    span {
+	    	font-size: 14px;
+    		color: #fff;
+	    }
+	}
+
+}
+
+.row {
+	.cell {
+		&:last-child {
+			.money {
+				border-right: 0;
+			}
+
+			.select {
+				border-right: 0;
+			}
+		}
+	}
+}
+
+/*结果部分*/
+.lhc-bet-result {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+
+    .desc {
+    	margin-bottom: 20px;
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+    }
+
+    .dotted {
+	    border: 1px dashed #c9c9c9;
+	    display: flex;
+	    flex: 1;
+	}
+
+	.info-check {
+	    padding: 0 20px;
+	    text-align: center;
+	    font-size: 14px;
+	     span {
+			padding: 0 5px;
+		}
+	}
+
+	.table {
+	    border: 1px solid #e94335;
+	    display: inline-block;
+	    vertical-align: top;
+	    width: 650px;
+	    height: 180px;
+
+	    .theader {
+		    height: 35px;
+		    background-color: #fff3ee;
+		}
+		.tbody {
+		    height: 143px;
+		    overflow: auto;
+		}
+
+		.row {
+			border-bottom: 0;
+		}
+		.model {
+			width: 22%;
+		}
+		.odds {
+		    width: 22%;
+		}
+		.combination {
+		    width: 44%;
+		}
+		.sequence {
+			width: 12%;
+		}
+		.operation {
+		    width: 12%;
+		    text-decoration: underline;
+		    color: #e94335;
+		    cursor: pointer;
+		}
+		.theader {
+			.operation {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+		.combination,
+		.model,
+		.odds,
+		.operation,
+		.sequence {
+		    display: inline-block;
+		    vertical-align: top;
+		    height: 35px;
+		    line-height: 35px;
+		    text-align: center;
+		    font-size: 14px;
+		    float: left;
+		}
+	}
+
+	.info {
+	    border: 1px solid #e94335;
+	    width: 340px;
+	    height: 180px;
+	    display: inline-block;
+	    vertical-align: top;
+	    float: right;
+	    padding: 20px;
+
+	    .money {
+		    padding-top: 5px;
+		    padding-left: 15px;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+
+		    span {
+			    font-size: 14px;
+			}
+
+			&>div {
+			    position: relative;
+			    height: 35px;
+
+			    input {
+				    width: 192px;
+				    height: 30px;
+				    font-size: 14px;
+				    background-color: #fff;
+				    cursor: text;
+				    border-radius: 4px;
+				    border: 1px solid #e94335;
+				    padding: 0 5px;
+				}
+			}
+		}
+
+		.tips {
+		    padding-left: 85px;
+		    padding-top: 10px;
+
+		    span {
+			    color: #333;
+			    font-size: 12px;
+			}
+		}
+
+		.confirm-btn {
+			width: 110px;
+		    height: 30px;
+		    font-size: 16px;
+		    padding: 0;
+		}
+
+		.cancel-btn {
+			width: 60px;
+			padding: 0;
+			height: 30px;
+			font-size: 16px;
+			margin-left: 20px;
+		}
+	}
+}
+
+/*结果部分*/
+
+/*连码*/
+@import url(lma.lottery.less);
+/*连哨*/
+@import url(lx.lottery.less);
+/*生肖*/
+@import url(sx.lottery.less);
+/*合肖*/
+@import url(hx.lottery.less);
+/*头尾数*/
+/*七码五行*/
+.tou-wei-shu,
+.qima-wuxing {
+	.cell {
+		&:last-child {
+			.money {
+				border-right: 0;
+			}
+		}
+	}
+}
+
+.num-arr {
+	font-size: 16px;
+	color: #333;
+}
+
+/*tooltip 价格部分样式*/
+.qp-list {
+    width: 100px;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid red;
+    .qp-item {
+    	height: 30px;
+    	line-height: 30px;
+    	border-bottom: 1px solid red;
+    	&:last-child {
+    		border-bottom: 0;
+    	}
+    }
+
+    .qp-link {
+    	display: block;
+    }
+}
